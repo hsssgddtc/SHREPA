@@ -277,7 +277,7 @@ if __name__ == '__main__':
                 #getContent_Outside(BASE_URL+content.get("href"), House_Info_Type_Name, house_link_set, community_link_set)
                 #print(BASE_URL+content.get("href"))
                 bs_t_1 = getBSobj(BASE_URL+content.get("href"))
-                #print(bs_t_1)
+                print(bs_t_1)
                 count = 1
 
                 for content in bs_t_1.find_all(name="span", attrs={"class": "item-cell"}):
