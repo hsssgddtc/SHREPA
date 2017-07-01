@@ -1,14 +1,19 @@
 # _*_ coding: utf-8 _*_
 
+"""
+Lianjia_Collection_Main_2017.py by shai
+"""
+
 import requests
 import random
 import urllib2
+import pymysql
 from bs4 import BeautifulSoup
 
 import utilities
 import processor
 
-url_house_info='http://sh.lianjia.com/ershoufang/sh4509559.html'
+url_content='http://sh.lianjia.com/ershoufang/sh4509559.html'
 
 #define the fetch process
 class LianjiaFetcher(processor.Fetcher):
@@ -128,10 +133,39 @@ class LianjiaParser(processor.Parser):
                                                                                                                   attrs={
                                                                                                                       "class": "comment-item"})[
                                             2].text.encode("utf-8").replace('\n', '').replace(' ', '')[12:]})
-        return 1, url_list, content_dict
+        return content_dict
 
+class LianjiaSaver(processor.Saver):
+    def db_prep(self, content):
+        content_list = [u'House_Title', u'House_Type_Name', u'Structure_Type', u'Decoration_Level'
+            , u'Orientation_Type', u'Restriction_Type', u'Listing_Price', u'Square_Meter', u'Quoted_Price'
+            , u'Floor_Number', u'Year_Build', u'District', u'Area', u'Address', u'Community_Name'
+            , u'Ring_Line', u'Elevator', u'Heating_Type', u'Keys_Flag', u'Num_of_Visit_7', u'Num_of_Visit_90'
+            , u'Last_Trade_Date', u'Owner_My_Story', u'Owner_Decoration', u'Owner_House_Feature', u'Seriel_Number', u'House_Link']
 
+        t = []
+        #for keys, values in content[2].items(): print(keys + " : " + values)
+        for column in content_list:
+            if column in content:
+                t.append(content[column])
+            else:
+                t.append(None)
+        #print(t)
+        t = tuple(t)
+        return(t)
 
+    def db_insert(self, dataset):
+        cur = self.conn.cursor()
+        cur.execute(
+            "INSERT INTO house_info_saf_2017(House_Title, House_Type_Name, Structure_Type, Decoration_Level, Orientation_Type,"
+            "Restriction_Type,Listing_Price, Square_Meter, Quoted_Price, Floor_Number, Year_Build, District,"
+            "Area, Address, Community_Name, Ring_Line, Elevator, Heating_Type, Keys_Flag,"
+            "Num_of_Visit_7, Num_of_Visit_90, Last_Trade_Date, "
+            "Owner_My_Story, Owner_Decoration, Owner_House_Feature, Seriel_Number, House_Link) "
+            "VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
+            (dataset))
+
+        cur.connection.commit()
 
 if __name__ == "__main__":
     """
@@ -139,12 +173,11 @@ if __name__ == "__main__":
     """
     fetcher = LianjiaFetcher(critical_max_repeat=3, critical_sleep_time=0)
     processor = LianjiaParser(max_deep=1, max_repeat=3)
+    saver = LianjiaSaver(save_type="db", db_info=utilities.CONFIG_DB_INFO)
 
 
-    cur_code,content = fetcher.working(url_house_info, None, 1, 3)
-    house_info = processor.html_parse(content)
-
-
-    #result = fetcher.url_fetch(url_house_info)
-
-    for keys, values in house_info[2].items(): print(keys+" : "+values)
+    cur_code,content = fetcher.working(url_content, None, 1, 3)
+    content = processor.html_parse(content)
+    #for keys, values in content[2].items(): print(keys + " : " + values)
+    dataset = saver.db_prep(content)
+    saver.db_insert(dataset)

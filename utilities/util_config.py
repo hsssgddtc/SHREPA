@@ -12,6 +12,7 @@ __all__ = [
     "CONFIG_USERAGENT_PC",
     "CONFIG_USERAGENT_PHONE",
     "CONFIG_USERAGENT_ALL",
+    "CONFIG_DB_INFO"
 ]
 
 
@@ -259,3 +260,10 @@ CONFIG_HEADERS = {
     "Server", "TE", "Trailer", "Transfer-Encoding", "Upgrade", "User-Agent", "Vary", "Via",
     "Warning", "WWW-Authenticate", "Origin", "Upgrade-Insecure-Requests", "X_FORWARDED_FOR"
 }
+
+CONFIG_DB_INFO = {"host":"127.0.0.1",
+                  "user":"root",
+                  "passwd":"Thermo2014!",
+                  "charset":"utf8",
+                  "db":"SHREPA"
+                  }
