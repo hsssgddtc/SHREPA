@@ -8,6 +8,7 @@ import requests
 import random
 import urllib2
 import pymysql
+import re
 from bs4 import BeautifulSoup
 
 import utilities
@@ -163,8 +164,45 @@ class LianjiaParser(processor.Parser):
             {"PM_Company": bsObj.find_all(name="span", attrs={"class": "other"})[3].text.encode("utf-8").replace('\n', '').strip()})
         content_dict.update(
             {"Developer": bsObj.find_all(name="span", attrs={"class": "other"})[4].text.encode("utf-8").replace('\n', '').strip()})
+        content_dict.update({"Longitude": bsObj.find_all(name="div", attrs={"id": "zoneMap"})[0].get("longitude")})
+        content_dict.update({"Latitude": bsObj.find_all(name="div", attrs={"id": "zoneMap"})[0].get("latitude")})
+        content_dict.update({"Seriel_Number": bsObj.find_all(name="div", attrs={"id": "notice_focus"})[0].get("propertyno")})
+
+        content_dict.update(
+            {"District_Link":BASE_URL+bsObj.find_all(name="div", attrs={"class": "container"})[0].find_all(name="a")[2].get("href")})
+        content_dict.update(
+            {"Area_Link":BASE_URL+bsObj.find_all(name="div", attrs={"class": "container"})[0].find_all(name="a")[3].get("href")})
+        content_dict.update(
+            {"Community_Link":BASE_URL+bsObj.find_all(name="div", attrs={"class": "container"})[0].find_all(name="a")[4].get("href")})
+        content_dict.update(
+            {"Community_Name":bsObj.find_all(name="div", attrs={"class": "title fl"})[0].find_all(name="h1")[0].text})
+
+        District_Area = bsObj.find_all(name="div", attrs={"class": "title fl"})[0].find_all(name="span")[1].text
+        if District_Area.find(u"上海周边")>0:
+            District = District_Area[District_Area.find("(")+1:District_Area.find("(")+5]
+            Area = District_Area[District_Area.find("(")+5:District_Area.find(")")]
+        else:
+            District = District_Area[District_Area.find("(")+1:District_Area.find("(")+3]
+            Area = District_Area[District_Area.find("(")+3:District_Area.find(")")]
+
+        content_dict.update({"District":District})
+        content_dict.update({"Area": Area})
+        content_dict.update(
+            {"Address": bsObj.find_all(name="div", attrs={"class": "title fl"})[0].find_all(name="span",attrs={"class":"adr"})[0].text})
+
+        House_on_Sold = bsObj.find_all(name="div", attrs={"id": "res-nav"})[0].find_all(name="a",attrs={"gahref":"xiaoqu_nav_for_sale"})[0].text
+
+        content_dict.update(
+            {"House_Num_on_Sold":House_on_Sold[House_on_Sold.find(u'（')+1:House_on_Sold.find(u'）')]})
+
+        content_dict.update(
+            {"On_Sold_Link":BASE_URL+bsObj.find_all(name="div", attrs={"id": "res-nav"})[0].find_all(name="a",
+                                                                              attrs={"gahref": "xiaoqu_nav_for_sale"})[
+                  0].get("href")})
 
         return content_dict
+
+
 
     def html_parse_com_gonglue(self, content, content_dict):
 
@@ -211,7 +249,8 @@ class LianjiaSaver(processor.Saver):
                 , u'Orientation_Type', u'Restriction_Type', u'Listing_Price', u'Square_Meter', u'Quoted_Price'
                 , u'Floor_Number', u'Year_Build', u'District', u'Area', u'Address', u'Community_Name'
                 , u'Ring_Line', u'Elevator', u'Heating_Type', u'Keys_Flag', u'Num_of_Visit_7', u'Num_of_Visit_90'
-                , u'Last_Trade_Date', u'Owner_My_Story', u'Owner_Decoration', u'Owner_House_Feature', u'Seriel_Number', u'House_Link']
+                , u'Last_Trade_Date', u'Owner_My_Story', u'Owner_Decoration', u'Owner_House_Feature', u'Seriel_Number'
+                , u'House_Link']
 
             t = []
             #for keys, values in content[2].items(): print(keys + " : " + values)
@@ -223,7 +262,9 @@ class LianjiaSaver(processor.Saver):
         elif type == "community":
             content_list = [u'Community_Env',u'Assist_Fac',u'Estate_Manag',u'Community_Type',u'Community_Overview',
                         u'Compre_Plan',u'Sim_Community',u'Year_Build',u'Market_Quo',u'Everage_Price',u'Buiding_Char',u'PM_Company',
-                        u'Household_Char',u'PM_Fee',u'Developer']
+                        u'Household_Char',u'PM_Fee',u'Developer',u'Longitude',u'Latitude',u'Seriel_Number',u'District_Link',
+                        u'Area_Link',u'Community_Link',u'Community_Name',u'House_Num_on_Sold',u'On_Sold_Link',u'Address',
+                        u'District',u'Area']
 
             t = []
             #for keys, values in content.items(): print(keys + " : " + values)
@@ -250,8 +291,9 @@ class LianjiaSaver(processor.Saver):
             cur.execute(
                 "INSERT INTO community_info_saf_2017(Community_Env,Assist_Fac,Estate_Manag,Community_Type,Community_Overview,"
                 "Compre_Plan,Sim_Community,Year_Build,Market_Quo,Everage_Price,Buiding_Char,PM_Company,"
-                "Household_Char,PM_Fee,Developer) "
-                "VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
+                "Household_Char,PM_Fee,Developer,Longitude,Latitude,Seriel_Number,District_Link,"
+                "Area_Link,Community_Link,Community_Name,House_Num_on_Sold,On_Sold_Link,Address,District,Area) "
+                "VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
                 (dataset))
 
         cur.connection.commit()

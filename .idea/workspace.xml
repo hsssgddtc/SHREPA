@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/Lianjia_Collection_2017.py" line="87" mnemonic="0" />
-    <bookmark url="file://$PROJECT_DIR$/Lianjia_Collection_Main_2017.py" line="201" mnemonic="8" />
+    <bookmark url="file://$PROJECT_DIR$/Old_Python_Code/Lianjia_Collection_2017.py" line="87" mnemonic="0" />
+    <bookmark url="file://$PROJECT_DIR$/Lianjia_Collection_Main_2017.py" line="239" mnemonic="8" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6963936f-f81e-4131-9510-5eb69cd65ba6" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Lianjia_Collection_2017.py" afterPath="$PROJECT_DIR$/Old_Python_Code/Lianjia_Collection_2017.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Lianjia_Collection_Main_2017.py" afterPath="$PROJECT_DIR$/Lianjia_Collection_Main_2017.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utilities/util_config.py" afterPath="$PROJECT_DIR$/utilities/util_config.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,24 +22,24 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Lianjia_Collection.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Old_Python_Code/Lianjia_Collection.py">
+      <file leaf-file-name="Lianjia_Collection_Main_2017.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Lianjia_Collection_Main_2017.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="101" />
-              <folding />
+            <state relative-caret-position="121">
+              <caret line="182" column="42" lean-forward="false" selection-start-line="182" selection-start-column="42" selection-end-line="182" selection-end-column="42" />
+              <folding>
+                <element signature="e#74#89#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Lianjia_Collection_Main_2017.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Lianjia_Collection_Main_2017.py">
+      <file leaf-file-name="Lianjia_Collection.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Old_Python_Code/Lianjia_Collection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="157" column="28" lean-forward="true" selection-start-line="157" selection-start-column="28" selection-end-line="157" selection-end-column="28" />
-              <folding>
-                <element signature="e#74#89#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="127">
+              <caret line="200" column="21" lean-forward="false" selection-start-line="200" selection-start-column="18" selection-end-line="200" selection-end-column="21" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -64,13 +67,23 @@
         </entry>
       </file>
       <file leaf-file-name="Lianjia_Collection_2017.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Lianjia_Collection_2017.py">
+        <entry file="file://$PROJECT_DIR$/Old_Python_Code/Lianjia_Collection_2017.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
+            <state relative-caret-position="2685">
               <caret line="182" column="151" lean-forward="true" selection-start-line="182" selection-start-column="5" selection-end-line="182" selection-end-column="151" />
               <folding>
                 <element signature="e#33#47#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="26" lean-forward="false" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -97,6 +110,11 @@
       <find>if</find>
       <find>house_info</find>
       <find>replace</find>
+      <find>re.</find>
+      <find>浦东|闵行</find>
+      <find>p</find>
+      <find>浦东</find>
+      <find>DISTRICT_CN</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -106,6 +124,7 @@
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/utilities</dir>
+      <dir>$PROJECT_DIR$/</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -126,6 +145,7 @@
         <option value="$PROJECT_DIR$/processor/__init__.py" />
         <option value="$PROJECT_DIR$/utilities/util_config.py" />
         <option value="$PROJECT_DIR$/processor/pro_save.py" />
+        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Lianjia_Collection_Main_2017.py" />
       </list>
     </option>
@@ -196,6 +216,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SHREPA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SHREPA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Old_Python_Code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -205,8 +239,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/Old_Python_Code" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -234,7 +268,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="SHREPA" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lianjia_Collection_2017.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Old_Python_Code/Lianjia_Collection_2017.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -393,14 +427,21 @@
       <option name="project" value="LOCAL" />
       <updated>1498900313243</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add pro_save in processor and rewrite the db_prep/db_insert function">
+      <created>1499091940906</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1499091940906</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="37" y="23" width="1243" height="777" extended-state="0" />
+    <frame x="37" y="23" width="1243" height="777" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19308126" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25422364" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -446,14 +487,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Old_Python_Code/Lianjia_Collection_by_Community.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
@@ -468,9 +501,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="3" />
-          <folding>
-            <element signature="e#62#88#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -512,14 +543,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Old_Python_Code/Lianjia_Collection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="101" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/processor/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -556,9 +579,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lianjia_Collection_2017.py">
+    <entry file="file://$PROJECT_DIR$/Old_Python_Code/Lianjia_Collection_2017.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
+        <state relative-caret-position="2685">
           <caret line="182" column="151" lean-forward="true" selection-start-line="182" selection-start-column="5" selection-end-line="182" selection-end-column="151" />
           <folding>
             <element signature="e#33#47#0" expanded="true" />
@@ -566,10 +589,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="26" lean-forward="false" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Old_Python_Code/Lianjia_Collection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="200" column="21" lean-forward="false" selection-start-line="200" selection-start-column="18" selection-end-line="200" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Old_Python_Code/col_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="23" column="11" lean-forward="false" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Old_Python_Code/Lianjia_Chengjiao_Collection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="14" column="104" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Lianjia_Collection_Main_2017.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="157" column="28" lean-forward="true" selection-start-line="157" selection-start-column="28" selection-end-line="157" selection-end-column="28" />
+        <state relative-caret-position="121">
+          <caret line="182" column="42" lean-forward="false" selection-start-line="182" selection-start-column="42" selection-end-line="182" selection-end-column="42" />
           <folding>
             <element signature="e#74#89#0" expanded="true" />
           </folding>

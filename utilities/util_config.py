@@ -263,7 +263,7 @@ CONFIG_HEADERS = {
 
 CONFIG_DB_INFO = {"host":"127.0.0.1",
                   "user":"root",
-                  "passwd":"Thermo2014!",
+                  "passwd":"root",
                   "charset":"utf8",
                   "db":"SHREPA"
                   }
