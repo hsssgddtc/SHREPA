@@ -253,7 +253,7 @@ class LianjiaSaver(processor.Saver):
                 , u'House_Link']
 
             t = []
-            #for keys, values in content[2].items(): print(keys + " : " + values)
+            #for keys, values in content.items(): print(keys + " : " + values)
             for column in content_list:
                 if column in content:
                     t.append(content[column])
@@ -306,22 +306,60 @@ if __name__ == "__main__":
     processor = LianjiaParser(max_deep=1, max_repeat=3)
     saver = LianjiaSaver(save_type="db", db_info=utilities.CONFIG_DB_INFO)
 
+    House_Info_Type_Name="ershoufang"
 
-    #cur_code, content = fetcher.working(url_content, None, 1, 3)
-    #content = processor.html_parse(content)
+    cur_code, content = fetcher.working(BASE_URL+"/"+House_Info_Type_Name, None, 1, 3)
+    cur_code, cur_url, cur_html = content
+    bsObj = BeautifulSoup(cur_html, "html.parser")
+
+    for content in bsObj.find_all(name="div", attrs={"id": "plateList"}):
+        for item in content.find_all(name="a", gahref=re.compile(
+                "^((?!(district-nolimit)).)*$")):
+            DISTRICT_URL = BASE_URL + item.get("href")
+            print("Current District: " + item.get_text())
+            print(DISTRICT_URL)
+
+            dis_code, content_dis = fetcher.working(DISTRICT_URL, None, 1, 3)
+            dis_code, dis_url, dis_html = content_dis
+            bsObj_dis = BeautifulSoup(dis_html, "html.parser")
+
+            for area_content in bsObj_dis.find_all(name="div",attrs={"class":"level2 gio_plate"}):
+                for area_item in area_content.find_all(name="a", gahref=re.compile("^((?!(plate-nolimit)).)*$")):
+                    AREA_URL = BASE_URL + area_item.get("href")
+                    print("Current Area: " + area_item.text)
+                    print(AREA_URL)
+
+                    house_code, content_house = fetcher.working(AREA_URL, None, 1, 3)
+                    house_code, house_url, house_html = content_house
+                    bsObj_house = BeautifulSoup(dis_html, "html.parser")
+
+                    for i in range(1,31):
+                        list_link = "results_click_order_" + str(i)
+                        detail_link = BASE_URL+bsObj_house.find_all(name="a",attrs={"gahref":list_link})[0].get("href")
+
+                        detail_code, content_detail = fetcher.working(detail_link, None, 1, 3)
+                        content_detail_dict = processor.html_parse(content_detail)
+
+                        #for keys, values in content_detail_dict.items(): print(keys + " : " + values)
+                        dataset = saver.db_prep("house", content_detail_dict)
+                        saver.db_insert("house", dataset)
+
+                        print("insert done~")
+
 
     #for keys, values in content[2].items(): print(keys + " : " + values)
     #print(content.get("Community_Link"))
 
-    cur_code, content = fetcher.working(url_community, None, 1, 3)
-    content_dict = processor.html_parse_com(content)
+    #cur_code, content = fetcher.working(url_community, None, 1, 3)
+    #content_dict = processor.html_parse_com(content)
+    #
+    #url_community_gonglue = content_dict.pop("Gonglue_Link")
+    #cur_code, content = fetcher.working(url_community_gonglue, None, 1, 3)
 
-    url_community_gonglue = content_dict.pop("Gonglue_Link")
-    cur_code, content = fetcher.working(url_community_gonglue, None, 1, 3)
-
-    content_dict = processor.html_parse_com_gonglue(content, content_dict)
-    #for keys, values in content_dict.items(): print(keys)
-    #print(content)
-
-    dataset = saver.db_prep("community", content_dict)
-    saver.db_insert("community", dataset)
+    #content_dict = processor.html_parse_com_gonglue(content, content_dict)
+    ##for keys, values in content_dict.items(): print(keys)
+    ##print(content)
+    #
+    #dataset = saver.db_prep("community", content_dict)
+    #saver.db_insert("community", dataset)
+    #
