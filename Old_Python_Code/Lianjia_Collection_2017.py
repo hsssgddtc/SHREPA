@@ -10,6 +10,7 @@ import pymysql
 import time
 import random
 import sys
+import utilities
 
 hds=[{'User-Agent':'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.6) Gecko/20091201 Firefox/3.5.6'},\
     {'User-Agent':'Mozilla/5.0 (Windows NT 6.2) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.12 Safari/535.11'},\
@@ -85,11 +86,11 @@ if __name__ == '__main__':
     house_info_dict = {}
 
 
-    house_info_dict.update({"House_Title":bs_t_1.find_all(name="div", attrs={"class": "header-row2"})[0].text.strip()})
+    house_info_dict.update({"House_Title":utilities.get_string_strip(bs_t_1.find_all(name="div", attrs={"class": "header-row2"})[0].text)})
     house_info_dict.update({"Listing_Price":bs_t_1.find_all(name="span", attrs={"class": "price-num"})[0].text})
     house_info_dict.update({"Quoted_Price": bs_t_1.find_all(name="p", attrs={"class": "price-unit-num"})[0].find_all(name="span")[0].text})
     house_info_dict.update(
-        {"Year_Build":bs_t_1.find_all(name="li", attrs={"class": "main-item u-tr"})[0].find_all(name="p", attrs={"class": "u-fz12"})[
+        {"Year_Build":bs_t_1.find_all(name="li", attrs={    "class": "main-item u-tr"})[0].find_all(name="p", attrs={"class": "u-fz12"})[
         0].text.strip()})
     house_info_dict.update(
         {"Ring_Line":bs_t_1.find_all(name="ul", attrs={"class": "maininfo-minor maininfo-item"})[0].find_all(name="span", attrs={"class": "item-cell"})[5].text})

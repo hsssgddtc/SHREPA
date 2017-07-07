@@ -79,18 +79,23 @@ class LianjiaParser(processor.Parser):
         elif content_type == "house_links":
             for i in range(1, 31):
                 list_link = "results_click_order_" + str(i)
+                if bsObj.find_all(name="a", attrs={"gahref": list_link}) == []:
+                    break;
+
                 detail_link = BASE_URL + bsObj.find_all(name="a", attrs={"gahref": list_link})[0].get("href")
 
                 detail_code, content_detail = fetcher.working(detail_link, None, 1, 3)
                 house_content_dict = processor.html_parse(content_detail, "house")
 
-                house_content_dict.update({"Hash_Value":hash(frozenset(house_content_dict.items()))})
+
+                house_content_dict.update({"Hash_Value":str(hash(frozenset(house_content_dict.items())))})
 
                 if house_content_dict.get("Hash_Value") not in cur_house_hash_set:
                     # for keys, values in content_detail_dict.items(): print(keys + " : " + values)
                     dataset = saver.db_prep("house", house_content_dict)
                     saver.db_insert("house", dataset)
                     cur_house_hash_set.add(house_content_dict.get("Hash_Value"))
+                    print("House Insert Done~")
                 else:
                     print("House Exists")
 
@@ -102,7 +107,7 @@ class LianjiaParser(processor.Parser):
                 cur_code, content = fetcher.working(url_community, None, 1, 3)
                 community_content_dict = processor.html_parse(content, "community")
 
-                community_content_dict.update({"Hash_Value": hash(frozenset(community_content_dict.items()))})
+                community_content_dict.update({"Hash_Value": str(hash(frozenset(community_content_dict.items())))})
 
                 if "Gonglue_Link" in community_content_dict:
                     url_community_gonglue = community_content_dict.pop("Gonglue_Link")
@@ -114,10 +119,11 @@ class LianjiaParser(processor.Parser):
                     dataset = saver.db_prep("community", community_content_dict)
                     saver.db_insert("community", dataset)
                     cur_community_hash_set.add(community_content_dict.get("Hash_Value"))
+                    print("Community Insert Done~")
                 else:
                     print("Community Exists")
 
-                print("insert done~")
+
 
         elif content_type == "house":
             content_dict.update({"House_Title": utilities.get_string_strip(bsObj.find_all(name="div", attrs={"class": "header-row2"})[0].text)})
@@ -238,7 +244,7 @@ class LianjiaParser(processor.Parser):
                 {"PM_Fee": utilities.get_string_strip(bsObj.find_all(name="span", attrs={"class": "other"})[2].text.encode("utf-8"))})
             content_dict.update(
                 {"PM_Company": utilities.get_string_strip(bsObj.find_all(name="span", attrs={"class": "other"})[3].text.encode("utf-8"))})
-            print(content_dict.get("PM_Company"))
+            #print(content_dict.get("PM_Company"))
             content_dict.update(
                 {"Developer": utilities.get_string_strip(bsObj.find_all(name="span", attrs={"class": "other"})[4].text.encode("utf-8"))})
             content_dict.update({"Longitude": utilities.get_string_strip(bsObj.find_all(name="div", attrs={"id": "zoneMap"})[0].get("longitude"))})
