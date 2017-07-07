@@ -6,10 +6,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6963936f-f81e-4131-9510-5eb69cd65ba6" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Old_DB_Data/shrepa_chengjiao_data.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Old_DB_Data/shrepa_chengjiao_data_bkp.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Old_DB_Data/shrepa_chengjiao_links.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Old_DB_Data/shrepa_chengjiao_links_bkp.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Old_DB_Data/shrepa_community_info_saf.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Old_DB_Data/shrepa_community_info_saf_new.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Old_DB_Data/shrepa_community_info_saf_new_chengjiao.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Old_DB_Data/shrepa_house_info_saf.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Old_DB_Data/shrepa_house_info_saf_bkp.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Old_DB_Data/shrepa_house_info_saf_etl_bkp.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Old_DB_Data/shrepa_house_info_saf_new.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Old_DB_Data/shrepa_house_info_saf_new_chengjiao.sql" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Lianjia_Collection_Main_2017.py" afterPath="$PROJECT_DIR$/Lianjia_Collection_Main_2017.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Old_Python_Code/Lianjia_Collection_2017.py" afterPath="$PROJECT_DIR$/Old_Python_Code/Lianjia_Collection_2017.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utilities/__init__.py" afterPath="$PROJECT_DIR$/utilities/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utilities/util_config.py" afterPath="$PROJECT_DIR$/utilities/util_config.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,11 +37,21 @@
       <file leaf-file-name="Lianjia_Collection_Main_2017.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Lianjia_Collection_Main_2017.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="129" column="33" lean-forward="true" selection-start-line="129" selection-start-column="33" selection-end-line="129" selection-end-column="33" />
+            <state relative-caret-position="270">
+              <caret line="93" column="26" lean-forward="false" selection-start-line="93" selection-start-column="26" selection-end-line="93" selection-end-column="26" />
               <folding>
                 <element signature="e#74#89#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="util_config.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utilities/util_config.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="237">
+              <caret line="266" column="35" lean-forward="true" selection-start-line="266" selection-start-column="35" selection-end-line="266" selection-end-column="35" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -130,8 +150,8 @@
       <find>print</find>
       <find>PM_COM</find>
       <find>urllib2</find>
-      <find>detail_link = BASE_URL + bsObj.find_all(name=&quot;a&quot;, attrs={&quot;gahref&quot;: list_link})[0].get(&quot;href&quot;)</find>
       <find>5972636304818549627</find>
+      <find>detail_link = BASE_URL + bsObj.find_all(name=&quot;a&quot;, attrs={&quot;gahref&quot;: list_link})[0].get(&quot;href&quot;)</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -160,7 +180,6 @@
         <option value="$PROJECT_DIR$/processor/pro_fetch.py" />
         <option value="$PROJECT_DIR$/processor/pro_parse.py" />
         <option value="$PROJECT_DIR$/processor/__init__.py" />
-        <option value="$PROJECT_DIR$/utilities/util_config.py" />
         <option value="$PROJECT_DIR$/processor/pro_save.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Old_Python_Code/Lianjia_Collection_2017.py" />
@@ -168,6 +187,7 @@
         <option value="$PROJECT_DIR$/utilities/util_parse.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/Lianjia_Collection_Main_2017.py" />
+        <option value="$PROJECT_DIR$/utilities/util_config.py" />
       </list>
     </option>
   </component>
@@ -263,24 +283,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.Lianjia_Collection_Main_2017">
-    <configuration default="false" name="Lianjia_Collection_2017" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="SHREPA" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Old_Python_Code/Lianjia_Collection_2017.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="Lianjia_Collection_Main_2017" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -353,6 +355,24 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
+    <configuration default="false" name="util_config" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utilities" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="SHREPA" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utilities/util_config.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -418,19 +438,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.Lianjia_Collection_2017" />
-      <item index="1" class="java.lang.String" itemvalue="Python.Lianjia_Collection_Main_2017" />
-      <item index="2" class="java.lang.String" itemvalue="Python.test" />
-      <item index="3" class="java.lang.String" itemvalue="Python.__init__" />
-      <item index="4" class="java.lang.String" itemvalue="Python.util_parse" />
+      <item index="0" class="java.lang.String" itemvalue="Python.Lianjia_Collection_Main_2017" />
+      <item index="1" class="java.lang.String" itemvalue="Python.test" />
+      <item index="2" class="java.lang.String" itemvalue="Python.__init__" />
+      <item index="3" class="java.lang.String" itemvalue="Python.util_parse" />
+      <item index="4" class="java.lang.String" itemvalue="Python.util_config" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.Lianjia_Collection_Main_2017" />
-        <item index="1" class="java.lang.String" itemvalue="Python.test" />
-        <item index="2" class="java.lang.String" itemvalue="Python.util_parse" />
-        <item index="3" class="java.lang.String" itemvalue="Python.__init__" />
-        <item index="4" class="java.lang.String" itemvalue="Python.Lianjia_Collection_2017" />
+        <item index="1" class="java.lang.String" itemvalue="Python.util_config" />
+        <item index="2" class="java.lang.String" itemvalue="Python.test" />
+        <item index="3" class="java.lang.String" itemvalue="Python.util_parse" />
+        <item index="4" class="java.lang.String" itemvalue="Python.__init__" />
       </list>
     </recent_temporary>
   </component>
@@ -522,7 +542,14 @@
       <option name="project" value="LOCAL" />
       <updated>1499416617432</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Fix the hash_value check bug~">
+      <created>1499421677847</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1499421677847</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView">
@@ -581,7 +608,8 @@
     <MESSAGE value="Update the community info parse code~" />
     <MESSAGE value="Add the logic to loop get house info~" />
     <MESSAGE value="Add util_parse for string parse and also add CDC logic~" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add util_parse for string parse and also add CDC logic~" />
+    <MESSAGE value="Fix the hash_value check bug~" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix the hash_value check bug~" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -756,14 +784,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utilities/util_config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="263" column="0" lean-forward="false" selection-start-line="263" selection-start-column="0" selection-end-line="263" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/processor/pro_save.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
@@ -794,10 +814,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/utilities/util_config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="266" column="35" lean-forward="true" selection-start-line="266" selection-start-column="35" selection-end-line="266" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Lianjia_Collection_Main_2017.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="129" column="33" lean-forward="true" selection-start-line="129" selection-start-column="33" selection-end-line="129" selection-end-column="33" />
+        <state relative-caret-position="270">
+          <caret line="93" column="26" lean-forward="false" selection-start-line="93" selection-start-column="26" selection-end-line="93" selection-end-column="26" />
           <folding>
             <element signature="e#74#89#0" expanded="true" />
           </folding>

@@ -261,9 +261,9 @@ CONFIG_HEADERS = {
     "Warning", "WWW-Authenticate", "Origin", "Upgrade-Insecure-Requests", "X_FORWARDED_FOR"
 }
 
-CONFIG_DB_INFO = {"host":"127.0.0.1",
+CONFIG_DB_INFO = {"host":"45.76.106.76",
                   "user":"root",
-                  "passwd":"root",
+                  "passwd":"infullstack1989",
                   "charset":"utf8",
                   "db":"SHREPA"
                   }
