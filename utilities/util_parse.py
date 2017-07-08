@@ -6,6 +6,7 @@ util_parse.py by shai
 
 import re
 import urllib
+from six import string_types
 
 __all__ = [
     "get_string_strip",
@@ -40,7 +41,7 @@ def get_string_strip(string):
     remove \t, \r, \n from a string, also change None to ""
     """
     #return re.sub("[\s|\n]+", " ", string, flags=re.IGNORECASE).strip() if string else ""
-    if not isinstance(string, str):
+    if not isinstance(string, string_types):
         string = string.decode("utf-8")
     return re.sub("\s+", " ", string, flags=re.IGNORECASE).strip() if string else ""
 
