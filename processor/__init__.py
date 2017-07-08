@@ -4,6 +4,6 @@
 define utilities for SHREPA
 """
 
-from pro_fetch import Fetcher
-from pro_parse import Parser
-from pro_save import Saver
+from .pro_fetch import Fetcher
+from .pro_parse import Parser
+from .pro_save import Saver

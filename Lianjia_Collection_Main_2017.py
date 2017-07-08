@@ -6,7 +6,7 @@ Lianjia_Collection_Main_2017.py by shai
 
 import requests
 import random
-import urllib2
+import urllib3
 import pymysql
 import re
 from bs4 import BeautifulSoup
@@ -69,7 +69,7 @@ class LianjiaParser(processor.Parser):
             next_content = bsObj.find_all(name="div", attrs={"class": "c-pagination"})[0].find_all(name="a", attrs={
                 "gahref": "results_next_page"})
 
-            if next_content <> []:
+            if next_content != []:
                 next_page = BASE_URL + next_content[0].get("href")
                 cur_code, content = fetcher.working(next_page, None, 1, 3)
                 processor.html_parse(content, "area_links")
@@ -254,24 +254,22 @@ class LianjiaParser(processor.Parser):
                                                 2].text.encode("utf-8")).replace('\n', '').replace(' ', '')[12:]})
 
         elif content_type == "community":
-            if bsObj.find_all(name="a", attrs={"class": "link_more"})<>[]:
+            if bsObj.find_all(name="a", attrs={"class": "link_more"}) != []:
                 content_dict.update({"Gonglue_Link": utilities.get_string_strip(bsObj.find_all(name="a", attrs={"class": "link_more"})[0].get("href"))})
 
             content_dict.update(
-                {"Everage_Price": utilities.get_string_strip(bsObj.find_all(name="span", attrs={"class": "p"})[0].text.encode("utf-8").replace(
-                    '\n', ''))})
+                {"Everage_Price": utilities.get_string_strip(bsObj.find_all(name="span", attrs={"class": "p"})[0].text)})
             content_dict.update(
-                {"Community_Type": utilities.get_string_strip(bsObj.find_all(name="span", attrs={"class": "other"})[0].text.encode(
-                    "utf-8").replace('\n', ''))})
+                {"Community_Type": utilities.get_string_strip(bsObj.find_all(name="span", attrs={"class": "other"})[0].text)})
             content_dict.update(
                 {"Year_Build": utilities.get_string_num(utilities.get_string_strip(bsObj.find_all(name="span", attrs={"class": "other"})[1].text))})
             content_dict.update(
-                {"PM_Fee": utilities.get_string_strip(bsObj.find_all(name="span", attrs={"class": "other"})[2].text.encode("utf-8"))})
+                {"PM_Fee": utilities.get_string_strip(bsObj.find_all(name="span", attrs={"class": "other"})[2].text)})
             content_dict.update(
-                {"PM_Company": utilities.get_string_strip(bsObj.find_all(name="span", attrs={"class": "other"})[3].text.encode("utf-8"))})
+                {"PM_Company": utilities.get_string_strip(bsObj.find_all(name="span", attrs={"class": "other"})[3].text)})
             #print(content_dict.get("PM_Company"))
             content_dict.update(
-                {"Developer": utilities.get_string_strip(bsObj.find_all(name="span", attrs={"class": "other"})[4].text.encode("utf-8"))})
+                {"Developer": utilities.get_string_strip(bsObj.find_all(name="span", attrs={"class": "other"})[4].text)})
             content_dict.update({"Longitude": utilities.get_string_strip(bsObj.find_all(name="div", attrs={"id": "zoneMap"})[0].get("longitude"))})
             content_dict.update({"Latitude": utilities.get_string_strip(bsObj.find_all(name="div", attrs={"id": "zoneMap"})[0].get("latitude"))})
             content_dict.update(

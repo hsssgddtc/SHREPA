@@ -5,7 +5,7 @@ util_fetch.py by shai
 """
 
 import random
-from util_config import CONFIG_USERAGENT_PC, CONFIG_USERAGENT_PHONE, CONFIG_USERAGENT_ALL
+from .util_config import CONFIG_USERAGENT_PC, CONFIG_USERAGENT_PHONE, CONFIG_USERAGENT_ALL
 
 __all__ = [
     "make_random_useragent",

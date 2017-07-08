@@ -40,6 +40,8 @@ def get_string_strip(string):
     remove \t, \r, \n from a string, also change None to ""
     """
     #return re.sub("[\s|\n]+", " ", string, flags=re.IGNORECASE).strip() if string else ""
+    if not isinstance(string, str):
+        string = string.decode("utf-8")
     return re.sub("\s+", " ", string, flags=re.IGNORECASE).strip() if string else ""
 
 def get_url_legal(url, base_url, encoding=None):
