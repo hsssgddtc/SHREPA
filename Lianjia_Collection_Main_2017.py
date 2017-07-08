@@ -107,13 +107,19 @@ class LianjiaParser(processor.Parser):
                 cur_code, content = fetcher.working(url_community, None, 1, 3)
                 community_content_dict = processor.html_parse(content, "community")
 
-                community_content_dict.update({"Hash_Value": str(hash(frozenset(community_content_dict.items())))})
+                community_content_dict.update({"Building_Num_on_Total":house_content_dict.pop("Building_Num_on_Total")})
+                community_content_dict.update({"House_Num_on_Total": house_content_dict.pop("House_Num_on_Total")})
+                community_content_dict.update({"House_Num_on_Sold": house_content_dict.pop("House_Num_on_Sold")})
+                community_content_dict.update({"House_Num_on_Rent": house_content_dict.pop("House_Num_on_Rent")})
 
                 if "Gonglue_Link" in community_content_dict:
                     url_community_gonglue = community_content_dict.pop("Gonglue_Link")
                     cur_code, content = fetcher.working(url_community_gonglue, None, 1, 3)
 
                     community_content_dict = processor.html_parse_com_gonglue(content, community_content_dict)
+
+                community_content_dict.update({"Hash_Value": str(hash(frozenset(community_content_dict.items())))})
+
 
                 if community_content_dict.get("Hash_Value") not in cur_community_hash_set:
                     dataset = saver.db_prep("community", community_content_dict)
@@ -202,6 +208,26 @@ class LianjiaParser(processor.Parser):
             content_dict.update(
                 {"House_Type_Name": utilities.get_string_strip(bsObj.find_all(name="ul", attrs={"class": "baseinfo-tb"})[5].find_all(name="span", attrs={
                     "class": "item-cell"})[3].text)})
+            content_dict.update(
+                {"House_Type_Name": utilities.get_string_strip(
+                    bsObj.find_all(name="ul", attrs={"class": "baseinfo-tb"})[5].find_all(name="span", attrs={
+                        "class": "item-cell"})[3].text)})
+            content_dict.update(
+                {"House_Type_Name": utilities.get_string_strip(
+                    bsObj.find_all(name="ul", attrs={"class": "baseinfo-tb"})[5].find_all(name="span", attrs={
+                        "class": "item-cell"})[3].text)})
+
+            content_dict.update({"Building_Num_on_Total":
+                                     utilities.get_string_num(bsObj.find_all(name="div", attrs={"class": "module-col intro-col2"})[0].find_all(
+                                         name="span")[7].text)})
+            content_dict.update({"House_Num_on_Total":
+                                     utilities.get_string_num(bsObj.find_all(name="div", attrs={"class": "module-col intro-col2"})[0].find_all(
+                                         name="span")[9].text)})
+            Sold_Rent_Num = utilities.get_string_strip(
+                bsObj.find_all(name="div", attrs={"class": "module-col intro-col2"})[0].find_all(name="span")[15].text)
+            content_dict.update({"House_Num_on_Sold": utilities.get_string_num(Sold_Rent_Num[:Sold_Rent_Num.find(" ")])})
+            content_dict.update({"House_Num_on_Rent": utilities.get_string_num(Sold_Rent_Num[Sold_Rent_Num.find(" "):])})
+
             content_dict.update(
                 {"Num_of_Visit_7": utilities.get_string_strip(bsObj.find_all(name="div", attrs={"id": "kanfangListVue"})[0].find_all(name="look-list")[
                     0].get("count7").encode("utf-8"))})
@@ -350,7 +376,7 @@ class LianjiaSaver(processor.Saver):
                 , u'Floor_Number', u'Year_Build', u'District', u'Area', u'Address', u'Community_Name'
                 , u'Ring_Line', u'Elevator', u'Heating_Type', u'Keys_Flag', u'Num_of_Visit_7', u'Num_of_Visit_90'
                 , u'Last_Trade_Date', u'Owner_My_Story', u'Owner_Decoration', u'Owner_House_Feature', u'Seriel_Number'
-                , u'House_Link', u'Hash_Value']
+                , u'House_Link', u'Hash_Value', u'Parking_Place', u'Trade_Reason']
 
             t = []
             #for keys, values in content.items(): print(keys + " : " + values)
@@ -364,7 +390,7 @@ class LianjiaSaver(processor.Saver):
                         u'Compre_Plan',u'Sim_Community',u'Year_Build',u'Market_Quo',u'Everage_Price',u'Buiding_Char',u'PM_Company',
                         u'Household_Char',u'PM_Fee',u'Developer',u'Longitude',u'Latitude',u'Seriel_Number',u'District_Link',
                         u'Area_Link',u'Community_Link',u'Community_Name',u'House_Num_on_Sold',u'On_Sold_Link',u'Address',
-                        u'District',u'Area', u'Hash_Value']
+                        u'District',u'Area', u'Hash_Value', u'House_Num_on_Rent', u'House_Num_on_Total', u'Building_Num_on_Total']
 
             t = []
             #for keys, values in content.items(): print(keys + " : " + values)
@@ -374,6 +400,7 @@ class LianjiaSaver(processor.Saver):
                 else:
                     t.append(None)
         t = tuple(t)
+        #for i in t: print(i)
         return(t)
 
     def db_insert(self, type, dataset):
@@ -384,16 +411,17 @@ class LianjiaSaver(processor.Saver):
                 "Restriction_Type,Listing_Price, Square_Meter, Quoted_Price, Floor_Number, Year_Build, District,"
                 "Area, Address, Community_Name, Ring_Line, Elevator, Heating_Type, Keys_Flag,"
                 "Num_of_Visit_7, Num_of_Visit_90, Last_Trade_Date, "
-                "Owner_My_Story, Owner_Decoration, Owner_House_Feature, Seriel_Number, House_Link, Hash_Value) "
-                "VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
+                "Owner_My_Story, Owner_Decoration, Owner_House_Feature, Seriel_Number, House_Link, Hash_Value, Parking_Place, Trade_Reason) "
+                "VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
                 (dataset))
         elif type == "community":
             cur.execute(
                 "INSERT INTO community_info_saf_2017(Community_Env,Assist_Fac,Estate_Manag,Community_Type,Community_Overview,"
                 "Compre_Plan,Sim_Community,Year_Build,Market_Quo,Everage_Price,Buiding_Char,PM_Company,"
                 "Household_Char,PM_Fee,Developer,Longitude,Latitude,Seriel_Number,District_Link,"
-                "Area_Link,Community_Link,Community_Name,House_Num_on_Sold,On_Sold_Link,Address,District,Area,Hash_Value) "
-                "VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
+                "Area_Link,Community_Link,Community_Name,House_Num_on_Sold,On_Sold_Link,Address,District,Area,Hash_Value"
+                ",House_Num_on_Rent,House_Num_on_Total,Building_Num_on_Total) "
+                "VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
                 (dataset))
 
         cur.connection.commit()

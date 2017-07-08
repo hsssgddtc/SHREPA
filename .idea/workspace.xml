@@ -2,23 +2,12 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/Old_Python_Code/Lianjia_Collection_2017.py" line="88" mnemonic="0" />
-    <bookmark url="file://$PROJECT_DIR$/Lianjia_Collection_Main_2017.py" line="418" mnemonic="8" />
+    <bookmark url="file://$PROJECT_DIR$/Lianjia_Collection_Main_2017.py" line="446" mnemonic="8" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6963936f-f81e-4131-9510-5eb69cd65ba6" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Old_DB_Data/shrepa_chengjiao_data.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Old_DB_Data/shrepa_chengjiao_data_bkp.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Old_DB_Data/shrepa_chengjiao_links.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Old_DB_Data/shrepa_chengjiao_links_bkp.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Old_DB_Data/shrepa_community_info_saf.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Old_DB_Data/shrepa_community_info_saf_new.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Old_DB_Data/shrepa_community_info_saf_new_chengjiao.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Old_DB_Data/shrepa_house_info_saf.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Old_DB_Data/shrepa_house_info_saf_bkp.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Old_DB_Data/shrepa_house_info_saf_etl_bkp.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Old_DB_Data/shrepa_house_info_saf_new.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Old_DB_Data/shrepa_house_info_saf_new_chengjiao.sql" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Lianjia_Collection_Main_2017.py" afterPath="$PROJECT_DIR$/Lianjia_Collection_Main_2017.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utilities/util_config.py" afterPath="$PROJECT_DIR$/utilities/util_config.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,8 +26,8 @@
       <file leaf-file-name="Lianjia_Collection_Main_2017.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Lianjia_Collection_Main_2017.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="93" column="26" lean-forward="false" selection-start-line="93" selection-start-column="26" selection-end-line="93" selection-end-column="26" />
+            <state relative-caret-position="84">
+              <caret line="110" column="42" lean-forward="false" selection-start-line="110" selection-start-column="42" selection-end-line="110" selection-end-column="42" />
               <folding>
                 <element signature="e#74#89#0" expanded="true" />
               </folding>
@@ -49,8 +38,8 @@
       <file leaf-file-name="util_config.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utilities/util_config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="266" column="35" lean-forward="true" selection-start-line="266" selection-start-column="35" selection-end-line="266" selection-end-column="35" />
+            <state relative-caret-position="1276">
+              <caret line="267" column="31" lean-forward="true" selection-start-line="267" selection-start-column="31" selection-end-line="267" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -59,7 +48,7 @@
       <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
+            <state relative-caret-position="132">
               <caret line="76" column="29" lean-forward="true" selection-start-line="76" selection-start-column="29" selection-end-line="76" selection-end-column="29" />
               <folding>
                 <element signature="e#25#34#0" expanded="true" />
@@ -68,33 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Lianjia_Collection.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Old_Python_Code/Lianjia_Collection.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="381" column="47" lean-forward="false" selection-start-line="381" selection-start-column="47" selection-end-line="381" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pro_save.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/processor/pro_save.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="33" column="8" lean-forward="false" selection-start-line="33" selection-start-column="8" selection-end-line="34" selection-end-column="29" />
-              <folding>
-                <element signature="e#53#63#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="util_parse.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utilities/util_parse.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="47" column="17" lean-forward="false" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
+            <state relative-caret-position="46">
+              <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
               <folding>
                 <element signature="e#56#65#0" expanded="true" />
               </folding>
@@ -123,9 +90,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>href</find>
-      <find>index</find>
-      <find>get</find>
       <find>rine_line</find>
       <find>getBSobj</find>
       <find>house_info_dict</find>
@@ -149,9 +113,13 @@
       <find>select</find>
       <find>print</find>
       <find>PM_COM</find>
-      <find>urllib2</find>
       <find>5972636304818549627</find>
       <find>detail_link = BASE_URL + bsObj.find_all(name=&quot;a&quot;, attrs={&quot;gahref&quot;: list_link})[0].get(&quot;href&quot;)</find>
+      <find>PARKING_PLACE</find>
+      <find>module-col intro-col2</find>
+      <find>urllib2</find>
+      <find>pop</find>
+      <find>hOUSE_NUM_ON_SOLD</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -186,8 +154,8 @@
         <option value="$PROJECT_DIR$/utilities/__init__.py" />
         <option value="$PROJECT_DIR$/utilities/util_parse.py" />
         <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/Lianjia_Collection_Main_2017.py" />
         <option value="$PROJECT_DIR$/utilities/util_config.py" />
+        <option value="$PROJECT_DIR$/Lianjia_Collection_Main_2017.py" />
       </list>
     </option>
   </component>
@@ -549,7 +517,14 @@
       <option name="project" value="LOCAL" />
       <updated>1499421677847</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Remove old db files~">
+      <created>1499440254377</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1499440254377</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView">
@@ -609,7 +584,8 @@
     <MESSAGE value="Add the logic to loop get house info~" />
     <MESSAGE value="Add util_parse for string parse and also add CDC logic~" />
     <MESSAGE value="Fix the hash_value check bug~" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix the hash_value check bug~" />
+    <MESSAGE value="Remove old db files~" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove old db files~" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -647,7 +623,7 @@
         <state relative-caret-position="480">
           <caret line="33" column="8" lean-forward="true" selection-start-line="33" selection-start-column="8" selection-end-line="34" selection-end-column="29" />
           <folding>
-            <element signature="e#53#63#0" expanded="true" />
+            <element signature="e#53#63#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -763,7 +739,7 @@
         <state relative-caret-position="135">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <element signature="e#62#88#0" expanded="true" />
+            <element signature="e#62#88#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -789,24 +765,14 @@
         <state relative-caret-position="416">
           <caret line="33" column="8" lean-forward="false" selection-start-line="33" selection-start-column="8" selection-end-line="34" selection-end-column="29" />
           <folding>
-            <element signature="e#53#63#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utilities/util_parse.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="47" column="17" lean-forward="false" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
-          <folding>
-            <element signature="e#56#65#0" expanded="true" />
+            <element signature="e#53#63#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
+        <state relative-caret-position="132">
           <caret line="76" column="29" lean-forward="true" selection-start-line="76" selection-start-column="29" selection-end-line="76" selection-end-column="29" />
           <folding>
             <element signature="e#25#34#0" expanded="true" />
@@ -814,18 +780,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/utilities/util_parse.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+          <folding>
+            <element signature="e#56#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/utilities/util_config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="266" column="35" lean-forward="true" selection-start-line="266" selection-start-column="35" selection-end-line="266" selection-end-column="35" />
+        <state relative-caret-position="1276">
+          <caret line="267" column="31" lean-forward="true" selection-start-line="267" selection-start-column="31" selection-end-line="267" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Lianjia_Collection_Main_2017.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="93" column="26" lean-forward="false" selection-start-line="93" selection-start-column="26" selection-end-line="93" selection-end-column="26" />
+        <state relative-caret-position="84">
+          <caret line="110" column="42" lean-forward="false" selection-start-line="110" selection-start-column="42" selection-end-line="110" selection-end-column="42" />
           <folding>
             <element signature="e#74#89#0" expanded="true" />
           </folding>
