@@ -14,9 +14,11 @@ from bs4 import BeautifulSoup
 import utilities
 import processor
 
+global cur_house_hash_set
+global cur_community_hash_set
+global cur_link_repo
+cur_link_repo_dict = {}
 BASE_URL = "http://sh.lianjia.com"
-url_house = "http://sh.lianjia.com/ershoufang/sh4509559.html"
-url_community = "http://sh.lianjia.com/xiaoqu/5011000017696.html"
 
 #define the fetch process
 class LianjiaFetcher(processor.Fetcher):
@@ -36,6 +38,7 @@ class LianjiaParser(processor.Parser):
         :return: 
         """
         url_list, content_dict = [], {}
+        global cur_link_repo_dict
 
         cur_code, cur_url, cur_html = content
         bsObj = BeautifulSoup(cur_html, "html.parser")
@@ -45,8 +48,12 @@ class LianjiaParser(processor.Parser):
                 for item in content.find_all(name="a", gahref=re.compile(
                         "^((?!(district-nolimit)).)*$")):
                     DISTRICT_URL = BASE_URL + item.get("href")
+
+
                     print("Current District: " + item.get_text())
                     print(DISTRICT_URL)
+
+                    cur_link_repo_dict.update({"District": item.get_text()})
 
                     dis_code, content_dis = fetcher.working(DISTRICT_URL, None, 1, 3)
                     processor.html_parse(content_dis, "district_links")
@@ -55,7 +62,10 @@ class LianjiaParser(processor.Parser):
             for area_content in bsObj.find_all(name="div", attrs={"class": "level2 gio_plate"}):
                 for area_item in area_content.find_all(name="a", gahref=re.compile("^((?!(plate-nolimit)).)*$")):
                     AREA_URL = BASE_URL + area_item.get("href")
-                    print("Current Stage: " + area_item.text)
+                    print("Current Area: " + area_item.text)
+
+                    cur_link_repo_dict.update({"Area": area_item.get_text()})
+
                     cur_code, content = fetcher.working(AREA_URL, None, 1, 3)
                     processor.html_parse(content, "area_links")
 
@@ -64,8 +74,31 @@ class LianjiaParser(processor.Parser):
             current_page = bsObj.find_all(name="span", attrs={"class": "current"})[0].text
             print("Current Page: " + str(current_page))
 
-            processor.html_parse(content, "house_links")
+            cur_link_repo_dict.update({"Page": current_page})
+            cur_link_repo_dict.update({"URL": cur_url})
+            cur_link_repo_dict.update({"Active_Flg": "Y"})
 
+            #for keys, values in cur_link_repo_dict.items(): print(keys + " : " + values)
+
+
+            if cur_url not in cur_link_repo:
+                pass
+                dataset = saver.db_prep("link", cur_link_repo_dict)
+                saver.db_insert("link", dataset)
+                cur_house_hash_set.add(cur_link_repo_dict.get("URL"))
+
+
+            #if house_content_dict.get("Hash_Value") not in cur_house_hash_set:
+            #    # for keys, values in content_detail_dict.items(): print(keys + " : " + values)
+            #    dataset = saver.db_prep("house", house_content_dict)
+            #    saver.db_insert("house", dataset)
+            #    cur_house_hash_set.add(house_content_dict.get("Hash_Value"))
+            #    print("House Insert Done~")
+            #else:
+            #    print("House Exists")
+
+            #processor.html_parse(content, "house_links")
+            #
             next_content = bsObj.find_all(name="div", attrs={"class": "c-pagination"})[0].find_all(name="a", attrs={
                 "gahref": "results_next_page"})
 
@@ -360,12 +393,14 @@ class LianjiaParser(processor.Parser):
         return(content_dict)
 
 class LianjiaSaver(processor.Saver):
-    def hash_fetch(self, hash_type):
+    def data_fetch(self, data_type):
         cur = self.conn.cursor()
-        if hash_type == "house":
+        if data_type == "house":
             cur.execute("SELECT Hash_Value FROM house_info_saf_2017")
-        else:
+        elif data_type == "community":
             cur.execute("SELECT Hash_Value FROM community_info_saf_2017")
+        else:
+            cur.execute("SELECT URL FROM link_repo_2017")
         orig_set = set(link[0] for link in cur)
 
         return (orig_set)
@@ -379,13 +414,6 @@ class LianjiaSaver(processor.Saver):
                 , u'Last_Trade_Date', u'Owner_My_Story', u'Owner_Decoration', u'Owner_House_Feature', u'Seriel_Number'
                 , u'House_Link', u'Hash_Value', u'Parking_Place', u'Trade_Reason']
 
-            t = []
-            #for keys, values in content.items(): print(keys + " : " + values)
-            for column in content_list:
-                if column in content:
-                    t.append(content[column])
-                else:
-                    t.append(None)
         elif type == "community":
             content_list = [u'Community_Env',u'Assist_Fac',u'Estate_Manag',u'Community_Type',u'Community_Overview',
                         u'Compre_Plan',u'Sim_Community',u'Year_Build',u'Market_Quo',u'Everage_Price',u'Buiding_Char',u'PM_Company',
@@ -393,14 +421,16 @@ class LianjiaSaver(processor.Saver):
                         u'Area_Link',u'Community_Link',u'Community_Name',u'House_Num_on_Sold',u'On_Sold_Link',u'Address',
                         u'District',u'Area', u'Hash_Value', u'House_Num_on_Rent', u'House_Num_on_Total', u'Building_Num_on_Total',
                         u'Community_Nearby']
+        else:
+            content_list = [u'District', u'Area', u'Page', u'URL', u'Active_Flg']
 
-            t = []
-            #for keys, values in content.items(): print(keys + " : " + values)
-            for column in content_list:
-                if column in content:
-                    t.append(content[column])
-                else:
-                    t.append(None)
+        t = []
+        # for keys, values in content.items(): print(keys + " : " + values)
+        for column in content_list:
+            if column in content:
+                t.append(content[column])
+            else:
+                t.append(None)
         t = tuple(t)
         #for i in t: print(i)
         return(t)
@@ -425,6 +455,11 @@ class LianjiaSaver(processor.Saver):
                 ",House_Num_on_Rent,House_Num_on_Total,Building_Num_on_Total, Community_Nearby) "
                 "VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
                 (dataset))
+        else:
+            cur.execute(
+                "INSERT INTO link_repo_2017(District, Area, Page, URL, Active_Flg) "
+                "VALUES (%s,%s,%s,%s,%s)",
+                (dataset))
 
         cur.connection.commit()
 
@@ -436,11 +471,9 @@ if __name__ == "__main__":
     processor = LianjiaParser(max_deep=1, max_repeat=3)
     saver = LianjiaSaver(save_type="db", db_info=utilities.CONFIG_DB_INFO)
 
-    global cur_house_hash_set
-    global cur_community_hash_set
-
-    cur_house_hash_set = saver.hash_fetch("house")
-    cur_community_hash_set = saver.hash_fetch("community")
+    cur_house_hash_set = saver.data_fetch("house")
+    cur_community_hash_set = saver.data_fetch("community")
+    cur_link_repo  = saver.data_fetch("link")
 
     House_Info_Type_Name="ershoufang"
 
