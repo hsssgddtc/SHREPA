@@ -71,34 +71,27 @@ class LianjiaParser(processor.Parser):
 
 
         elif content_type == "area_links":
-            current_page = bsObj.find_all(name="span", attrs={"class": "current"})[0].text
-            print("Current Page: " + str(current_page))
+            if bsObj.find_all(name="span", attrs={"class": "current"}) != []:
+                current_page = bsObj.find_all(name="span", attrs={"class": "current"})[0].text
+                print("Current Page: " + str(current_page))
+                print(cur_url)
 
-            cur_link_repo_dict.update({"Page": current_page})
-            cur_link_repo_dict.update({"URL": cur_url})
-            cur_link_repo_dict.update({"Active_Flg": "Y"})
+                cur_link_repo_dict.update({"Page": current_page})
+                cur_link_repo_dict.update({"URL": cur_url})
+                cur_link_repo_dict.update({"Active_Flg": "Y"})
 
-            #for keys, values in cur_link_repo_dict.items(): print(keys + " : " + values)
+                #for keys, values in cur_link_repo_dict.items(): print(keys + " : " + values)
 
+                if cur_url not in cur_link_repo:
+                    dataset = saver.db_prep("link", cur_link_repo_dict)
+                    saver.db_insert("link", dataset)
+                    cur_link_repo.add(cur_link_repo_dict.get("URL"))
+                else:
+                    print("link exits")
+            else:
+                print("blank page")
+                return None
 
-            if cur_url not in cur_link_repo:
-                pass
-                dataset = saver.db_prep("link", cur_link_repo_dict)
-                saver.db_insert("link", dataset)
-                cur_house_hash_set.add(cur_link_repo_dict.get("URL"))
-
-
-            #if house_content_dict.get("Hash_Value") not in cur_house_hash_set:
-            #    # for keys, values in content_detail_dict.items(): print(keys + " : " + values)
-            #    dataset = saver.db_prep("house", house_content_dict)
-            #    saver.db_insert("house", dataset)
-            #    cur_house_hash_set.add(house_content_dict.get("Hash_Value"))
-            #    print("House Insert Done~")
-            #else:
-            #    print("House Exists")
-
-            #processor.html_parse(content, "house_links")
-            #
             next_content = bsObj.find_all(name="div", attrs={"class": "c-pagination"})[0].find_all(name="a", attrs={
                 "gahref": "results_next_page"})
 
@@ -120,11 +113,10 @@ class LianjiaParser(processor.Parser):
                 detail_code, content_detail = fetcher.working(detail_link, None, 1, 3)
                 house_content_dict = processor.html_parse(content_detail, "house")
 
-
                 house_content_dict.update({"Hash_Value":str(hash(frozenset(house_content_dict.items())))})
 
                 if house_content_dict.get("Hash_Value") not in cur_house_hash_set:
-                    # for keys, values in content_detail_dict.items(): print(keys + " : " + values)
+
                     dataset = saver.db_prep("house", house_content_dict)
                     saver.db_insert("house", dataset)
                     cur_house_hash_set.add(house_content_dict.get("Hash_Value"))
@@ -399,8 +391,11 @@ class LianjiaSaver(processor.Saver):
             cur.execute("SELECT Hash_Value FROM house_info_saf_2017")
         elif data_type == "community":
             cur.execute("SELECT Hash_Value FROM community_info_saf_2017")
-        else:
+        elif data_type == "link":
             cur.execute("SELECT URL FROM link_repo_2017")
+        else:
+            cur.execute("SELECT URL FROM link_repo_2017 WHERE active_flg='Y' Order by Link_ID")
+
         orig_set = set(link[0] for link in cur)
 
         return (orig_set)
@@ -463,6 +458,15 @@ class LianjiaSaver(processor.Saver):
 
         cur.connection.commit()
 
+    def db_update(self, type, data):
+        cur = self.conn.cursor()
+        if type == "link":
+            cur.execute(
+                "Update link_repo_2017 Set Active_Flg='N' Where URL=%s",
+                data)
+
+        cur.connection.commit()
+
 if __name__ == "__main__":
     """
     main process
@@ -478,4 +482,12 @@ if __name__ == "__main__":
     House_Info_Type_Name="ershoufang"
 
     cur_code, content = fetcher.working(BASE_URL+"/"+House_Info_Type_Name, None, 1, 3)
-    processor.html_parse(content, "main_links")
+    #processor.html_parse(content, "main_links")
+
+    cur_active_link_repo = saver.data_fetch("active_link")
+
+    for link in cur_active_link_repo:
+        print(link)
+        cur_code, content = fetcher.working(link, None, 1, 3)
+        processor.html_parse(content, "house_links")
+        saver.db_update("link", link)
