@@ -6,7 +6,7 @@ Lianjia_Collection_Main_2017.py by shai
 
 import requests
 import random
-import urllib3
+import urllib2
 import pymysql
 import logging
 import re
@@ -24,6 +24,12 @@ BASE_URL = "http://sh.lianjia.com"
 
 #define the fetch process
 class LianjiaFetcher(processor.Fetcher):
+    def network_on(self):
+        try:
+            urllib2.urlopen('http://www.baidu.com', timeout=1)
+            return True
+        except urllib2.URLError as err:
+            return False
 
     def url_fetch(self, url, keys, critical, fetch_repeat):
         headers = {"User-Agent": utilities.make_random_useragent("pc"), "Accept-Encoding": "gzip"}
@@ -111,6 +117,7 @@ class LianjiaParser(processor.Parser):
                     break;
 
                 detail_link = BASE_URL + bsObj.find_all(name="a", attrs={"gahref": list_link})[0].get("href")
+                print(detail_link)
 
                 detail_code, content_detail = fetcher.working(detail_link, None, 1, 3)
                 house_content_dict = processor.html_parse(content_detail, "house")
@@ -118,7 +125,6 @@ class LianjiaParser(processor.Parser):
                 house_content_dict.update({"Hash_Value":str(hash(frozenset(house_content_dict.items())))})
 
                 if house_content_dict.get("Hash_Value") not in cur_house_hash_set:
-
                     dataset = saver.db_prep("house", house_content_dict)
                     saver.db_insert("house", dataset)
                     cur_house_hash_set.add(house_content_dict.get("Hash_Value"))
@@ -265,12 +271,13 @@ class LianjiaParser(processor.Parser):
             content_dict.update({"House_Num_on_Sold": utilities.get_string_num(Sold_Rent_Num[:Sold_Rent_Num.find(" ")])})
             content_dict.update({"House_Num_on_Rent": utilities.get_string_num(Sold_Rent_Num[Sold_Rent_Num.find(" "):])})
 
-            content_dict.update(
-                {"Num_of_Visit_7": utilities.get_string_strip(bsObj.find_all(name="div", attrs={"id": "kanfangListVue"})[0].find_all(name="look-list")[
-                    0].get("count7").encode("utf-8"))})
-            content_dict.update(
-                {"Num_of_Visit_90": utilities.get_string_strip(bsObj.find_all(name="div", attrs={"id": "kanfangListVue"})[0].find_all(name="look-list")[
-                    0].get("count90").encode("utf-8"))})
+            if bsObj.find_all(name="div", attrs={"id": "kanfangListVue"}) != []:
+                content_dict.update(
+                    {"Num_of_Visit_7": utilities.get_string_strip(bsObj.find_all(name="div", attrs={"id": "kanfangListVue"})[0].find_all(name="look-list")[
+                        0].get("count7").encode("utf-8"))})
+                content_dict.update(
+                    {"Num_of_Visit_90": utilities.get_string_strip(bsObj.find_all(name="div", attrs={"id": "kanfangListVue"})[0].find_all(name="look-list")[
+                        0].get("count90").encode("utf-8"))})
 
             if len(bsObj.find_all(name="div", attrs={"id": "js-owner-comment"})) > 0:
                 content_dict.update(
@@ -356,12 +363,12 @@ class LianjiaParser(processor.Parser):
                                                                                                             attrs={
                                                                                                                 "gahref": "xiaoqu_nav_for_sale"})[
                     0].get("href"))})
-
+            base_index = len(bsObj.find_all(name="div", attrs={"id": "nearby"})[0].find_all("a"))
             content_dict.update(
-                {"Community_Nearby": "|".join((bsObj.find_all(name="div", attrs={"id":"nearby"})[0].find_all("a")[2].text
-            ,bsObj.find_all(name="div", attrs={"id": "nearby"})[0].find_all("a")[5].text
-            ,bsObj.find_all(name="div", attrs={"id": "nearby"})[0].find_all("a")[8].text
-            ,bsObj.find_all(name="div", attrs={"id": "nearby"})[0].find_all("a")[11].text))})
+                {"Community_Nearby": "|".join((bsObj.find_all(name="div", attrs={"id":"nearby"})[0].find_all("a")[base_index-11].text
+            ,bsObj.find_all(name="div", attrs={"id": "nearby"})[0].find_all("a")[base_index-7].text
+            ,bsObj.find_all(name="div", attrs={"id": "nearby"})[0].find_all("a")[base_index-5].text
+            ,bsObj.find_all(name="div", attrs={"id": "nearby"})[0].find_all("a")[base_index-2].text))})
         return content_dict
 
     def html_parse_com_gonglue(self, content, content_dict):
@@ -478,8 +485,8 @@ class LianjiaSaver(processor.Saver):
         cur = self.conn.cursor()
         if type == "link":
             cur.execute(
-                "Update link_repo_2017 Set Active_Flg='N' Where URL=%s",
-                data)
+                "Update link_repo_2017 Set Active_Flg='N', Updated_Timestamp=%s Where URL=%s", (datetime.now(),
+                data))
 
         cur.connection.commit()
 
@@ -494,22 +501,25 @@ if __name__ == "__main__":
     processor = LianjiaParser(max_deep=1, max_repeat=3)
     saver = LianjiaSaver(save_type="db", db_info=utilities.CONFIG_DB_INFO)
 
-    cur_house_hash_set = saver.data_fetch("house")
-    cur_community_hash_set = saver.data_fetch("community")
-    cur_link_repo = saver.data_fetch("link")
+    network_check = fetcher.network_on()
 
-    House_Info_Type_Name = "ershoufang"
+    if network_check:
+        cur_house_hash_set = saver.data_fetch("house")
+        cur_community_hash_set = saver.data_fetch("community")
+        cur_link_repo = saver.data_fetch("link")
 
-    cur_code, content = fetcher.working(BASE_URL + "/" + House_Info_Type_Name, None, 1, 3)
-    # processor.html_parse(content, "main_links")
+        House_Info_Type_Name = "ershoufang"
 
-    cur_active_link_repo = saver.data_fetch("active_link")
+        cur_code, content = fetcher.working(BASE_URL + "/" + House_Info_Type_Name, None, 1, 3)
+        #processor.html_parse(content, "main_links")
 
-    for link in cur_active_link_repo:
-        print(link)
-        cur_code, content = fetcher.working(link, None, 1, 3)
-        processor.html_parse(content, "house_links")
-        saver.db_update("link", link)
+        cur_active_link_repo = saver.data_fetch("active_link")
+
+        for link in cur_active_link_repo:
+            print(link)
+            cur_code, content = fetcher.working(link, None, 1, 3)
+            processor.html_parse(content, "house_links")
+            saver.db_update("link", link)
 
     #try:
     #
