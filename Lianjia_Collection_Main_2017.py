@@ -9,6 +9,7 @@ import random
 import urllib2
 import pymysql
 import logging
+import traceback
 import re
 from datetime import datetime
 from bs4 import BeautifulSoup
@@ -58,8 +59,8 @@ class LianjiaParser(processor.Parser):
                     DISTRICT_URL = BASE_URL + item.get("href")
 
 
-                    print("Current District: " + item.get_text())
-                    print(DISTRICT_URL)
+                    logging.debug("Current District: " + item.get_text())
+                    #logging.debug(DISTRICT_URL)
 
                     cur_link_repo_dict.update({"District": item.get_text()})
 
@@ -70,7 +71,7 @@ class LianjiaParser(processor.Parser):
             for area_content in bsObj.find_all(name="div", attrs={"class": "level2 gio_plate"}):
                 for area_item in area_content.find_all(name="a", gahref=re.compile("^((?!(plate-nolimit)).)*$")):
                     AREA_URL = BASE_URL + area_item.get("href")
-                    print("Current Area: " + area_item.text)
+                    logging.debug("Current Area: " + area_item.text)
 
                     cur_link_repo_dict.update({"Area": area_item.get_text()})
 
@@ -81,8 +82,8 @@ class LianjiaParser(processor.Parser):
         elif content_type == "area_links":
             if bsObj.find_all(name="span", attrs={"class": "current"}) != []:
                 current_page = bsObj.find_all(name="span", attrs={"class": "current"})[0].text
-                print("Current Page: " + str(current_page))
-                print(cur_url)
+                logging.debug("Current Page: " + str(current_page))
+                #print(cur_url)
 
                 cur_link_repo_dict.update({"Page": current_page})
                 cur_link_repo_dict.update({"URL": cur_url})
@@ -95,9 +96,9 @@ class LianjiaParser(processor.Parser):
                     saver.db_insert("link", dataset)
                     cur_link_repo.add(cur_link_repo_dict.get("URL"))
                 else:
-                    print("link exits")
+                    logging.debug("link exits")
             else:
-                print("blank page")
+                logging.debug("blank page")
                 return None
 
             next_content = bsObj.find_all(name="div", attrs={"class": "c-pagination"})[0].find_all(name="a", attrs={
@@ -117,7 +118,7 @@ class LianjiaParser(processor.Parser):
                     break;
 
                 detail_link = BASE_URL + bsObj.find_all(name="a", attrs={"gahref": list_link})[0].get("href")
-                print(detail_link)
+                #print(detail_link)
 
                 detail_code, content_detail = fetcher.working(detail_link, None, 1, 3)
                 house_content_dict = processor.html_parse(content_detail, "house")
@@ -128,9 +129,9 @@ class LianjiaParser(processor.Parser):
                     dataset = saver.db_prep("house", house_content_dict)
                     saver.db_insert("house", dataset)
                     cur_house_hash_set.add(house_content_dict.get("Hash_Value"))
-                    print("House Insert Done~")
+                    logging.debug("House Insert Done~")
                 else:
-                    print("House Exists")
+                    logging.debug("House Exists")
 
                 # for keys, values in content[2].items(): print(keys + " : " + values)
 
@@ -157,9 +158,9 @@ class LianjiaParser(processor.Parser):
                     dataset = saver.db_prep("community", community_content_dict)
                     saver.db_insert("community", dataset)
                     cur_community_hash_set.add(community_content_dict.get("Hash_Value"))
-                    print("Community Insert Done~")
+                    logging.debug("Community Insert Done~")
                 else:
-                    print("Community Exists")
+                    logging.debug("Community Exists")
 
 
 
@@ -172,8 +173,9 @@ class LianjiaParser(processor.Parser):
                 {"Year_Build": utilities.get_string_num(utilities.get_string_strip(bsObj.find_all(name="li", attrs={"class": "main-item u-tr"})[0].find_all(name="p", attrs={
                     "class": "u-fz12"})[
                     0].text))})
+
             if len(bsObj.find_all(name="ul", attrs={"class": "maininfo-minor maininfo-item"})[0].find_all(name="span", attrs={
-                "class": "item-cell"})) == 14:
+                "class": "item-cell"})) >= 12:
                 incre_index = 3
                 content_dict.update(
                     {"Ring_Line":
@@ -204,7 +206,7 @@ class LianjiaParser(processor.Parser):
                     bsObj.find_all(name="ul", attrs={"class": "maininfo-minor maininfo-item"})[0].find_all(name="span",
                                                                                                            attrs={
                                                                                                                "class": "item-cell"})[
-                        10+incre_index].text.encode("utf-8"))[:9]
+                        8+incre_index].text.encode("utf-8"))[:9]
 
             content_dict.update(
                 {"Seriel_Number": Seriel_Number})
@@ -280,23 +282,27 @@ class LianjiaParser(processor.Parser):
                         0].get("count90").encode("utf-8"))})
 
             if len(bsObj.find_all(name="div", attrs={"id": "js-owner-comment"})) > 0:
-                content_dict.update(
-                    {"Owner_My_Story": utilities.get_string_strip(bsObj.find_all(name="div", attrs={"id": "js-owner-comment"})[0].find_all(name="li",
-                                                                                                                 attrs={
-                                                                                                                     "class": "comment-item"})[
-                                           0].text.encode("utf-8"))[12:]})
-
-                content_dict.update(
-                    {"Owner_Decoration": utilities.get_string_strip(bsObj.find_all(name="div", attrs={"id": "js-owner-comment"})[0].find_all(name="li",
-                                                                                                                   attrs={
-                                                                                                                       "class": "comment-item"})[
-                                             1].text.encode("utf-8")).replace('\n', '').replace(' ', '')[12:]})
-
-                content_dict.update(
-                    {"Owner_House_Feature": utilities.get_string_strip(bsObj.find_all(name="div", attrs={"id": "js-owner-comment"})[0].find_all(name="li",
-                                                                                                                      attrs={
-                                                                                                                          "class": "comment-item"})[
-                                                2].text.encode("utf-8")).replace('\n', '').replace(' ', '')[12:]})
+                owner_comment = bsObj.find_all(name="div", attrs={"id": "js-owner-comment"})[0].find_all(name="li",
+                                                                                                         attrs={
+                                                                                                             "class": "comment-item"})
+                if len(owner_comment) > 0:
+                    content_dict.update(
+                        {"Owner_My_Story": utilities.get_string_strip(bsObj.find_all(name="div", attrs={"id": "js-owner-comment"})[0].find_all(name="li",
+                                                                                                                     attrs={
+                                                                                                                         "class": "comment-item"})[
+                                               0].text.encode("utf-8"))[12:]})
+                    if len(owner_comment) > 1:
+                        content_dict.update(
+                            {"Owner_Decoration": utilities.get_string_strip(bsObj.find_all(name="div", attrs={"id": "js-owner-comment"})[0].find_all(name="li",
+                                                                                                                           attrs={
+                                                                                                                               "class": "comment-item"})[
+                                                     1].text.encode("utf-8"))[12:]})
+                        if len(owner_comment) > 2:
+                            content_dict.update(
+                                {"Owner_House_Feature": utilities.get_string_strip(bsObj.find_all(name="div", attrs={"id": "js-owner-comment"})[0].find_all(name="li",
+                                                                                                                                  attrs={
+                                                                                                                                      "class": "comment-item"})[
+                                                            2].text.encode("utf-8"))[12:]})
 
         elif content_type == "community":
             if bsObj.find_all(name="a", attrs={"class": "link_more"}) != []:
@@ -315,7 +321,6 @@ class LianjiaParser(processor.Parser):
                 {"PM_Fee": utilities.get_string_strip(bsObj.find_all(name="span", attrs={"class": "other"})[2].text)})
             content_dict.update(
                 {"PM_Company": utilities.get_string_strip(bsObj.find_all(name="span", attrs={"class": "other"})[3].text)})
-            #print(content_dict.get("PM_Company"))
             content_dict.update(
                 {"Developer": utilities.get_string_strip(bsObj.find_all(name="span", attrs={"class": "other"})[4].text)})
             content_dict.update({"Longitude": utilities.get_string_strip(bsObj.find_all(name="div", attrs={"id": "zoneMap"})[0].get("longitude"))})
@@ -494,36 +499,38 @@ if __name__ == "__main__":
     """
     main process
     """
-    utilities.SetupLogging()
-    logging.debug("Fetching Start: %s", datetime.now())
+    utilities.SetupLogging("file")
+    # logger.debug("Fetching Start: %s", datetime.now())
 
-    fetcher = LianjiaFetcher(critical_max_repeat=3, critical_sleep_time=0)
-    processor = LianjiaParser(max_deep=1, max_repeat=3)
-    saver = LianjiaSaver(save_type="db", db_info=utilities.CONFIG_DB_INFO)
+    try:
+        fetcher = LianjiaFetcher(critical_max_repeat=3, critical_sleep_time=0)
+        processor = LianjiaParser(max_deep=1, max_repeat=3)
+        saver = LianjiaSaver(save_type="db", db_info=utilities.CONFIG_DB_INFO)
 
-    network_check = fetcher.network_on()
+        network_check = fetcher.network_on()
 
-    if network_check:
-        cur_house_hash_set = saver.data_fetch("house")
-        cur_community_hash_set = saver.data_fetch("community")
-        cur_link_repo = saver.data_fetch("link")
+        if network_check:
+            cur_house_hash_set = saver.data_fetch("house")
+            cur_community_hash_set = saver.data_fetch("community")
+            cur_link_repo = saver.data_fetch("link")
 
-        House_Info_Type_Name = "ershoufang"
+            House_Info_Type_Name = "ershoufang"
 
-        cur_code, content = fetcher.working(BASE_URL + "/" + House_Info_Type_Name, None, 1, 3)
-        #processor.html_parse(content, "main_links")
+            cur_code, content = fetcher.working(BASE_URL + "/" + House_Info_Type_Name, None, 1, 3)
+            # processor.html_parse(content, "main_links")
 
-        cur_active_link_repo = saver.data_fetch("active_link")
+            cur_active_link_repo = saver.data_fetch("active_link")
 
-        for link in cur_active_link_repo:
-            print(link)
-            cur_code, content = fetcher.working(link, None, 1, 3)
-            processor.html_parse(content, "house_links")
-            saver.db_update("link", link)
+            for link in cur_active_link_repo:
+                # print(link)
+                cur_code, content = fetcher.working(link, None, 1, 3)
+                processor.html_parse(content, "house_links")
+                saver.db_update("link", link)
 
-    #try:
-    #
-    #except Exception as excep:
-    #    logging.debug("Exception: %s", excep)
-    #finally:
-    #    logging.debug("Fetcher end: %s", datetime.now())
+    except Exception as excep:
+        logging.debug("Exception: %s", excep)
+        traceback.print_exc()
+    finally:
+        logging.debug("Fetcher end: %s", datetime.now())
+
+

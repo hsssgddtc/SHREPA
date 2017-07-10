@@ -1,0 +1,96 @@
+2017-07-11 00:05:07,457 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang, keys=None, critical=1, fetch_repeat=3
+2017-07-11 00:05:07,460 - DEBUG - Starting new HTTP connection (1): sh.lianjia.com
+2017-07-11 00:05:07,482 - DEBUG - http://sh.lianjia.com:80 "GET /ershoufang HTTP/1.1" 302 0
+2017-07-11 00:05:07,521 - DEBUG - http://sh.lianjia.com:80 "GET /ershoufang HTTP/1.1" 200 None
+2017-07-11 00:05:07,530 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang
+2017-07-11 00:05:07,584 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/jinhongqiao, keys=None, critical=1, fetch_repeat=3
+2017-07-11 00:05:07,586 - DEBUG - Starting new HTTP connection (1): sh.lianjia.com
+2017-07-11 00:05:07,606 - DEBUG - http://sh.lianjia.com:80 "GET /ershoufang/jinhongqiao HTTP/1.1" 302 0
+2017-07-11 00:05:07,651 - DEBUG - http://sh.lianjia.com:80 "GET /ershoufang/jinhongqiao HTTP/1.1" 200 None
+2017-07-11 00:05:07,662 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/jinhongqiao
+2017-07-11 00:05:07,881 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4513743.html, keys=None, critical=1, fetch_repeat=3
+2017-07-11 00:05:07,883 - DEBUG - Starting new HTTP connection (1): sh.lianjia.com
+2017-07-11 00:05:07,903 - DEBUG - http://sh.lianjia.com:80 "GET /ershoufang/sh4513743.html HTTP/1.1" 302 0
+2017-07-11 00:05:08,904 - DEBUG - http://sh.lianjia.com:80 "GET /ershoufang/sh4513743.html HTTP/1.1" 200 None
+2017-07-11 00:05:08,928 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4513743.html
+2017-07-11 00:05:09,624 - DEBUG - House Exists
+2017-07-11 00:05:09,624 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000016571.html, keys=None, critical=1, fetch_repeat=3
+2017-07-11 00:05:09,626 - DEBUG - Starting new HTTP connection (1): sh.lianjia.com
+2017-07-11 00:05:09,664 - DEBUG - http://sh.lianjia.com:80 "GET /xiaoqu/5011000016571.html HTTP/1.1" 200 None
+2017-07-11 00:05:09,674 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000016571.html
+2017-07-11 00:05:11,227 - DEBUG - Community Insert Done~
+2017-07-11 00:05:12,067 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4577791.html, keys=None, critical=1, fetch_repeat=3
+2017-07-11 00:05:12,077 - DEBUG - Starting new HTTP connection (1): sh.lianjia.com
+2017-07-11 00:05:12,093 - DEBUG - http://sh.lianjia.com:80 "GET /ershoufang/sh4577791.html HTTP/1.1" 302 0
+2017-07-11 00:05:12,177 - DEBUG - http://sh.lianjia.com:80 "GET /ershoufang/sh4577791.html HTTP/1.1" 200 None
+2017-07-11 00:05:12,191 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4577791.html
+2017-07-11 00:05:12,699 - DEBUG - Fetcher end: 2017-07-11 00:05:12.699620
+2017-07-11 00:05:46,993 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang, keys=None, critical=1, fetch_repeat=3
+2017-07-11 00:05:46,996 - DEBUG - Starting new HTTP connection (1): sh.lianjia.com
+2017-07-11 00:05:47,009 - DEBUG - http://sh.lianjia.com:80 "GET /ershoufang HTTP/1.1" 302 0
+2017-07-11 00:05:47,048 - DEBUG - http://sh.lianjia.com:80 "GET /ershoufang HTTP/1.1" 200 None
+2017-07-11 00:05:47,060 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang
+2017-07-11 00:05:47,144 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/jinhongqiao, keys=None, critical=1, fetch_repeat=3
+2017-07-11 00:05:47,146 - DEBUG - Starting new HTTP connection (1): sh.lianjia.com
+2017-07-11 00:05:47,164 - DEBUG - http://sh.lianjia.com:80 "GET /ershoufang/jinhongqiao HTTP/1.1" 302 0
+2017-07-11 00:05:47,223 - DEBUG - http://sh.lianjia.com:80 "GET /ershoufang/jinhongqiao HTTP/1.1" 200 None
+2017-07-11 00:05:47,233 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/jinhongqiao
+2017-07-11 00:05:47,463 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4513743.html, keys=None, critical=1, fetch_repeat=3
+2017-07-11 00:05:47,465 - DEBUG - Starting new HTTP connection (1): sh.lianjia.com
+2017-07-11 00:05:47,485 - DEBUG - http://sh.lianjia.com:80 "GET /ershoufang/sh4513743.html HTTP/1.1" 302 0
+2017-07-11 00:05:47,528 - DEBUG - http://sh.lianjia.com:80 "GET /ershoufang/sh4513743.html HTTP/1.1" 200 None
+2017-07-11 00:05:47,548 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4513743.html
+2017-07-11 00:05:48,297 - DEBUG - House Exists
+2017-07-11 00:05:48,297 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000016571.html, keys=None, critical=1, fetch_repeat=3
+2017-07-11 00:05:48,300 - DEBUG - Starting new HTTP connection (1): sh.lianjia.com
+2017-07-11 00:05:48,317 - DEBUG - http://sh.lianjia.com:80 "GET /xiaoqu/5011000016571.html HTTP/1.1" 302 0
+2017-07-11 00:05:48,348 - DEBUG - http://sh.lianjia.com:80 "GET /xiaoqu/5011000016571.html HTTP/1.1" 200 None
+2017-07-11 00:05:48,358 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000016571.html
+2017-07-11 00:05:48,919 - DEBUG - Community Exists
+2017-07-11 00:05:49,037 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4577791.html, keys=None, critical=1, fetch_repeat=3
+2017-07-11 00:05:49,039 - DEBUG - Starting new HTTP connection (1): sh.lianjia.com
+2017-07-11 00:05:49,055 - DEBUG - http://sh.lianjia.com:80 "GET /ershoufang/sh4577791.html HTTP/1.1" 302 0
+2017-07-11 00:05:49,139 - DEBUG - http://sh.lianjia.com:80 "GET /ershoufang/sh4577791.html HTTP/1.1" 200 None
+2017-07-11 00:05:49,162 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4577791.html
+2017-07-11 00:05:50,546 - DEBUG - House Insert Done~
+2017-07-11 00:05:50,546 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000018067.html, keys=None, critical=1, fetch_repeat=3
+2017-07-11 00:05:50,549 - DEBUG - Starting new HTTP connection (1): sh.lianjia.com
+2017-07-11 00:05:50,588 - DEBUG - http://sh.lianjia.com:80 "GET /xiaoqu/5011000018067.html HTTP/1.1" 200 None
+2017-07-11 00:05:50,596 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000018067.html
+2017-07-11 00:05:51,248 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000018067/gonglue, keys=None, critical=1, fetch_repeat=3
+2017-07-11 00:05:51,250 - DEBUG - Starting new HTTP connection (1): sh.lianjia.com
+2017-07-11 00:05:51,292 - DEBUG - http://sh.lianjia.com:80 "GET /xiaoqu/5011000018067/gonglue HTTP/1.1" 200 None
+2017-07-11 00:05:51,293 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000018067/gonglue
+2017-07-11 00:05:52,976 - DEBUG - Community Insert Done~
+2017-07-11 00:05:53,050 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4561443.html, keys=None, critical=1, fetch_repeat=3
+2017-07-11 00:05:53,051 - DEBUG - Starting new HTTP connection (1): sh.lianjia.com
+2017-07-11 00:05:53,064 - DEBUG - http://sh.lianjia.com:80 "GET /ershoufang/sh4561443.html HTTP/1.1" 302 0
+2017-07-11 00:05:53,149 - DEBUG - http://sh.lianjia.com:80 "GET /ershoufang/sh4561443.html HTTP/1.1" 200 None
+2017-07-11 00:05:53,165 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4561443.html
+2017-07-11 00:05:53,837 - DEBUG - House Insert Done~
+2017-07-11 00:05:53,837 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000015381.html, keys=None, critical=1, fetch_repeat=3
+2017-07-11 00:05:53,838 - DEBUG - Starting new HTTP connection (1): sh.lianjia.com
+2017-07-11 00:05:53,854 - DEBUG - http://sh.lianjia.com:80 "GET /xiaoqu/5011000015381.html HTTP/1.1" 302 0
+2017-07-11 00:05:53,969 - DEBUG - http://sh.lianjia.com:80 "GET /xiaoqu/5011000015381.html HTTP/1.1" 200 None
+2017-07-11 00:05:53,981 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000015381.html
+2017-07-11 00:05:54,662 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000015381/gonglue, keys=None, critical=1, fetch_repeat=3
+2017-07-11 00:05:54,664 - DEBUG - Starting new HTTP connection (1): sh.lianjia.com
+2017-07-11 00:05:54,700 - DEBUG - http://sh.lianjia.com:80 "GET /xiaoqu/5011000015381/gonglue HTTP/1.1" 200 None
+2017-07-11 00:05:54,702 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000015381/gonglue
+2017-07-11 00:05:56,226 - DEBUG - Community Insert Done~
+2017-07-11 00:05:56,323 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4449476.html, keys=None, critical=1, fetch_repeat=3
+2017-07-11 00:05:56,324 - DEBUG - Starting new HTTP connection (1): sh.lianjia.com
+2017-07-11 00:05:56,343 - DEBUG - http://sh.lianjia.com:80 "GET /ershoufang/sh4449476.html HTTP/1.1" 302 0
+2017-07-11 00:05:56,445 - DEBUG - http://sh.lianjia.com:80 "GET /ershoufang/sh4449476.html HTTP/1.1" 200 None
+2017-07-11 00:05:56,461 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4449476.html
+2017-07-11 00:05:57,390 - DEBUG - House Insert Done~
+2017-07-11 00:05:57,390 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000016237.html, keys=None, critical=1, fetch_repeat=3
+2017-07-11 00:05:57,392 - DEBUG - Starting new HTTP connection (1): sh.lianjia.com
+2017-07-11 00:05:57,412 - DEBUG - http://sh.lianjia.com:80 "GET /xiaoqu/5011000016237.html HTTP/1.1" 302 0
+2017-07-11 00:05:57,446 - DEBUG - http://sh.lianjia.com:80 "GET /xiaoqu/5011000016237.html HTTP/1.1" 200 None
+2017-07-11 00:05:57,456 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000016237.html
+2017-07-11 00:05:58,096 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000016237/gonglue, keys=None, critical=1, fetch_repeat=3
+2017-07-11 00:05:58,106 - DEBUG - Starting new HTTP connection (1): sh.lianjia.com
+2017-07-11 00:05:58,141 - DEBUG - http://sh.lianjia.com:80 "GET /xiaoqu/5011000016237/gonglue HTTP/1.1" 200 None
+2017-07-11 00:05:58,144 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000016237/gonglue
+2017-07-11 00:06:00,979 - DEBUG - Fetcher end: 2017-07-11 00:06:00.979329
