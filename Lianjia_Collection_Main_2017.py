@@ -8,7 +8,9 @@ import requests
 import random
 import urllib3
 import pymysql
+import logging
 import re
+from datetime import datetime
 from bs4 import BeautifulSoup
 
 import utilities
@@ -164,15 +166,23 @@ class LianjiaParser(processor.Parser):
                 {"Year_Build": utilities.get_string_num(utilities.get_string_strip(bsObj.find_all(name="li", attrs={"class": "main-item u-tr"})[0].find_all(name="p", attrs={
                     "class": "u-fz12"})[
                     0].text))})
-            content_dict.update(
-                {"Ring_Line":
-                     utilities.get_string_strip(bsObj.find_all(name="ul", attrs={"class": "maininfo-minor maininfo-item"})[0].find_all(name="span",
-                                                                                                             attrs={
-                                                                                                                 "class": "item-cell"})[
-                         5].text)})
+            if len(bsObj.find_all(name="ul", attrs={"class": "maininfo-minor maininfo-item"})[0].find_all(name="span", attrs={
+                "class": "item-cell"})) == 14:
+                incre_index = 3
+                content_dict.update(
+                    {"Ring_Line":
+                         utilities.get_string_strip(
+                             bsObj.find_all(name="ul", attrs={"class": "maininfo-minor maininfo-item"})[0].find_all(
+                                 name="span",
+                                 attrs={
+                                     "class": "item-cell"})[
+                                 5].text)})
+            else:
+                incre_index = 1
+
             community_info = \
                 utilities.get_string_strip(bsObj.find_all(name="ul", attrs={"class": "maininfo-minor maininfo-item"})[0].find_all(name="span", attrs={
-                    "class": "item-cell"})[7].text.encode("utf-8"))
+                    "class": "item-cell"})[4+incre_index].text.encode("utf-8"))
             content_dict.update(
                 {"Community_Name": community_info[:community_info.find(" ")]})
             content_dict.update(
@@ -182,11 +192,14 @@ class LianjiaParser(processor.Parser):
             content_dict.update({"Address":
                                      utilities.get_string_strip(bsObj.find_all(name="ul", attrs={"class": "maininfo-minor maininfo-item"})[0].find_all(
                                             name="span", attrs={
-                                                "class": "item-cell"})[9].text.encode("utf-8"))})
-
+                                                "class": "item-cell"})[6+incre_index].text.encode("utf-8"))})
             Seriel_Number = \
-                utilities.get_string_strip(bsObj.find_all(name="ul", attrs={"class": "maininfo-minor maininfo-item"})[0].find_all(name="span", attrs={
-                "class": "item-cell"})[13].text.encode("utf-8"))[:9]
+                utilities.get_string_strip(
+                    bsObj.find_all(name="ul", attrs={"class": "maininfo-minor maininfo-item"})[0].find_all(name="span",
+                                                                                                           attrs={
+                                                                                                               "class": "item-cell"})[
+                        10+incre_index].text.encode("utf-8"))[:9]
+
             content_dict.update(
                 {"Seriel_Number": Seriel_Number})
             House_Link = BASE_URL + "/ershoufang/" + Seriel_Number + ".html"
@@ -282,8 +295,11 @@ class LianjiaParser(processor.Parser):
             if bsObj.find_all(name="a", attrs={"class": "link_more"}) != []:
                 content_dict.update({"Gonglue_Link": utilities.get_string_strip(bsObj.find_all(name="a", attrs={"class": "link_more"})[0].get("href"))})
 
-            content_dict.update(
-                {"Everage_Price": utilities.get_string_strip(bsObj.find_all(name="span", attrs={"class": "p"})[0].text)})
+            if bsObj.find_all(name="span", attrs={"class": "p"}) != []:
+                Everage_Price = utilities.get_string_strip(bsObj.find_all(name="span", attrs={"class": "p"})[0].text)
+            else:
+                Everage_Price = 0
+            content_dict.update({"Everage_Price": Everage_Price})
             content_dict.update(
                 {"Community_Type": utilities.get_string_strip(bsObj.find_all(name="span", attrs={"class": "other"})[0].text)})
             content_dict.update(
@@ -471,18 +487,21 @@ if __name__ == "__main__":
     """
     main process
     """
+    utilities.SetupLogging()
+    logging.debug("Fetching Start: %s", datetime.now())
+
     fetcher = LianjiaFetcher(critical_max_repeat=3, critical_sleep_time=0)
     processor = LianjiaParser(max_deep=1, max_repeat=3)
     saver = LianjiaSaver(save_type="db", db_info=utilities.CONFIG_DB_INFO)
 
     cur_house_hash_set = saver.data_fetch("house")
     cur_community_hash_set = saver.data_fetch("community")
-    cur_link_repo  = saver.data_fetch("link")
+    cur_link_repo = saver.data_fetch("link")
 
-    House_Info_Type_Name="ershoufang"
+    House_Info_Type_Name = "ershoufang"
 
-    cur_code, content = fetcher.working(BASE_URL+"/"+House_Info_Type_Name, None, 1, 3)
-    #processor.html_parse(content, "main_links")
+    cur_code, content = fetcher.working(BASE_URL + "/" + House_Info_Type_Name, None, 1, 3)
+    # processor.html_parse(content, "main_links")
 
     cur_active_link_repo = saver.data_fetch("active_link")
 
@@ -491,3 +510,10 @@ if __name__ == "__main__":
         cur_code, content = fetcher.working(link, None, 1, 3)
         processor.html_parse(content, "house_links")
         saver.db_update("link", link)
+
+    #try:
+    #
+    #except Exception as excep:
+    #    logging.debug("Exception: %s", excep)
+    #finally:
+    #    logging.debug("Fetcher end: %s", datetime.now())
