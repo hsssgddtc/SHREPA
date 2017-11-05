@@ -7,15 +7,20 @@ util_parse.py by shai
 import logging
 import os
 import sys
+import time
+
+
+ISOTIMEFORMAT='%Y%m%d'
 
 def SetupLogging(output_type):
   """
   Sets up logging for the spider.
   """
+  log_file = os.path.abspath('.')+"/logs/SHREPA_"+str(time.strftime(ISOTIMEFORMAT))+".log"
   if output_type == "console":
     logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
   else:
-    logging.basicConfig(filename = 'logs/SHREPA.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+    logging.basicConfig(filename = log_file, level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def HandleDaemon(handle_type):
   """
