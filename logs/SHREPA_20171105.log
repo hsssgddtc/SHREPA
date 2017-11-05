@@ -1,0 +1,1541 @@
+2017-11-05 17:14:01,585 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:01,594 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:01,696 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:01,831 - DEBUG - "GET /ershoufang HTTP/1.1" 302 0
+2017-11-05 17:14:01,835 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:01,899 - DEBUG - "GET /ershoufang HTTP/1.1" 200 None
+2017-11-05 17:14:01,933 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang
+2017-11-05 17:14:02,003 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/songjianglaocheng/d6, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:02,004 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:02,014 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:02,032 - DEBUG - "GET /ershoufang/songjianglaocheng/d6 HTTP/1.1" 302 0
+2017-11-05 17:14:02,034 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:02,097 - DEBUG - "GET /ershoufang/songjianglaocheng/d6 HTTP/1.1" 200 None
+2017-11-05 17:14:02,111 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/songjianglaocheng/d6
+2017-11-05 17:14:02,252 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4653928.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:02,253 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:02,284 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:02,326 - DEBUG - "GET /ershoufang/sh4653928.html HTTP/1.1" 302 0
+2017-11-05 17:14:02,328 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:02,398 - DEBUG - "GET /ershoufang/sh4653928.html HTTP/1.1" 200 None
+2017-11-05 17:14:02,469 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4653928.html
+2017-11-05 17:14:02,988 - DEBUG - House Insert Done~
+2017-11-05 17:14:02,988 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000013421.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:02,989 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:03,017 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:03,056 - DEBUG - "GET /xiaoqu/5011000013421.html HTTP/1.1" 302 0
+2017-11-05 17:14:03,059 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:03,110 - DEBUG - "GET /xiaoqu/5011000013421.html HTTP/1.1" 200 None
+2017-11-05 17:14:03,134 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000013421.html
+2017-11-05 17:14:03,383 - DEBUG - Community Exists
+2017-11-05 17:14:03,424 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4643062.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:03,425 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:03,456 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:03,498 - DEBUG - "GET /ershoufang/sh4643062.html HTTP/1.1" 302 0
+2017-11-05 17:14:03,500 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:03,926 - DEBUG - "GET /ershoufang/sh4643062.html HTTP/1.1" 200 None
+2017-11-05 17:14:03,948 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4643062.html
+2017-11-05 17:14:04,403 - DEBUG - House Insert Done~
+2017-11-05 17:14:04,403 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000000890.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:04,404 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:04,417 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:04,437 - DEBUG - "GET /xiaoqu/5011000000890.html HTTP/1.1" 302 0
+2017-11-05 17:14:04,439 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:04,473 - DEBUG - "GET /xiaoqu/5011000000890.html HTTP/1.1" 200 None
+2017-11-05 17:14:04,488 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000000890.html
+2017-11-05 17:14:04,758 - DEBUG - Community Exists
+2017-11-05 17:14:04,798 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4641711.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:04,799 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:04,826 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:04,860 - DEBUG - "GET /ershoufang/sh4641711.html HTTP/1.1" 302 0
+2017-11-05 17:14:04,862 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:05,118 - DEBUG - "GET /ershoufang/sh4641711.html HTTP/1.1" 200 None
+2017-11-05 17:14:05,164 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4641711.html
+2017-11-05 17:14:05,686 - DEBUG - House Insert Done~
+2017-11-05 17:14:05,687 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000010756.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:05,687 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:05,711 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:05,746 - DEBUG - "GET /xiaoqu/5011000010756.html HTTP/1.1" 302 0
+2017-11-05 17:14:05,748 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:05,804 - DEBUG - "GET /xiaoqu/5011000010756.html HTTP/1.1" 200 None
+2017-11-05 17:14:05,827 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000010756.html
+2017-11-05 17:14:06,143 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000010756/gonglue, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:06,143 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:06,156 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:06,191 - DEBUG - "GET /xiaoqu/5011000010756/gonglue HTTP/1.1" 200 None
+2017-11-05 17:14:06,192 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000010756/gonglue
+2017-11-05 17:14:07,028 - DEBUG - Community Exists
+2017-11-05 17:14:07,066 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4639868.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:07,067 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:07,103 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:07,479 - DEBUG - "GET /ershoufang/sh4639868.html HTTP/1.1" 200 None
+2017-11-05 17:14:07,514 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4639868.html
+2017-11-05 17:14:07,949 - DEBUG - House Insert Done~
+2017-11-05 17:14:07,949 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000004539.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:07,950 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:07,990 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:08,031 - DEBUG - "GET /xiaoqu/5011000004539.html HTTP/1.1" 302 0
+2017-11-05 17:14:08,033 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:08,133 - DEBUG - "GET /xiaoqu/5011000004539.html HTTP/1.1" 200 None
+2017-11-05 17:14:08,168 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000004539.html
+2017-11-05 17:14:08,414 - DEBUG - Community Exists
+2017-11-05 17:14:08,450 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4633558.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:08,451 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:08,461 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:08,480 - DEBUG - "GET /ershoufang/sh4633558.html HTTP/1.1" 302 0
+2017-11-05 17:14:08,482 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:08,556 - DEBUG - "GET /ershoufang/sh4633558.html HTTP/1.1" 200 None
+2017-11-05 17:14:08,579 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4633558.html
+2017-11-05 17:14:09,075 - DEBUG - House Insert Done~
+2017-11-05 17:14:09,075 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000001511.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:09,076 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:09,112 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:09,155 - DEBUG - "GET /xiaoqu/5011000001511.html HTTP/1.1" 302 0
+2017-11-05 17:14:09,157 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:09,221 - DEBUG - "GET /xiaoqu/5011000001511.html HTTP/1.1" 200 None
+2017-11-05 17:14:09,255 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000001511.html
+2017-11-05 17:14:09,554 - DEBUG - Community Insert Done~
+2017-11-05 17:14:09,595 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4627706.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:09,596 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:09,620 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:09,649 - DEBUG - "GET /ershoufang/sh4627706.html HTTP/1.1" 302 0
+2017-11-05 17:14:09,652 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:10,012 - DEBUG - "GET /ershoufang/sh4627706.html HTTP/1.1" 200 None
+2017-11-05 17:14:10,059 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4627706.html
+2017-11-05 17:14:10,568 - DEBUG - House Insert Done~
+2017-11-05 17:14:10,568 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000000890.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:10,569 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:10,586 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:10,612 - DEBUG - "GET /xiaoqu/5011000000890.html HTTP/1.1" 302 0
+2017-11-05 17:14:10,614 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:10,650 - DEBUG - "GET /xiaoqu/5011000000890.html HTTP/1.1" 200 None
+2017-11-05 17:14:10,661 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000000890.html
+2017-11-05 17:14:10,931 - DEBUG - Community Exists
+2017-11-05 17:14:10,972 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4615014.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:10,973 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:11,009 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:11,045 - DEBUG - "GET /ershoufang/sh4615014.html HTTP/1.1" 302 0
+2017-11-05 17:14:11,047 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:11,338 - DEBUG - "GET /ershoufang/sh4615014.html HTTP/1.1" 200 None
+2017-11-05 17:14:11,398 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4615014.html
+2017-11-05 17:14:11,869 - DEBUG - House Insert Done~
+2017-11-05 17:14:11,869 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000000891.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:11,870 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:11,903 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:11,941 - DEBUG - "GET /xiaoqu/5011000000891.html HTTP/1.1" 302 0
+2017-11-05 17:14:11,943 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:11,994 - DEBUG - "GET /xiaoqu/5011000000891.html HTTP/1.1" 200 None
+2017-11-05 17:14:12,025 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000000891.html
+2017-11-05 17:14:12,370 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000000891/gonglue, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:12,371 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:12,382 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:12,417 - DEBUG - "GET /xiaoqu/5011000000891/gonglue HTTP/1.1" 200 None
+2017-11-05 17:14:12,434 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000000891/gonglue
+2017-11-05 17:14:13,314 - DEBUG - Community Exists
+2017-11-05 17:14:13,353 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4614704.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:13,354 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:13,366 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:13,393 - DEBUG - "GET /ershoufang/sh4614704.html HTTP/1.1" 302 0
+2017-11-05 17:14:13,395 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:13,825 - DEBUG - "GET /ershoufang/sh4614704.html HTTP/1.1" 200 None
+2017-11-05 17:14:13,850 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4614704.html
+2017-11-05 17:14:14,310 - DEBUG - House Insert Done~
+2017-11-05 17:14:14,310 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000000891.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:14,311 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:14,346 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:14,387 - DEBUG - "GET /xiaoqu/5011000000891.html HTTP/1.1" 302 0
+2017-11-05 17:14:14,389 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:14,447 - DEBUG - "GET /xiaoqu/5011000000891.html HTTP/1.1" 200 None
+2017-11-05 17:14:14,481 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000000891.html
+2017-11-05 17:14:14,818 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000000891/gonglue, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:14,819 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:14,834 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:14,861 - DEBUG - "GET /xiaoqu/5011000000891/gonglue HTTP/1.1" 200 None
+2017-11-05 17:14:14,862 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000000891/gonglue
+2017-11-05 17:14:15,786 - DEBUG - Community Exists
+2017-11-05 17:14:15,825 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4606543.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:15,828 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:15,839 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:15,862 - DEBUG - "GET /ershoufang/sh4606543.html HTTP/1.1" 302 0
+2017-11-05 17:14:15,864 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:16,094 - DEBUG - "GET /ershoufang/sh4606543.html HTTP/1.1" 200 None
+2017-11-05 17:14:16,117 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4606543.html
+2017-11-05 17:14:16,568 - DEBUG - House Insert Done~
+2017-11-05 17:14:16,568 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000000762.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:16,569 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:16,602 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:16,646 - DEBUG - "GET /xiaoqu/5011000000762.html HTTP/1.1" 302 0
+2017-11-05 17:14:16,648 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:16,709 - DEBUG - "GET /xiaoqu/5011000000762.html HTTP/1.1" 200 None
+2017-11-05 17:14:16,745 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000000762.html
+2017-11-05 17:14:17,049 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000000762/gonglue, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:17,050 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:17,088 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:17,144 - DEBUG - "GET /xiaoqu/5011000000762/gonglue HTTP/1.1" 200 None
+2017-11-05 17:14:17,146 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000000762/gonglue
+2017-11-05 17:14:18,043 - DEBUG - Community Exists
+2017-11-05 17:14:18,083 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4606446.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:18,084 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:18,105 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:18,123 - DEBUG - "GET /ershoufang/sh4606446.html HTTP/1.1" 302 0
+2017-11-05 17:14:18,125 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:18,534 - DEBUG - "GET /ershoufang/sh4606446.html HTTP/1.1" 200 None
+2017-11-05 17:14:18,579 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4606446.html
+2017-11-05 17:14:19,031 - DEBUG - House Insert Done~
+2017-11-05 17:14:19,031 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000004076.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:19,034 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:19,068 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:19,115 - DEBUG - "GET /xiaoqu/5011000004076.html HTTP/1.1" 302 0
+2017-11-05 17:14:19,117 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:19,176 - DEBUG - "GET /xiaoqu/5011000004076.html HTTP/1.1" 200 None
+2017-11-05 17:14:19,212 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000004076.html
+2017-11-05 17:14:19,477 - DEBUG - Community Exists
+2017-11-05 17:14:19,521 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4586474.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:19,522 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:19,557 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:19,595 - DEBUG - "GET /ershoufang/sh4586474.html HTTP/1.1" 302 0
+2017-11-05 17:14:19,597 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:19,854 - DEBUG - "GET /ershoufang/sh4586474.html HTTP/1.1" 200 None
+2017-11-05 17:14:19,928 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4586474.html
+2017-11-05 17:14:20,398 - DEBUG - House Insert Done~
+2017-11-05 17:14:20,398 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000000762.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:20,399 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:20,433 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:20,472 - DEBUG - "GET /xiaoqu/5011000000762.html HTTP/1.1" 302 0
+2017-11-05 17:14:20,474 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:20,530 - DEBUG - "GET /xiaoqu/5011000000762.html HTTP/1.1" 200 None
+2017-11-05 17:14:20,567 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000000762.html
+2017-11-05 17:14:20,870 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000000762/gonglue, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:20,871 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:20,909 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:20,972 - DEBUG - "GET /xiaoqu/5011000000762/gonglue HTTP/1.1" 200 None
+2017-11-05 17:14:20,974 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000000762/gonglue
+2017-11-05 17:14:21,859 - DEBUG - Community Exists
+2017-11-05 17:14:21,896 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4576408.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:21,897 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:22,004 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:22,047 - DEBUG - "GET /ershoufang/sh4576408.html HTTP/1.1" 302 0
+2017-11-05 17:14:22,049 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:22,292 - DEBUG - "GET /ershoufang/sh4576408.html HTTP/1.1" 200 None
+2017-11-05 17:14:22,352 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4576408.html
+2017-11-05 17:14:22,797 - DEBUG - House Insert Done~
+2017-11-05 17:14:22,797 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000010252.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:22,798 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:22,837 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:22,883 - DEBUG - "GET /xiaoqu/5011000010252.html HTTP/1.1" 302 0
+2017-11-05 17:14:22,885 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:22,952 - DEBUG - "GET /xiaoqu/5011000010252.html HTTP/1.1" 200 None
+2017-11-05 17:14:22,992 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000010252.html
+2017-11-05 17:14:23,260 - DEBUG - Community Exists
+2017-11-05 17:14:23,299 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4564167.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:23,299 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:23,314 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:23,334 - DEBUG - "GET /ershoufang/sh4564167.html HTTP/1.1" 302 0
+2017-11-05 17:14:23,336 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:23,430 - DEBUG - "GET /ershoufang/sh4564167.html HTTP/1.1" 200 None
+2017-11-05 17:14:23,468 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4564167.html
+2017-11-05 17:14:23,936 - DEBUG - House Insert Done~
+2017-11-05 17:14:23,936 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000002254.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:23,937 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:23,966 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:24,005 - DEBUG - "GET /xiaoqu/5011000002254.html HTTP/1.1" 302 0
+2017-11-05 17:14:24,007 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:24,064 - DEBUG - "GET /xiaoqu/5011000002254.html HTTP/1.1" 200 None
+2017-11-05 17:14:24,093 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000002254.html
+2017-11-05 17:14:24,352 - DEBUG - Community Insert Done~
+2017-11-05 17:14:24,389 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4564111.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:24,390 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:24,401 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:24,419 - DEBUG - "GET /ershoufang/sh4564111.html HTTP/1.1" 302 0
+2017-11-05 17:14:24,421 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:24,649 - DEBUG - "GET /ershoufang/sh4564111.html HTTP/1.1" 200 None
+2017-11-05 17:14:24,674 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4564111.html
+2017-11-05 17:14:25,157 - DEBUG - House Insert Done~
+2017-11-05 17:14:25,157 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000002434.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:25,158 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:25,181 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:25,221 - DEBUG - "GET /xiaoqu/5011000002434.html HTTP/1.1" 302 0
+2017-11-05 17:14:25,223 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:25,279 - DEBUG - "GET /xiaoqu/5011000002434.html HTTP/1.1" 200 None
+2017-11-05 17:14:25,306 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000002434.html
+2017-11-05 17:14:25,625 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000002434/gonglue, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:25,627 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:25,651 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:25,719 - DEBUG - "GET /xiaoqu/5011000002434/gonglue HTTP/1.1" 200 None
+2017-11-05 17:14:25,720 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000002434/gonglue
+2017-11-05 17:14:26,607 - DEBUG - Community Insert Done~
+2017-11-05 17:14:26,649 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4563664.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:26,650 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:26,670 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:26,695 - DEBUG - "GET /ershoufang/sh4563664.html HTTP/1.1" 302 0
+2017-11-05 17:14:26,697 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:26,947 - DEBUG - "GET /ershoufang/sh4563664.html HTTP/1.1" 200 None
+2017-11-05 17:14:26,988 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4563664.html
+2017-11-05 17:14:27,446 - DEBUG - House Insert Done~
+2017-11-05 17:14:27,446 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000000890.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:27,447 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:27,481 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:27,527 - DEBUG - "GET /xiaoqu/5011000000890.html HTTP/1.1" 302 0
+2017-11-05 17:14:27,529 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:27,590 - DEBUG - "GET /xiaoqu/5011000000890.html HTTP/1.1" 200 None
+2017-11-05 17:14:27,627 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000000890.html
+2017-11-05 17:14:27,923 - DEBUG - Community Exists
+2017-11-05 17:14:27,964 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4554311.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:27,965 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:27,983 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:28,001 - DEBUG - "GET /ershoufang/sh4554311.html HTTP/1.1" 302 0
+2017-11-05 17:14:28,003 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:28,236 - DEBUG - "GET /ershoufang/sh4554311.html HTTP/1.1" 200 None
+2017-11-05 17:14:28,303 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4554311.html
+2017-11-05 17:14:28,788 - DEBUG - House Insert Done~
+2017-11-05 17:14:28,788 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000000315.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:28,789 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:28,825 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:28,869 - DEBUG - "GET /xiaoqu/5011000000315.html HTTP/1.1" 302 0
+2017-11-05 17:14:28,872 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:28,922 - DEBUG - "GET /xiaoqu/5011000000315.html HTTP/1.1" 200 None
+2017-11-05 17:14:28,955 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000000315.html
+2017-11-05 17:14:29,240 - DEBUG - Community Exists
+2017-11-05 17:14:29,283 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4531118.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:29,284 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:29,314 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:29,361 - DEBUG - "GET /ershoufang/sh4531118.html HTTP/1.1" 302 0
+2017-11-05 17:14:29,363 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:29,608 - DEBUG - "GET /ershoufang/sh4531118.html HTTP/1.1" 200 None
+2017-11-05 17:14:29,677 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4531118.html
+2017-11-05 17:14:30,125 - DEBUG - House Insert Done~
+2017-11-05 17:14:30,125 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000019361.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:30,126 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:30,154 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:30,194 - DEBUG - "GET /xiaoqu/5011000019361.html HTTP/1.1" 302 0
+2017-11-05 17:14:30,196 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:30,259 - DEBUG - "GET /xiaoqu/5011000019361.html HTTP/1.1" 200 None
+2017-11-05 17:14:30,292 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000019361.html
+2017-11-05 17:14:30,616 - DEBUG - Community Exists
+2017-11-05 17:14:30,659 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4524632.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:30,660 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:30,673 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:30,698 - DEBUG - "GET /ershoufang/sh4524632.html HTTP/1.1" 302 0
+2017-11-05 17:14:30,699 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:30,925 - DEBUG - "GET /ershoufang/sh4524632.html HTTP/1.1" 200 None
+2017-11-05 17:14:30,974 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4524632.html
+2017-11-05 17:14:31,437 - DEBUG - House Insert Done~
+2017-11-05 17:14:31,438 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000016042.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:31,438 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:31,463 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:31,509 - DEBUG - "GET /xiaoqu/5011000016042.html HTTP/1.1" 302 0
+2017-11-05 17:14:31,511 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:31,578 - DEBUG - "GET /xiaoqu/5011000016042.html HTTP/1.1" 200 None
+2017-11-05 17:14:31,615 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000016042.html
+2017-11-05 17:14:31,941 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000016042/gonglue, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:31,942 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:31,978 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:32,026 - DEBUG - "GET /xiaoqu/5011000016042/gonglue HTTP/1.1" 200 None
+2017-11-05 17:14:32,029 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000016042/gonglue
+2017-11-05 17:14:32,904 - DEBUG - Community Exists
+2017-11-05 17:14:32,945 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4522980.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:32,946 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:32,957 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:32,982 - DEBUG - "GET /ershoufang/sh4522980.html HTTP/1.1" 302 0
+2017-11-05 17:14:32,984 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:33,232 - DEBUG - "GET /ershoufang/sh4522980.html HTTP/1.1" 200 None
+2017-11-05 17:14:33,263 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4522980.html
+2017-11-05 17:14:33,709 - DEBUG - House Insert Done~
+2017-11-05 17:14:33,709 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000008439.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:33,710 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:33,742 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:33,778 - DEBUG - "GET /xiaoqu/5011000008439.html HTTP/1.1" 302 0
+2017-11-05 17:14:33,780 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:33,842 - DEBUG - "GET /xiaoqu/5011000008439.html HTTP/1.1" 200 None
+2017-11-05 17:14:33,880 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000008439.html
+2017-11-05 17:14:34,222 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000008439/gonglue, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:34,223 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:34,234 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:34,262 - DEBUG - "GET /xiaoqu/5011000008439/gonglue HTTP/1.1" 200 None
+2017-11-05 17:14:34,263 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000008439/gonglue
+2017-11-05 17:14:35,254 - DEBUG - Community Exists
+2017-11-05 17:14:35,295 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4494115.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:35,296 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:35,326 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:35,368 - DEBUG - "GET /ershoufang/sh4494115.html HTTP/1.1" 302 0
+2017-11-05 17:14:35,370 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:35,653 - DEBUG - "GET /ershoufang/sh4494115.html HTTP/1.1" 200 None
+2017-11-05 17:14:35,716 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4494115.html
+2017-11-05 17:14:36,179 - DEBUG - House Insert Done~
+2017-11-05 17:14:36,179 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000000891.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:36,180 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:36,191 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:36,214 - DEBUG - "GET /xiaoqu/5011000000891.html HTTP/1.1" 302 0
+2017-11-05 17:14:36,216 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:36,255 - DEBUG - "GET /xiaoqu/5011000000891.html HTTP/1.1" 200 None
+2017-11-05 17:14:36,266 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000000891.html
+2017-11-05 17:14:36,600 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000000891/gonglue, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:36,601 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:36,610 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:36,640 - DEBUG - "GET /xiaoqu/5011000000891/gonglue HTTP/1.1" 200 None
+2017-11-05 17:14:36,641 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000000891/gonglue
+2017-11-05 17:14:37,566 - DEBUG - Community Exists
+2017-11-05 17:14:37,603 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4494061.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:37,603 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:37,639 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:37,686 - DEBUG - "GET /ershoufang/sh4494061.html HTTP/1.1" 302 0
+2017-11-05 17:14:37,689 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:38,057 - DEBUG - "GET /ershoufang/sh4494061.html HTTP/1.1" 200 None
+2017-11-05 17:14:38,126 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4494061.html
+2017-11-05 17:14:38,563 - DEBUG - House Insert Done~
+2017-11-05 17:14:38,563 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000011150.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:38,564 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:38,597 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:38,655 - DEBUG - "GET /xiaoqu/5011000011150.html HTTP/1.1" 200 None
+2017-11-05 17:14:38,689 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000011150.html
+2017-11-05 17:14:38,955 - DEBUG - Community Exists
+2017-11-05 17:14:38,993 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4485417.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:38,994 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:39,008 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:39,028 - DEBUG - "GET /ershoufang/sh4485417.html HTTP/1.1" 302 0
+2017-11-05 17:14:39,030 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:39,423 - DEBUG - "GET /ershoufang/sh4485417.html HTTP/1.1" 200 None
+2017-11-05 17:14:39,453 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4485417.html
+2017-11-05 17:14:39,905 - DEBUG - House Insert Done~
+2017-11-05 17:14:39,905 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000001507.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:39,907 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:39,936 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:39,975 - DEBUG - "GET /xiaoqu/5011000001507.html HTTP/1.1" 302 0
+2017-11-05 17:14:39,977 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:40,031 - DEBUG - "GET /xiaoqu/5011000001507.html HTTP/1.1" 200 None
+2017-11-05 17:14:40,061 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000001507.html
+2017-11-05 17:14:40,306 - DEBUG - Community Exists
+2017-11-05 17:14:40,344 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4482015.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:40,345 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:40,375 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:40,411 - DEBUG - "GET /ershoufang/sh4482015.html HTTP/1.1" 302 0
+2017-11-05 17:14:40,414 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:40,736 - DEBUG - "GET /ershoufang/sh4482015.html HTTP/1.1" 200 None
+2017-11-05 17:14:40,797 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4482015.html
+2017-11-05 17:14:41,248 - DEBUG - House Insert Done~
+2017-11-05 17:14:41,248 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5015093905765095.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:41,249 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:41,261 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:41,279 - DEBUG - "GET /xiaoqu/5015093905765095.html HTTP/1.1" 302 0
+2017-11-05 17:14:41,281 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:41,317 - DEBUG - "GET /xiaoqu/5015093905765095.html HTTP/1.1" 200 None
+2017-11-05 17:14:41,327 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5015093905765095.html
+2017-11-05 17:14:41,597 - DEBUG - Community Insert Done~
+2017-11-05 17:14:41,637 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4452045.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:41,638 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:41,653 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:41,671 - DEBUG - "GET /ershoufang/sh4452045.html HTTP/1.1" 302 0
+2017-11-05 17:14:41,673 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:42,055 - DEBUG - "GET /ershoufang/sh4452045.html HTTP/1.1" 200 None
+2017-11-05 17:14:42,094 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4452045.html
+2017-11-05 17:14:42,589 - DEBUG - House Insert Done~
+2017-11-05 17:14:42,589 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000014061.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:42,590 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:42,621 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:42,658 - DEBUG - "GET /xiaoqu/5011000014061.html HTTP/1.1" 302 0
+2017-11-05 17:14:42,660 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:42,717 - DEBUG - "GET /xiaoqu/5011000014061.html HTTP/1.1" 200 None
+2017-11-05 17:14:42,746 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000014061.html
+2017-11-05 17:14:43,007 - DEBUG - Community Exists
+2017-11-05 17:14:43,048 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4408603.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:43,049 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:43,058 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:43,390 - DEBUG - "GET /ershoufang/sh4408603.html HTTP/1.1" 200 None
+2017-11-05 17:14:43,409 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4408603.html
+2017-11-05 17:14:43,881 - DEBUG - House Insert Done~
+2017-11-05 17:14:43,881 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000013854.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:43,882 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:43,916 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:43,964 - DEBUG - "GET /xiaoqu/5011000013854.html HTTP/1.1" 302 0
+2017-11-05 17:14:43,968 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:44,025 - DEBUG - "GET /xiaoqu/5011000013854.html HTTP/1.1" 200 None
+2017-11-05 17:14:44,057 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000013854.html
+2017-11-05 17:14:44,335 - DEBUG - Community Exists
+2017-11-05 17:14:44,376 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4388807.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:44,377 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:44,388 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:44,410 - DEBUG - "GET /ershoufang/sh4388807.html HTTP/1.1" 302 0
+2017-11-05 17:14:44,412 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:44,964 - DEBUG - "GET /ershoufang/sh4388807.html HTTP/1.1" 200 None
+2017-11-05 17:14:44,994 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4388807.html
+2017-11-05 17:14:45,447 - DEBUG - House Insert Done~
+2017-11-05 17:14:45,447 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000019260.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:45,448 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:45,460 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:45,483 - DEBUG - "GET /xiaoqu/5011000019260.html HTTP/1.1" 302 0
+2017-11-05 17:14:45,485 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:45,521 - DEBUG - "GET /xiaoqu/5011000019260.html HTTP/1.1" 200 None
+2017-11-05 17:14:45,530 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000019260.html
+2017-11-05 17:14:45,800 - DEBUG - Community Exists
+2017-11-05 17:14:45,843 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4347972.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:45,844 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:45,854 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:45,878 - DEBUG - "GET /ershoufang/sh4347972.html HTTP/1.1" 302 0
+2017-11-05 17:14:45,880 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:46,102 - DEBUG - "GET /ershoufang/sh4347972.html HTTP/1.1" 200 None
+2017-11-05 17:14:46,129 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4347972.html
+2017-11-05 17:14:46,590 - DEBUG - House Insert Done~
+2017-11-05 17:14:46,590 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000000870.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:46,591 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:46,621 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:46,674 - DEBUG - "GET /xiaoqu/5011000000870.html HTTP/1.1" 302 0
+2017-11-05 17:14:46,676 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:46,734 - DEBUG - "GET /xiaoqu/5011000000870.html HTTP/1.1" 200 None
+2017-11-05 17:14:46,768 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000000870.html
+2017-11-05 17:14:47,069 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000000870/gonglue, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:47,070 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:47,089 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:47,136 - DEBUG - "GET /xiaoqu/5011000000870/gonglue HTTP/1.1" 200 None
+2017-11-05 17:14:47,137 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000000870/gonglue
+2017-11-05 17:14:47,984 - DEBUG - Community Exists
+2017-11-05 17:14:48,023 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4343072.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:48,024 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:48,058 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:48,100 - DEBUG - "GET /ershoufang/sh4343072.html HTTP/1.1" 302 0
+2017-11-05 17:14:48,102 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:48,353 - DEBUG - "GET /ershoufang/sh4343072.html HTTP/1.1" 200 None
+2017-11-05 17:14:48,423 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4343072.html
+2017-11-05 17:14:48,898 - DEBUG - House Insert Done~
+2017-11-05 17:14:48,898 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000010756.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:48,899 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:48,935 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:48,978 - DEBUG - "GET /xiaoqu/5011000010756.html HTTP/1.1" 302 0
+2017-11-05 17:14:48,980 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:49,035 - DEBUG - "GET /xiaoqu/5011000010756.html HTTP/1.1" 200 None
+2017-11-05 17:14:49,067 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000010756.html
+2017-11-05 17:14:49,379 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000010756/gonglue, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:49,380 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:49,406 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:49,459 - DEBUG - "GET /xiaoqu/5011000010756/gonglue HTTP/1.1" 200 None
+2017-11-05 17:14:49,484 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000010756/gonglue
+2017-11-05 17:14:50,317 - DEBUG - Community Exists
+2017-11-05 17:14:50,357 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4325528.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:50,358 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:50,388 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:50,647 - DEBUG - "GET /ershoufang/sh4325528.html HTTP/1.1" 200 None
+2017-11-05 17:14:50,715 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4325528.html
+2017-11-05 17:14:51,163 - DEBUG - House Insert Done~
+2017-11-05 17:14:51,163 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000004076.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:51,164 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:51,181 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:51,200 - DEBUG - "GET /xiaoqu/5011000004076.html HTTP/1.1" 302 0
+2017-11-05 17:14:51,202 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:51,250 - DEBUG - "GET /xiaoqu/5011000004076.html HTTP/1.1" 200 None
+2017-11-05 17:14:51,271 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000004076.html
+2017-11-05 17:14:51,546 - DEBUG - Community Exists
+2017-11-05 17:14:51,588 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4323510.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:51,589 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:51,632 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:51,690 - DEBUG - "GET /ershoufang/sh4323510.html HTTP/1.1" 302 0
+2017-11-05 17:14:51,692 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:51,953 - DEBUG - "GET /ershoufang/sh4323510.html HTTP/1.1" 200 None
+2017-11-05 17:14:52,034 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4323510.html
+2017-11-05 17:14:52,499 - DEBUG - House Insert Done~
+2017-11-05 17:14:52,499 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000014061.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:52,500 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:52,528 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:52,563 - DEBUG - "GET /xiaoqu/5011000014061.html HTTP/1.1" 302 0
+2017-11-05 17:14:52,565 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:52,610 - DEBUG - "GET /xiaoqu/5011000014061.html HTTP/1.1" 200 None
+2017-11-05 17:14:52,651 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000014061.html
+2017-11-05 17:14:52,886 - DEBUG - Community Exists
+2017-11-05 17:14:52,917 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/songjianglaocheng/d9, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:52,918 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:52,955 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:52,994 - DEBUG - "GET /ershoufang/songjianglaocheng/d9 HTTP/1.1" 302 0
+2017-11-05 17:14:52,996 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:53,212 - DEBUG - "GET /ershoufang/songjianglaocheng/d9 HTTP/1.1" 200 None
+2017-11-05 17:14:53,261 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/songjianglaocheng/d9
+2017-11-05 17:14:53,398 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4778334.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:53,398 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:53,435 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:53,476 - DEBUG - "GET /ershoufang/sh4778334.html HTTP/1.1" 302 0
+2017-11-05 17:14:53,478 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:53,745 - DEBUG - "GET /ershoufang/sh4778334.html HTTP/1.1" 200 None
+2017-11-05 17:14:53,816 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4778334.html
+2017-11-05 17:14:54,265 - DEBUG - House Insert Done~
+2017-11-05 17:14:54,266 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000009027.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:54,266 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:54,298 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:54,339 - DEBUG - "GET /xiaoqu/5011000009027.html HTTP/1.1" 302 0
+2017-11-05 17:14:54,341 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:54,401 - DEBUG - "GET /xiaoqu/5011000009027.html HTTP/1.1" 200 None
+2017-11-05 17:14:54,436 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000009027.html
+2017-11-05 17:14:54,675 - DEBUG - Community Exists
+2017-11-05 17:14:54,711 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4764272.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:54,712 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:54,750 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:54,791 - DEBUG - "GET /ershoufang/sh4764272.html HTTP/1.1" 302 0
+2017-11-05 17:14:54,793 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:55,074 - DEBUG - "GET /ershoufang/sh4764272.html HTTP/1.1" 200 None
+2017-11-05 17:14:55,120 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4764272.html
+2017-11-05 17:14:55,542 - DEBUG - House Insert Done~
+2017-11-05 17:14:55,542 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000000887.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:55,543 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:55,553 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:55,571 - DEBUG - "GET /xiaoqu/5011000000887.html HTTP/1.1" 302 0
+2017-11-05 17:14:55,573 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:55,619 - DEBUG - "GET /xiaoqu/5011000000887.html HTTP/1.1" 200 None
+2017-11-05 17:14:55,629 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000000887.html
+2017-11-05 17:14:55,931 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000000887/gonglue, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:55,933 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:55,941 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:55,972 - DEBUG - "GET /xiaoqu/5011000000887/gonglue HTTP/1.1" 200 None
+2017-11-05 17:14:55,973 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000000887/gonglue
+2017-11-05 17:14:56,974 - DEBUG - Community Exists
+2017-11-05 17:14:57,012 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4758166.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:57,013 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:57,021 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:57,036 - DEBUG - "GET /ershoufang/sh4758166.html HTTP/1.1" 302 0
+2017-11-05 17:14:57,038 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:57,395 - DEBUG - "GET /ershoufang/sh4758166.html HTTP/1.1" 200 None
+2017-11-05 17:14:57,412 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4758166.html
+2017-11-05 17:14:57,900 - DEBUG - House Insert Done~
+2017-11-05 17:14:57,900 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000013854.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:57,901 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:57,913 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:57,933 - DEBUG - "GET /xiaoqu/5011000013854.html HTTP/1.1" 302 0
+2017-11-05 17:14:57,935 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:57,972 - DEBUG - "GET /xiaoqu/5011000013854.html HTTP/1.1" 200 None
+2017-11-05 17:14:57,983 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000013854.html
+2017-11-05 17:14:58,222 - DEBUG - Community Exists
+2017-11-05 17:14:58,260 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4750539.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:58,261 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:58,270 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:58,288 - DEBUG - "GET /ershoufang/sh4750539.html HTTP/1.1" 302 0
+2017-11-05 17:14:58,290 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:58,657 - DEBUG - "GET /ershoufang/sh4750539.html HTTP/1.1" 200 None
+2017-11-05 17:14:58,676 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4750539.html
+2017-11-05 17:14:59,114 - DEBUG - House Insert Done~
+2017-11-05 17:14:59,114 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000009427.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:59,115 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:59,125 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:59,140 - DEBUG - "GET /xiaoqu/5011000009427.html HTTP/1.1" 302 0
+2017-11-05 17:14:59,142 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:59,173 - DEBUG - "GET /xiaoqu/5011000009427.html HTTP/1.1" 200 None
+2017-11-05 17:14:59,183 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000009427.html
+2017-11-05 17:14:59,423 - DEBUG - Community Exists
+2017-11-05 17:14:59,462 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4748567.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:14:59,463 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:14:59,491 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:59,508 - DEBUG - "GET /ershoufang/sh4748567.html HTTP/1.1" 302 0
+2017-11-05 17:14:59,510 - DEBUG - Setting read timeout to 10
+2017-11-05 17:14:59,941 - DEBUG - "GET /ershoufang/sh4748567.html HTTP/1.1" 200 None
+2017-11-05 17:14:59,961 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4748567.html
+2017-11-05 17:15:00,359 - DEBUG - House Insert Done~
+2017-11-05 17:15:00,359 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000003996.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:00,360 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:00,371 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:00,387 - DEBUG - "GET /xiaoqu/5011000003996.html HTTP/1.1" 302 0
+2017-11-05 17:15:00,389 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:00,430 - DEBUG - "GET /xiaoqu/5011000003996.html HTTP/1.1" 200 None
+2017-11-05 17:15:00,442 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000003996.html
+2017-11-05 17:15:00,713 - DEBUG - Community Exists
+2017-11-05 17:15:00,750 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4736198.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:00,751 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:00,759 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:00,776 - DEBUG - "GET /ershoufang/sh4736198.html HTTP/1.1" 302 0
+2017-11-05 17:15:00,778 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:01,019 - DEBUG - "GET /ershoufang/sh4736198.html HTTP/1.1" 200 None
+2017-11-05 17:15:01,036 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4736198.html
+2017-11-05 17:15:01,504 - DEBUG - House Insert Done~
+2017-11-05 17:15:01,504 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000013242.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:01,505 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:01,515 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:01,534 - DEBUG - "GET /xiaoqu/5011000013242.html HTTP/1.1" 302 0
+2017-11-05 17:15:01,536 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:01,577 - DEBUG - "GET /xiaoqu/5011000013242.html HTTP/1.1" 200 None
+2017-11-05 17:15:01,591 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000013242.html
+2017-11-05 17:15:01,868 - DEBUG - Community Exists
+2017-11-05 17:15:01,909 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4725124.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:01,910 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:01,925 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:01,948 - DEBUG - "GET /ershoufang/sh4725124.html HTTP/1.1" 302 0
+2017-11-05 17:15:01,950 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:02,219 - DEBUG - "GET /ershoufang/sh4725124.html HTTP/1.1" 200 None
+2017-11-05 17:15:02,243 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4725124.html
+2017-11-05 17:15:02,791 - DEBUG - House Insert Done~
+2017-11-05 17:15:02,792 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000011150.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:02,792 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:02,833 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:02,896 - DEBUG - "GET /xiaoqu/5011000011150.html HTTP/1.1" 302 0
+2017-11-05 17:15:02,898 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:02,965 - DEBUG - "GET /xiaoqu/5011000011150.html HTTP/1.1" 200 None
+2017-11-05 17:15:03,008 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000011150.html
+2017-11-05 17:15:03,281 - DEBUG - Community Exists
+2017-11-05 17:15:03,321 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4721899.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:03,322 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:03,366 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:03,720 - DEBUG - "GET /ershoufang/sh4721899.html HTTP/1.1" 200 None
+2017-11-05 17:15:03,849 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4721899.html
+2017-11-05 17:15:04,339 - DEBUG - House Insert Done~
+2017-11-05 17:15:04,339 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000014061.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:04,340 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:04,388 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:04,447 - DEBUG - "GET /xiaoqu/5011000014061.html HTTP/1.1" 302 0
+2017-11-05 17:15:04,449 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:04,517 - DEBUG - "GET /xiaoqu/5011000014061.html HTTP/1.1" 200 None
+2017-11-05 17:15:04,560 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000014061.html
+2017-11-05 17:15:04,817 - DEBUG - Community Exists
+2017-11-05 17:15:04,857 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4708107.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:04,858 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:04,901 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:04,949 - DEBUG - "GET /ershoufang/sh4708107.html HTTP/1.1" 302 0
+2017-11-05 17:15:04,951 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:05,215 - DEBUG - "GET /ershoufang/sh4708107.html HTTP/1.1" 200 None
+2017-11-05 17:15:05,321 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4708107.html
+2017-11-05 17:15:05,827 - DEBUG - House Insert Done~
+2017-11-05 17:15:05,827 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000009427.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:05,828 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:05,839 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:05,877 - DEBUG - "GET /xiaoqu/5011000009427.html HTTP/1.1" 302 0
+2017-11-05 17:15:05,879 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:05,919 - DEBUG - "GET /xiaoqu/5011000009427.html HTTP/1.1" 200 None
+2017-11-05 17:15:05,930 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000009427.html
+2017-11-05 17:15:06,181 - DEBUG - Community Exists
+2017-11-05 17:15:06,220 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4707252.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:06,221 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:06,268 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:06,328 - DEBUG - "GET /ershoufang/sh4707252.html HTTP/1.1" 302 0
+2017-11-05 17:15:06,331 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:06,602 - DEBUG - "GET /ershoufang/sh4707252.html HTTP/1.1" 200 None
+2017-11-05 17:15:06,655 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4707252.html
+2017-11-05 17:15:07,154 - DEBUG - House Insert Done~
+2017-11-05 17:15:07,154 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000010756.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:07,155 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:07,166 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:07,217 - DEBUG - "GET /xiaoqu/5011000010756.html HTTP/1.1" 200 None
+2017-11-05 17:15:07,237 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000010756.html
+2017-11-05 17:15:07,546 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000010756/gonglue, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:07,547 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:07,568 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:07,598 - DEBUG - "GET /xiaoqu/5011000010756/gonglue HTTP/1.1" 200 None
+2017-11-05 17:15:07,599 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000010756/gonglue
+2017-11-05 17:15:08,430 - DEBUG - Community Exists
+2017-11-05 17:15:08,471 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4701814.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:08,473 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:08,516 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:08,563 - DEBUG - "GET /ershoufang/sh4701814.html HTTP/1.1" 302 0
+2017-11-05 17:15:08,565 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:08,970 - DEBUG - "GET /ershoufang/sh4701814.html HTTP/1.1" 200 None
+2017-11-05 17:15:09,081 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4701814.html
+2017-11-05 17:15:09,549 - DEBUG - House Insert Done~
+2017-11-05 17:15:09,549 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000014061.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:09,550 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:09,602 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:09,663 - DEBUG - "GET /xiaoqu/5011000014061.html HTTP/1.1" 302 0
+2017-11-05 17:15:09,665 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:09,748 - DEBUG - "GET /xiaoqu/5011000014061.html HTTP/1.1" 200 None
+2017-11-05 17:15:09,804 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000014061.html
+2017-11-05 17:15:10,067 - DEBUG - Community Exists
+2017-11-05 17:15:10,110 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4697047.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:10,111 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:10,154 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:10,206 - DEBUG - "GET /ershoufang/sh4697047.html HTTP/1.1" 302 0
+2017-11-05 17:15:10,208 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:10,720 - DEBUG - "GET /ershoufang/sh4697047.html HTTP/1.1" 200 None
+2017-11-05 17:15:10,769 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4697047.html
+2017-11-05 17:15:11,243 - DEBUG - House Insert Done~
+2017-11-05 17:15:11,243 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000001511.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:11,244 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:11,281 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:11,339 - DEBUG - "GET /xiaoqu/5011000001511.html HTTP/1.1" 302 0
+2017-11-05 17:15:11,341 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:11,406 - DEBUG - "GET /xiaoqu/5011000001511.html HTTP/1.1" 200 None
+2017-11-05 17:15:11,496 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000001511.html
+2017-11-05 17:15:11,756 - DEBUG - Community Exists
+2017-11-05 17:15:11,795 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4694774.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:11,796 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:11,902 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:11,968 - DEBUG - "GET /ershoufang/sh4694774.html HTTP/1.1" 302 0
+2017-11-05 17:15:11,970 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:12,286 - DEBUG - "GET /ershoufang/sh4694774.html HTTP/1.1" 200 None
+2017-11-05 17:15:12,331 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4694774.html
+2017-11-05 17:15:12,845 - DEBUG - House Insert Done~
+2017-11-05 17:15:12,845 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000013242.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:12,846 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:12,893 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:12,952 - DEBUG - "GET /xiaoqu/5011000013242.html HTTP/1.1" 302 0
+2017-11-05 17:15:12,954 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:13,020 - DEBUG - "GET /xiaoqu/5011000013242.html HTTP/1.1" 200 None
+2017-11-05 17:15:13,062 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000013242.html
+2017-11-05 17:15:13,339 - DEBUG - Community Exists
+2017-11-05 17:15:13,379 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4687356.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:13,380 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:13,393 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:13,422 - DEBUG - "GET /ershoufang/sh4687356.html HTTP/1.1" 302 0
+2017-11-05 17:15:13,424 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:13,709 - DEBUG - "GET /ershoufang/sh4687356.html HTTP/1.1" 200 None
+2017-11-05 17:15:13,734 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4687356.html
+2017-11-05 17:15:14,182 - DEBUG - House Insert Done~
+2017-11-05 17:15:14,183 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000010756.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:14,183 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:14,199 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:14,220 - DEBUG - "GET /xiaoqu/5011000010756.html HTTP/1.1" 302 0
+2017-11-05 17:15:14,222 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:14,262 - DEBUG - "GET /xiaoqu/5011000010756.html HTTP/1.1" 200 None
+2017-11-05 17:15:14,279 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000010756.html
+2017-11-05 17:15:14,592 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000010756/gonglue, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:14,593 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:14,637 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:14,702 - DEBUG - "GET /xiaoqu/5011000010756/gonglue HTTP/1.1" 200 None
+2017-11-05 17:15:14,742 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000010756/gonglue
+2017-11-05 17:15:15,566 - DEBUG - Community Exists
+2017-11-05 17:15:15,604 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4681834.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:15,605 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:15,663 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:15,729 - DEBUG - "GET /ershoufang/sh4681834.html HTTP/1.1" 302 0
+2017-11-05 17:15:15,731 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:16,003 - DEBUG - "GET /ershoufang/sh4681834.html HTTP/1.1" 200 None
+2017-11-05 17:15:16,068 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4681834.html
+2017-11-05 17:15:16,527 - DEBUG - House Insert Done~
+2017-11-05 17:15:16,528 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000014061.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:16,528 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:16,595 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:16,665 - DEBUG - "GET /xiaoqu/5011000014061.html HTTP/1.1" 302 0
+2017-11-05 17:15:16,667 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:16,744 - DEBUG - "GET /xiaoqu/5011000014061.html HTTP/1.1" 200 None
+2017-11-05 17:15:16,800 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000014061.html
+2017-11-05 17:15:17,046 - DEBUG - Community Exists
+2017-11-05 17:15:17,085 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4680970.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:17,085 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:17,133 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:17,183 - DEBUG - "GET /ershoufang/sh4680970.html HTTP/1.1" 302 0
+2017-11-05 17:15:17,185 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:17,438 - DEBUG - "GET /ershoufang/sh4680970.html HTTP/1.1" 200 None
+2017-11-05 17:15:17,528 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4680970.html
+2017-11-05 17:15:18,077 - DEBUG - House Insert Done~
+2017-11-05 17:15:18,077 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000010756.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:18,078 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:18,135 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:18,210 - DEBUG - "GET /xiaoqu/5011000010756.html HTTP/1.1" 302 0
+2017-11-05 17:15:18,212 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:18,291 - DEBUG - "GET /xiaoqu/5011000010756.html HTTP/1.1" 200 None
+2017-11-05 17:15:18,356 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000010756.html
+2017-11-05 17:15:18,667 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000010756/gonglue, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:18,668 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:18,682 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:18,711 - DEBUG - "GET /xiaoqu/5011000010756/gonglue HTTP/1.1" 200 None
+2017-11-05 17:15:18,712 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000010756/gonglue
+2017-11-05 17:15:19,539 - DEBUG - Community Exists
+2017-11-05 17:15:19,578 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4680818.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:19,579 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:19,596 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:19,626 - DEBUG - "GET /ershoufang/sh4680818.html HTTP/1.1" 302 0
+2017-11-05 17:15:19,628 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:19,855 - DEBUG - "GET /ershoufang/sh4680818.html HTTP/1.1" 200 None
+2017-11-05 17:15:19,888 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4680818.html
+2017-11-05 17:15:20,331 - DEBUG - House Insert Done~
+2017-11-05 17:15:20,331 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000000315.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:20,332 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:20,391 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:20,465 - DEBUG - "GET /xiaoqu/5011000000315.html HTTP/1.1" 302 0
+2017-11-05 17:15:20,467 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:20,556 - DEBUG - "GET /xiaoqu/5011000000315.html HTTP/1.1" 200 None
+2017-11-05 17:15:20,614 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000000315.html
+2017-11-05 17:15:20,871 - DEBUG - Community Exists
+2017-11-05 17:15:20,909 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4677386.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:20,910 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:20,930 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:20,954 - DEBUG - "GET /ershoufang/sh4677386.html HTTP/1.1" 302 0
+2017-11-05 17:15:20,955 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:21,075 - DEBUG - "GET /ershoufang/sh4677386.html HTTP/1.1" 200 None
+2017-11-05 17:15:21,105 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4677386.html
+2017-11-05 17:15:21,575 - DEBUG - House Insert Done~
+2017-11-05 17:15:21,576 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000013242.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:21,576 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:21,588 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:21,606 - DEBUG - "GET /xiaoqu/5011000013242.html HTTP/1.1" 302 0
+2017-11-05 17:15:21,608 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:21,660 - DEBUG - "GET /xiaoqu/5011000013242.html HTTP/1.1" 200 None
+2017-11-05 17:15:21,675 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000013242.html
+2017-11-05 17:15:21,955 - DEBUG - Community Exists
+2017-11-05 17:15:21,995 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4677087.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:21,996 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:22,007 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:22,029 - DEBUG - "GET /ershoufang/sh4677087.html HTTP/1.1" 302 0
+2017-11-05 17:15:22,031 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:22,265 - DEBUG - "GET /ershoufang/sh4677087.html HTTP/1.1" 200 None
+2017-11-05 17:15:22,310 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4677087.html
+2017-11-05 17:15:22,776 - DEBUG - House Insert Done~
+2017-11-05 17:15:22,776 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000009027.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:22,777 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:22,832 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:22,902 - DEBUG - "GET /xiaoqu/5011000009027.html HTTP/1.1" 302 0
+2017-11-05 17:15:22,904 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:22,986 - DEBUG - "GET /xiaoqu/5011000009027.html HTTP/1.1" 200 None
+2017-11-05 17:15:23,109 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000009027.html
+2017-11-05 17:15:23,360 - DEBUG - Community Exists
+2017-11-05 17:15:23,399 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4670114.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:23,400 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:23,448 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:23,517 - DEBUG - "GET /ershoufang/sh4670114.html HTTP/1.1" 302 0
+2017-11-05 17:15:23,519 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:23,836 - DEBUG - "GET /ershoufang/sh4670114.html HTTP/1.1" 200 None
+2017-11-05 17:15:23,949 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4670114.html
+2017-11-05 17:15:24,452 - DEBUG - House Insert Done~
+2017-11-05 17:15:24,452 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000013242.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:24,453 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:24,517 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:24,607 - DEBUG - "GET /xiaoqu/5011000013242.html HTTP/1.1" 200 None
+2017-11-05 17:15:24,672 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000013242.html
+2017-11-05 17:15:24,941 - DEBUG - Community Exists
+2017-11-05 17:15:24,980 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4665217.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:24,981 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:25,041 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:25,329 - DEBUG - "GET /ershoufang/sh4665217.html HTTP/1.1" 200 None
+2017-11-05 17:15:25,447 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4665217.html
+2017-11-05 17:15:25,916 - DEBUG - House Insert Done~
+2017-11-05 17:15:25,917 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000000887.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:25,918 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:25,980 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:26,063 - DEBUG - "GET /xiaoqu/5011000000887.html HTTP/1.1" 200 None
+2017-11-05 17:15:26,127 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000000887.html
+2017-11-05 17:15:26,457 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000000887/gonglue, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:26,458 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:26,522 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:26,597 - DEBUG - "GET /xiaoqu/5011000000887/gonglue HTTP/1.1" 200 None
+2017-11-05 17:15:26,656 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000000887/gonglue
+2017-11-05 17:15:27,719 - DEBUG - Community Exists
+2017-11-05 17:15:27,759 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4641335.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:27,760 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:27,772 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:28,012 - DEBUG - "GET /ershoufang/sh4641335.html HTTP/1.1" 200 None
+2017-11-05 17:15:28,060 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4641335.html
+2017-11-05 17:15:28,621 - DEBUG - House Insert Done~
+2017-11-05 17:15:28,621 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000000891.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:28,622 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:28,683 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:28,747 - DEBUG - "GET /xiaoqu/5011000000891.html HTTP/1.1" 302 0
+2017-11-05 17:15:28,751 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:28,831 - DEBUG - "GET /xiaoqu/5011000000891.html HTTP/1.1" 200 None
+2017-11-05 17:15:28,892 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000000891.html
+2017-11-05 17:15:29,227 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000000891/gonglue, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:29,228 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:29,292 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:29,364 - DEBUG - "GET /xiaoqu/5011000000891/gonglue HTTP/1.1" 200 None
+2017-11-05 17:15:29,366 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000000891/gonglue
+2017-11-05 17:15:30,261 - DEBUG - Community Exists
+2017-11-05 17:15:30,300 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4629532.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:30,301 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:30,360 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:30,661 - DEBUG - "GET /ershoufang/sh4629532.html HTTP/1.1" 200 None
+2017-11-05 17:15:30,774 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4629532.html
+2017-11-05 17:15:31,226 - DEBUG - House Insert Done~
+2017-11-05 17:15:31,226 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000013854.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:31,227 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:31,287 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:31,355 - DEBUG - "GET /xiaoqu/5011000013854.html HTTP/1.1" 302 0
+2017-11-05 17:15:31,357 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:31,437 - DEBUG - "GET /xiaoqu/5011000013854.html HTTP/1.1" 200 None
+2017-11-05 17:15:31,495 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000013854.html
+2017-11-05 17:15:31,761 - DEBUG - Community Exists
+2017-11-05 17:15:31,802 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4619491.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:31,803 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:31,863 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:31,934 - DEBUG - "GET /ershoufang/sh4619491.html HTTP/1.1" 302 0
+2017-11-05 17:15:31,936 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:32,365 - DEBUG - "GET /ershoufang/sh4619491.html HTTP/1.1" 200 None
+2017-11-05 17:15:32,476 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4619491.html
+2017-11-05 17:15:32,944 - DEBUG - House Insert Done~
+2017-11-05 17:15:32,944 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000013242.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:32,945 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:33,006 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:33,065 - DEBUG - "GET /xiaoqu/5011000013242.html HTTP/1.1" 302 0
+2017-11-05 17:15:33,067 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:33,148 - DEBUG - "GET /xiaoqu/5011000013242.html HTTP/1.1" 200 None
+2017-11-05 17:15:33,200 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000013242.html
+2017-11-05 17:15:33,464 - DEBUG - Community Exists
+2017-11-05 17:15:33,503 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4597085.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:33,504 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:33,521 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:33,547 - DEBUG - "GET /ershoufang/sh4597085.html HTTP/1.1" 302 0
+2017-11-05 17:15:33,549 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:33,923 - DEBUG - "GET /ershoufang/sh4597085.html HTTP/1.1" 200 None
+2017-11-05 17:15:33,957 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4597085.html
+2017-11-05 17:15:34,410 - DEBUG - House Insert Done~
+2017-11-05 17:15:34,410 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000018746.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:34,411 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:34,425 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:34,453 - DEBUG - "GET /xiaoqu/5011000018746.html HTTP/1.1" 302 0
+2017-11-05 17:15:34,455 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:34,493 - DEBUG - "GET /xiaoqu/5011000018746.html HTTP/1.1" 200 None
+2017-11-05 17:15:34,512 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000018746.html
+2017-11-05 17:15:34,845 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000018746/gonglue, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:34,846 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:34,865 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:34,894 - DEBUG - "GET /xiaoqu/5011000018746/gonglue HTTP/1.1" 200 None
+2017-11-05 17:15:34,895 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000018746/gonglue
+2017-11-05 17:15:35,803 - DEBUG - Community Exists
+2017-11-05 17:15:35,841 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4584991.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:35,842 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:35,850 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:35,867 - DEBUG - "GET /ershoufang/sh4584991.html HTTP/1.1" 302 0
+2017-11-05 17:15:35,869 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:36,114 - DEBUG - "GET /ershoufang/sh4584991.html HTTP/1.1" 200 None
+2017-11-05 17:15:36,141 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4584991.html
+2017-11-05 17:15:36,663 - DEBUG - House Insert Done~
+2017-11-05 17:15:36,663 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000000870.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:36,664 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:36,715 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:36,782 - DEBUG - "GET /xiaoqu/5011000000870.html HTTP/1.1" 302 0
+2017-11-05 17:15:36,784 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:36,868 - DEBUG - "GET /xiaoqu/5011000000870.html HTTP/1.1" 200 None
+2017-11-05 17:15:36,927 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000000870.html
+2017-11-05 17:15:37,260 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000000870/gonglue, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:37,263 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:37,278 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:37,310 - DEBUG - "GET /xiaoqu/5011000000870/gonglue HTTP/1.1" 200 None
+2017-11-05 17:15:37,311 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000000870/gonglue
+2017-11-05 17:15:38,174 - DEBUG - Community Exists
+2017-11-05 17:15:38,213 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4570994.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:38,214 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:38,279 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:38,353 - DEBUG - "GET /ershoufang/sh4570994.html HTTP/1.1" 302 0
+2017-11-05 17:15:38,355 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:38,629 - DEBUG - "GET /ershoufang/sh4570994.html HTTP/1.1" 200 None
+2017-11-05 17:15:38,742 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4570994.html
+2017-11-05 17:15:39,231 - DEBUG - House Insert Done~
+2017-11-05 17:15:39,232 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000011229.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:39,233 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:39,275 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:39,323 - DEBUG - "GET /xiaoqu/5011000011229.html HTTP/1.1" 302 0
+2017-11-05 17:15:39,325 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:39,391 - DEBUG - "GET /xiaoqu/5011000011229.html HTTP/1.1" 200 None
+2017-11-05 17:15:39,494 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000011229.html
+2017-11-05 17:15:39,770 - DEBUG - Community Insert Done~
+2017-11-05 17:15:39,808 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4544605.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:39,809 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:39,827 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:39,850 - DEBUG - "GET /ershoufang/sh4544605.html HTTP/1.1" 302 0
+2017-11-05 17:15:39,852 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:40,102 - DEBUG - "GET /ershoufang/sh4544605.html HTTP/1.1" 200 None
+2017-11-05 17:15:40,151 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4544605.html
+2017-11-05 17:15:40,612 - DEBUG - House Insert Done~
+2017-11-05 17:15:40,612 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000006686.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:40,613 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:40,624 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:40,658 - DEBUG - "GET /xiaoqu/5011000006686.html HTTP/1.1" 302 0
+2017-11-05 17:15:40,660 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:40,701 - DEBUG - "GET /xiaoqu/5011000006686.html HTTP/1.1" 200 None
+2017-11-05 17:15:40,718 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000006686.html
+2017-11-05 17:15:41,025 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000006686/gonglue, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:41,026 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:41,086 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:41,169 - DEBUG - "GET /xiaoqu/5011000006686/gonglue HTTP/1.1" 200 None
+2017-11-05 17:15:41,170 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000006686/gonglue
+2017-11-05 17:15:42,023 - DEBUG - Community Exists
+2017-11-05 17:15:42,062 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4535760.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:42,063 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:42,131 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:42,199 - DEBUG - "GET /ershoufang/sh4535760.html HTTP/1.1" 302 0
+2017-11-05 17:15:42,201 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:42,645 - DEBUG - "GET /ershoufang/sh4535760.html HTTP/1.1" 200 None
+2017-11-05 17:15:42,777 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4535760.html
+2017-11-05 17:15:43,298 - DEBUG - House Insert Done~
+2017-11-05 17:15:43,299 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000002254.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:43,300 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:43,361 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:43,456 - DEBUG - "GET /xiaoqu/5011000002254.html HTTP/1.1" 200 None
+2017-11-05 17:15:43,521 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000002254.html
+2017-11-05 17:15:43,769 - DEBUG - Community Exists
+2017-11-05 17:15:43,808 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4525085.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:43,809 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:43,822 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:43,842 - DEBUG - "GET /ershoufang/sh4525085.html HTTP/1.1" 302 0
+2017-11-05 17:15:43,844 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:44,070 - DEBUG - "GET /ershoufang/sh4525085.html HTTP/1.1" 200 None
+2017-11-05 17:15:44,086 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4525085.html
+2017-11-05 17:15:44,523 - DEBUG - House Insert Done~
+2017-11-05 17:15:44,523 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000000868.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:44,524 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:44,582 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:44,643 - DEBUG - "GET /xiaoqu/5011000000868.html HTTP/1.1" 302 0
+2017-11-05 17:15:44,645 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:44,734 - DEBUG - "GET /xiaoqu/5011000000868.html HTTP/1.1" 200 None
+2017-11-05 17:15:44,790 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000000868.html
+2017-11-05 17:15:45,066 - DEBUG - Community Insert Done~
+2017-11-05 17:15:45,089 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/songjianglaocheng/d8, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:45,090 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:45,145 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:45,212 - DEBUG - "GET /ershoufang/songjianglaocheng/d8 HTTP/1.1" 302 0
+2017-11-05 17:15:45,214 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:45,331 - DEBUG - "GET /ershoufang/songjianglaocheng/d8 HTTP/1.1" 200 None
+2017-11-05 17:15:45,387 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/songjianglaocheng/d8
+2017-11-05 17:15:45,519 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4677001.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:45,520 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:45,626 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:46,111 - DEBUG - "GET /ershoufang/sh4677001.html HTTP/1.1" 200 None
+2017-11-05 17:15:46,232 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4677001.html
+2017-11-05 17:15:46,674 - DEBUG - House Insert Done~
+2017-11-05 17:15:46,675 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000010792.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:15:46,676 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:15:46,728 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:46,798 - DEBUG - "GET /xiaoqu/5011000010792.html HTTP/1.1" 302 0
+2017-11-05 17:15:46,800 - DEBUG - Setting read timeout to 10
+2017-11-05 17:15:46,879 - DEBUG - "GET /xiaoqu/5011000010792.html HTTP/1.1" 200 None
+2017-11-05 17:15:46,935 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000010792.html
+2017-11-05 17:16:01,425 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:01,432 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:01,443 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:01,462 - DEBUG - "GET /ershoufang HTTP/1.1" 302 0
+2017-11-05 17:16:01,464 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:01,505 - DEBUG - "GET /ershoufang HTTP/1.1" 200 None
+2017-11-05 17:16:01,516 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang
+2017-11-05 17:16:01,540 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/songjianglaocheng/d8, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:01,541 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:01,550 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:01,566 - DEBUG - "GET /ershoufang/songjianglaocheng/d8 HTTP/1.1" 302 0
+2017-11-05 17:16:01,568 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:01,618 - DEBUG - "GET /ershoufang/songjianglaocheng/d8 HTTP/1.1" 200 None
+2017-11-05 17:16:01,629 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/songjianglaocheng/d8
+2017-11-05 17:16:01,754 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4677001.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:01,755 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:01,767 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:01,786 - DEBUG - "GET /ershoufang/sh4677001.html HTTP/1.1" 302 0
+2017-11-05 17:16:01,788 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:01,830 - DEBUG - "GET /ershoufang/sh4677001.html HTTP/1.1" 200 None
+2017-11-05 17:16:01,854 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4677001.html
+2017-11-05 17:16:02,248 - DEBUG - House Exists
+2017-11-05 17:16:02,248 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000010792.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:02,249 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:02,311 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:02,325 - DEBUG - "GET /xiaoqu/5011000010792.html HTTP/1.1" 302 0
+2017-11-05 17:16:02,327 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:02,357 - DEBUG - "GET /xiaoqu/5011000010792.html HTTP/1.1" 200 None
+2017-11-05 17:16:02,366 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000010792.html
+2017-11-05 17:16:02,626 - DEBUG - Community Insert Done~
+2017-11-05 17:16:02,666 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4667487.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:02,667 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:02,676 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:02,703 - DEBUG - "GET /ershoufang/sh4667487.html HTTP/1.1" 302 0
+2017-11-05 17:16:02,706 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:03,470 - DEBUG - "GET /ershoufang/sh4667487.html HTTP/1.1" 200 None
+2017-11-05 17:16:03,488 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4667487.html
+2017-11-05 17:16:03,884 - DEBUG - House Insert Done~
+2017-11-05 17:16:03,884 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000016042.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:03,885 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:03,895 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:03,912 - DEBUG - "GET /xiaoqu/5011000016042.html HTTP/1.1" 302 0
+2017-11-05 17:16:03,914 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:03,946 - DEBUG - "GET /xiaoqu/5011000016042.html HTTP/1.1" 200 None
+2017-11-05 17:16:03,957 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000016042.html
+2017-11-05 17:16:04,231 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000016042/gonglue, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:04,232 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:04,242 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:04,274 - DEBUG - "GET /xiaoqu/5011000016042/gonglue HTTP/1.1" 200 None
+2017-11-05 17:16:04,284 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000016042/gonglue
+2017-11-05 17:16:05,061 - DEBUG - Community Insert Done~
+2017-11-05 17:16:05,096 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4636848.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:05,097 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:05,105 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:05,120 - DEBUG - "GET /ershoufang/sh4636848.html HTTP/1.1" 302 0
+2017-11-05 17:16:05,122 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:05,159 - DEBUG - "GET /ershoufang/sh4636848.html HTTP/1.1" 200 None
+2017-11-05 17:16:05,176 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4636848.html
+2017-11-05 17:16:05,565 - DEBUG - House Insert Done~
+2017-11-05 17:16:05,565 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000018685.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:05,566 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:05,575 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:05,602 - DEBUG - "GET /xiaoqu/5011000018685.html HTTP/1.1" 302 0
+2017-11-05 17:16:05,603 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:05,638 - DEBUG - "GET /xiaoqu/5011000018685.html HTTP/1.1" 200 None
+2017-11-05 17:16:05,647 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000018685.html
+2017-11-05 17:16:05,880 - DEBUG - Community Insert Done~
+2017-11-05 17:16:05,915 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4633042.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:05,916 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:05,926 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:05,944 - DEBUG - "GET /ershoufang/sh4633042.html HTTP/1.1" 302 0
+2017-11-05 17:16:05,946 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:06,669 - DEBUG - "GET /ershoufang/sh4633042.html HTTP/1.1" 200 None
+2017-11-05 17:16:06,691 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4633042.html
+2017-11-05 17:16:07,176 - DEBUG - House Insert Done~
+2017-11-05 17:16:07,176 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000014706.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:07,177 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:07,207 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:07,253 - DEBUG - "GET /xiaoqu/5011000014706.html HTTP/1.1" 302 0
+2017-11-05 17:16:07,255 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:07,350 - DEBUG - "GET /xiaoqu/5011000014706.html HTTP/1.1" 200 None
+2017-11-05 17:16:07,377 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000014706.html
+2017-11-05 17:16:07,712 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000014706/gonglue, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:07,713 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:07,727 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:07,761 - DEBUG - "GET /xiaoqu/5011000014706/gonglue HTTP/1.1" 200 None
+2017-11-05 17:16:07,762 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000014706/gonglue
+2017-11-05 17:16:08,769 - DEBUG - Community Insert Done~
+2017-11-05 17:16:08,810 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4607235.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:08,811 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:08,825 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:08,842 - DEBUG - "GET /ershoufang/sh4607235.html HTTP/1.1" 302 0
+2017-11-05 17:16:08,844 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:09,939 - DEBUG - "GET /ershoufang/sh4607235.html HTTP/1.1" 200 None
+2017-11-05 17:16:09,967 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4607235.html
+2017-11-05 17:16:10,462 - DEBUG - House Insert Done~
+2017-11-05 17:16:10,462 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000011030.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:10,463 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:10,474 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:10,492 - DEBUG - "GET /xiaoqu/5011000011030.html HTTP/1.1" 302 0
+2017-11-05 17:16:10,494 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:10,526 - DEBUG - "GET /xiaoqu/5011000011030.html HTTP/1.1" 200 None
+2017-11-05 17:16:10,536 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000011030.html
+2017-11-05 17:16:10,800 - DEBUG - Community Exists
+2017-11-05 17:16:10,840 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4603478.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:10,841 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:10,871 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:10,902 - DEBUG - "GET /ershoufang/sh4603478.html HTTP/1.1" 302 0
+2017-11-05 17:16:10,904 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:11,287 - DEBUG - "GET /ershoufang/sh4603478.html HTTP/1.1" 200 None
+2017-11-05 17:16:11,348 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4603478.html
+2017-11-05 17:16:11,845 - DEBUG - House Insert Done~
+2017-11-05 17:16:11,845 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000009056.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:11,846 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:11,876 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:11,918 - DEBUG - "GET /xiaoqu/5011000009056.html HTTP/1.1" 302 0
+2017-11-05 17:16:11,920 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:11,975 - DEBUG - "GET /xiaoqu/5011000009056.html HTTP/1.1" 200 None
+2017-11-05 17:16:12,009 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000009056.html
+2017-11-05 17:16:12,343 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000009056/gonglue, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:12,344 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:12,357 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:12,398 - DEBUG - "GET /xiaoqu/5011000009056/gonglue HTTP/1.1" 200 None
+2017-11-05 17:16:12,399 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000009056/gonglue
+2017-11-05 17:16:13,424 - DEBUG - Community Insert Done~
+2017-11-05 17:16:13,462 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4593322.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:13,463 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:13,477 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:13,842 - DEBUG - "GET /ershoufang/sh4593322.html HTTP/1.1" 200 None
+2017-11-05 17:16:13,870 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4593322.html
+2017-11-05 17:16:14,361 - DEBUG - House Insert Done~
+2017-11-05 17:16:14,361 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000016042.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:14,362 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:14,392 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:14,473 - DEBUG - "GET /xiaoqu/5011000016042.html HTTP/1.1" 200 None
+2017-11-05 17:16:14,505 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000016042.html
+2017-11-05 17:16:14,804 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000016042/gonglue, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:14,805 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:14,822 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:14,860 - DEBUG - "GET /xiaoqu/5011000016042/gonglue HTTP/1.1" 200 None
+2017-11-05 17:16:14,876 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000016042/gonglue
+2017-11-05 17:16:15,775 - DEBUG - Community Exists
+2017-11-05 17:16:15,816 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4581686.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:15,817 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:15,844 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:15,905 - DEBUG - "GET /ershoufang/sh4581686.html HTTP/1.1" 200 None
+2017-11-05 17:16:15,960 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4581686.html
+2017-11-05 17:16:16,429 - DEBUG - House Insert Done~
+2017-11-05 17:16:16,429 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000018662.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:16,430 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:16,445 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:16,468 - DEBUG - "GET /xiaoqu/5011000018662.html HTTP/1.1" 302 0
+2017-11-05 17:16:16,470 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:16,504 - DEBUG - "GET /xiaoqu/5011000018662.html HTTP/1.1" 200 None
+2017-11-05 17:16:16,523 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000018662.html
+2017-11-05 17:16:16,822 - DEBUG - Community Insert Done~
+2017-11-05 17:16:16,867 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4574193.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:16,868 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:16,882 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:16,913 - DEBUG - "GET /ershoufang/sh4574193.html HTTP/1.1" 302 0
+2017-11-05 17:16:16,915 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:17,146 - DEBUG - "GET /ershoufang/sh4574193.html HTTP/1.1" 200 None
+2017-11-05 17:16:17,179 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4574193.html
+2017-11-05 17:16:17,677 - DEBUG - House Insert Done~
+2017-11-05 17:16:17,677 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000009056.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:17,678 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:17,691 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:17,713 - DEBUG - "GET /xiaoqu/5011000009056.html HTTP/1.1" 302 0
+2017-11-05 17:16:17,715 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:17,755 - DEBUG - "GET /xiaoqu/5011000009056.html HTTP/1.1" 200 None
+2017-11-05 17:16:17,770 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000009056.html
+2017-11-05 17:16:18,084 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000009056/gonglue, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:18,085 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:18,124 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:18,175 - DEBUG - "GET /xiaoqu/5011000009056/gonglue HTTP/1.1" 200 None
+2017-11-05 17:16:18,176 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000009056/gonglue
+2017-11-05 17:16:18,964 - DEBUG - Community Exists
+2017-11-05 17:16:19,003 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4569145.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:19,004 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:19,032 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:19,071 - DEBUG - "GET /ershoufang/sh4569145.html HTTP/1.1" 302 0
+2017-11-05 17:16:19,073 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:19,335 - DEBUG - "GET /ershoufang/sh4569145.html HTTP/1.1" 200 None
+2017-11-05 17:16:19,522 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4569145.html
+2017-11-05 17:16:19,989 - DEBUG - House Insert Done~
+2017-11-05 17:16:19,989 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000009392.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:19,990 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:20,022 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:20,086 - DEBUG - "GET /xiaoqu/5011000009392.html HTTP/1.1" 200 None
+2017-11-05 17:16:20,115 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000009392.html
+2017-11-05 17:16:20,429 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000009392/gonglue, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:20,430 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:20,461 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:20,526 - DEBUG - "GET /xiaoqu/5011000009392/gonglue HTTP/1.1" 200 None
+2017-11-05 17:16:20,527 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000009392/gonglue
+2017-11-05 17:16:21,396 - DEBUG - Community Insert Done~
+2017-11-05 17:16:21,433 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4513145.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:21,433 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:21,462 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:21,494 - DEBUG - "GET /ershoufang/sh4513145.html HTTP/1.1" 302 0
+2017-11-05 17:16:21,496 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:21,882 - DEBUG - "GET /ershoufang/sh4513145.html HTTP/1.1" 200 None
+2017-11-05 17:16:21,936 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4513145.html
+2017-11-05 17:16:22,400 - DEBUG - House Insert Done~
+2017-11-05 17:16:22,400 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000014346.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:22,401 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:22,413 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:22,441 - DEBUG - "GET /xiaoqu/5011000014346.html HTTP/1.1" 302 0
+2017-11-05 17:16:22,443 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:22,588 - DEBUG - "GET /xiaoqu/5011000014346.html HTTP/1.1" 200 None
+2017-11-05 17:16:22,615 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000014346.html
+2017-11-05 17:16:22,961 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000014346/gonglue, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:22,962 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:22,977 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:23,012 - DEBUG - "GET /xiaoqu/5011000014346/gonglue HTTP/1.1" 200 None
+2017-11-05 17:16:23,013 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000014346/gonglue
+2017-11-05 17:16:23,967 - DEBUG - Community Insert Done~
+2017-11-05 17:16:24,006 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4512498.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:24,007 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:24,019 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:24,036 - DEBUG - "GET /ershoufang/sh4512498.html HTTP/1.1" 302 0
+2017-11-05 17:16:24,038 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:24,229 - DEBUG - "GET /ershoufang/sh4512498.html HTTP/1.1" 200 None
+2017-11-05 17:16:24,242 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4512498.html
+2017-11-05 17:16:24,706 - DEBUG - House Insert Done~
+2017-11-05 17:16:24,706 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000011019.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:24,707 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:24,737 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:24,774 - DEBUG - "GET /xiaoqu/5011000011019.html HTTP/1.1" 302 0
+2017-11-05 17:16:24,776 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:24,833 - DEBUG - "GET /xiaoqu/5011000011019.html HTTP/1.1" 200 None
+2017-11-05 17:16:24,863 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000011019.html
+2017-11-05 17:16:25,260 - DEBUG - Community Insert Done~
+2017-11-05 17:16:25,300 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4433125.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:25,301 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:25,314 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:25,585 - DEBUG - "GET /ershoufang/sh4433125.html HTTP/1.1" 200 None
+2017-11-05 17:16:25,711 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4433125.html
+2017-11-05 17:16:26,182 - DEBUG - House Insert Done~
+2017-11-05 17:16:26,182 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000019308.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:26,183 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:26,204 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:26,222 - DEBUG - "GET /xiaoqu/5011000019308.html HTTP/1.1" 302 0
+2017-11-05 17:16:26,224 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:26,317 - DEBUG - "GET /xiaoqu/5011000019308.html HTTP/1.1" 200 None
+2017-11-05 17:16:26,329 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000019308.html
+2017-11-05 17:16:26,629 - DEBUG - Community Insert Done~
+2017-11-05 17:16:26,668 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4365052.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:26,669 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:26,680 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:26,698 - DEBUG - "GET /ershoufang/sh4365052.html HTTP/1.1" 302 0
+2017-11-05 17:16:26,700 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:26,954 - DEBUG - "GET /ershoufang/sh4365052.html HTTP/1.1" 200 None
+2017-11-05 17:16:26,984 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4365052.html
+2017-11-05 17:16:27,500 - DEBUG - House Insert Done~
+2017-11-05 17:16:27,500 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000014376.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:27,501 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:27,518 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:27,537 - DEBUG - "GET /xiaoqu/5011000014376.html HTTP/1.1" 302 0
+2017-11-05 17:16:27,539 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:27,580 - DEBUG - "GET /xiaoqu/5011000014376.html HTTP/1.1" 200 None
+2017-11-05 17:16:27,592 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000014376.html
+2017-11-05 17:16:28,014 - DEBUG - Community Insert Done~
+2017-11-05 17:16:28,053 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4352994.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:28,054 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:28,069 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:28,090 - DEBUG - "GET /ershoufang/sh4352994.html HTTP/1.1" 302 0
+2017-11-05 17:16:28,092 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:28,359 - DEBUG - "GET /ershoufang/sh4352994.html HTTP/1.1" 200 None
+2017-11-05 17:16:28,386 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4352994.html
+2017-11-05 17:16:28,858 - DEBUG - House Insert Done~
+2017-11-05 17:16:28,859 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000016042.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:28,859 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:28,889 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:28,936 - DEBUG - "GET /xiaoqu/5011000016042.html HTTP/1.1" 302 0
+2017-11-05 17:16:28,938 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:28,995 - DEBUG - "GET /xiaoqu/5011000016042.html HTTP/1.1" 200 None
+2017-11-05 17:16:29,026 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000016042.html
+2017-11-05 17:16:29,371 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000016042/gonglue, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:29,372 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:29,387 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:29,423 - DEBUG - "GET /xiaoqu/5011000016042/gonglue HTTP/1.1" 200 None
+2017-11-05 17:16:29,436 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000016042/gonglue
+2017-11-05 17:16:30,339 - DEBUG - Community Exists
+2017-11-05 17:16:30,380 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4266125.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:30,381 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:30,414 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:30,453 - DEBUG - "GET /ershoufang/sh4266125.html HTTP/1.1" 302 0
+2017-11-05 17:16:30,455 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:30,728 - DEBUG - "GET /ershoufang/sh4266125.html HTTP/1.1" 200 None
+2017-11-05 17:16:30,788 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4266125.html
+2017-11-05 17:16:31,298 - DEBUG - House Insert Done~
+2017-11-05 17:16:31,298 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000016042.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:31,299 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:31,315 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:31,339 - DEBUG - "GET /xiaoqu/5011000016042.html HTTP/1.1" 302 0
+2017-11-05 17:16:31,341 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:31,385 - DEBUG - "GET /xiaoqu/5011000016042.html HTTP/1.1" 200 None
+2017-11-05 17:16:31,400 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000016042.html
+2017-11-05 17:16:31,713 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000016042/gonglue, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:31,714 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:31,740 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:31,786 - DEBUG - "GET /xiaoqu/5011000016042/gonglue HTTP/1.1" 200 None
+2017-11-05 17:16:31,973 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000016042/gonglue
+2017-11-05 17:16:32,832 - DEBUG - Community Exists
+2017-11-05 17:16:32,872 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4830013.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:32,873 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:32,883 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:32,934 - DEBUG - "GET /ershoufang/sh4830013.html HTTP/1.1" 200 None
+2017-11-05 17:16:32,953 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4830013.html
+2017-11-05 17:16:33,462 - DEBUG - House Insert Done~
+2017-11-05 17:16:33,462 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000000760.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:33,463 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:33,474 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:33,493 - DEBUG - "GET /xiaoqu/5011000000760.html HTTP/1.1" 302 0
+2017-11-05 17:16:33,495 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:33,537 - DEBUG - "GET /xiaoqu/5011000000760.html HTTP/1.1" 200 None
+2017-11-05 17:16:33,553 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000000760.html
+2017-11-05 17:16:33,804 - DEBUG - Community Exists
+2017-11-05 17:16:33,842 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4785675.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:33,844 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:33,861 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:33,881 - DEBUG - "GET /ershoufang/sh4785675.html HTTP/1.1" 302 0
+2017-11-05 17:16:33,883 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:34,136 - DEBUG - "GET /ershoufang/sh4785675.html HTTP/1.1" 200 None
+2017-11-05 17:16:34,191 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4785675.html
+2017-11-05 17:16:34,668 - DEBUG - House Insert Done~
+2017-11-05 17:16:34,668 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000004348.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:34,669 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:34,700 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:34,740 - DEBUG - "GET /xiaoqu/5011000004348.html HTTP/1.1" 302 0
+2017-11-05 17:16:34,742 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:34,807 - DEBUG - "GET /xiaoqu/5011000004348.html HTTP/1.1" 200 None
+2017-11-05 17:16:34,840 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000004348.html
+2017-11-05 17:16:35,093 - DEBUG - Community Exists
+2017-11-05 17:16:35,137 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4712330.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:35,139 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:35,166 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:35,191 - DEBUG - "GET /ershoufang/sh4712330.html HTTP/1.1" 302 0
+2017-11-05 17:16:35,194 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:35,500 - DEBUG - "GET /ershoufang/sh4712330.html HTTP/1.1" 200 None
+2017-11-05 17:16:35,560 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4712330.html
+2017-11-05 17:16:36,085 - DEBUG - House Insert Done~
+2017-11-05 17:16:36,085 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000010756.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:36,086 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:36,112 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:36,147 - DEBUG - "GET /xiaoqu/5011000010756.html HTTP/1.1" 302 0
+2017-11-05 17:16:36,150 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:36,205 - DEBUG - "GET /xiaoqu/5011000010756.html HTTP/1.1" 200 None
+2017-11-05 17:16:36,234 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000010756.html
+2017-11-05 17:16:36,571 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000010756/gonglue, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:36,572 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:36,599 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:36,645 - DEBUG - "GET /xiaoqu/5011000010756/gonglue HTTP/1.1" 200 None
+2017-11-05 17:16:36,646 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000010756/gonglue
+2017-11-05 17:16:37,496 - DEBUG - Community Exists
+2017-11-05 17:16:37,534 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4544971.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:37,535 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:37,571 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:37,610 - DEBUG - "GET /ershoufang/sh4544971.html HTTP/1.1" 302 0
+2017-11-05 17:16:37,612 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:37,685 - DEBUG - "GET /ershoufang/sh4544971.html HTTP/1.1" 200 None
+2017-11-05 17:16:37,750 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4544971.html
+2017-11-05 17:16:38,250 - DEBUG - House Insert Done~
+2017-11-05 17:16:38,250 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000004348.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:38,251 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:38,282 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:38,321 - DEBUG - "GET /xiaoqu/5011000004348.html HTTP/1.1" 302 0
+2017-11-05 17:16:38,324 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:38,383 - DEBUG - "GET /xiaoqu/5011000004348.html HTTP/1.1" 200 None
+2017-11-05 17:16:38,400 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000004348.html
+2017-11-05 17:16:38,649 - DEBUG - Community Exists
+2017-11-05 17:16:38,690 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4840392.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:38,691 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:38,725 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:38,763 - DEBUG - "GET /ershoufang/sh4840392.html HTTP/1.1" 302 0
+2017-11-05 17:16:38,765 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:39,136 - DEBUG - "GET /ershoufang/sh4840392.html HTTP/1.1" 200 None
+2017-11-05 17:16:39,198 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4840392.html
+2017-11-05 17:16:39,718 - DEBUG - House Insert Done~
+2017-11-05 17:16:39,718 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000002254.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:39,719 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:39,754 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:39,791 - DEBUG - "GET /xiaoqu/5011000002254.html HTTP/1.1" 302 0
+2017-11-05 17:16:39,793 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:39,851 - DEBUG - "GET /xiaoqu/5011000002254.html HTTP/1.1" 200 None
+2017-11-05 17:16:39,891 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000002254.html
+2017-11-05 17:16:40,217 - DEBUG - Community Exists
+2017-11-05 17:16:40,257 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4838078.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:40,258 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:40,288 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:40,325 - DEBUG - "GET /ershoufang/sh4838078.html HTTP/1.1" 302 0
+2017-11-05 17:16:40,327 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:40,563 - DEBUG - "GET /ershoufang/sh4838078.html HTTP/1.1" 200 None
+2017-11-05 17:16:40,629 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4838078.html
+2017-11-05 17:16:41,144 - DEBUG - House Insert Done~
+2017-11-05 17:16:41,144 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000003924.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:41,145 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:41,175 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:41,348 - DEBUG - "GET /xiaoqu/5011000003924.html HTTP/1.1" 302 0
+2017-11-05 17:16:41,350 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:41,396 - DEBUG - "GET /xiaoqu/5011000003924.html HTTP/1.1" 200 None
+2017-11-05 17:16:41,419 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000003924.html
+2017-11-05 17:16:41,674 - DEBUG - Community Exists
+2017-11-05 17:16:41,715 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4827090.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:41,716 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:41,730 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:41,758 - DEBUG - "GET /ershoufang/sh4827090.html HTTP/1.1" 302 0
+2017-11-05 17:16:41,760 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:41,982 - DEBUG - "GET /ershoufang/sh4827090.html HTTP/1.1" 200 None
+2017-11-05 17:16:42,006 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4827090.html
+2017-11-05 17:16:42,492 - DEBUG - House Insert Done~
+2017-11-05 17:16:42,492 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000019361.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:42,493 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:42,509 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:42,527 - DEBUG - "GET /xiaoqu/5011000019361.html HTTP/1.1" 302 0
+2017-11-05 17:16:42,529 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:42,569 - DEBUG - "GET /xiaoqu/5011000019361.html HTTP/1.1" 200 None
+2017-11-05 17:16:42,578 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000019361.html
+2017-11-05 17:16:42,880 - DEBUG - Community Exists
+2017-11-05 17:16:42,918 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4821370.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:42,919 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:42,932 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:42,951 - DEBUG - "GET /ershoufang/sh4821370.html HTTP/1.1" 302 0
+2017-11-05 17:16:42,953 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:43,028 - DEBUG - "GET /ershoufang/sh4821370.html HTTP/1.1" 200 None
+2017-11-05 17:16:43,055 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4821370.html
+2017-11-05 17:16:43,629 - DEBUG - House Insert Done~
+2017-11-05 17:16:43,629 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000003996.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:43,630 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:43,660 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:43,704 - DEBUG - "GET /xiaoqu/5011000003996.html HTTP/1.1" 302 0
+2017-11-05 17:16:43,706 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:43,759 - DEBUG - "GET /xiaoqu/5011000003996.html HTTP/1.1" 200 None
+2017-11-05 17:16:43,795 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000003996.html
+2017-11-05 17:16:44,077 - DEBUG - Community Exists
+2017-11-05 17:16:44,115 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4808386.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:44,115 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:44,128 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:44,147 - DEBUG - "GET /ershoufang/sh4808386.html HTTP/1.1" 302 0
+2017-11-05 17:16:44,149 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:44,473 - DEBUG - "GET /ershoufang/sh4808386.html HTTP/1.1" 200 None
+2017-11-05 17:16:44,499 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4808386.html
+2017-11-05 17:16:45,014 - DEBUG - House Insert Done~
+2017-11-05 17:16:45,014 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000018664.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:45,015 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:45,030 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:45,057 - DEBUG - "GET /xiaoqu/5011000018664.html HTTP/1.1" 302 0
+2017-11-05 17:16:45,059 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:45,099 - DEBUG - "GET /xiaoqu/5011000018664.html HTTP/1.1" 200 None
+2017-11-05 17:16:45,120 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000018664.html
+2017-11-05 17:16:45,443 - DEBUG - Fetcher start: url=http://sh.lianjia.com/xiaoqu/5011000018664/gonglue, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:45,444 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:45,456 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:45,486 - DEBUG - "GET /xiaoqu/5011000018664/gonglue HTTP/1.1" 200 None
+2017-11-05 17:16:45,487 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/xiaoqu/5011000018664/gonglue
+2017-11-05 17:16:46,301 - DEBUG - Community Exists
+2017-11-05 17:16:46,340 - DEBUG - Fetcher start: url=http://sh.lianjia.com/ershoufang/sh4803888.html, keys=None, critical=1, fetch_repeat=3
+2017-11-05 17:16:46,341 - INFO - Starting new HTTP connection (1): sh.lianjia.com
+2017-11-05 17:16:46,370 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:46,416 - DEBUG - "GET /ershoufang/sh4803888.html HTTP/1.1" 302 0
+2017-11-05 17:16:46,418 - DEBUG - Setting read timeout to 10
+2017-11-05 17:16:46,668 - DEBUG - "GET /ershoufang/sh4803888.html HTTP/1.1" 200 None
+2017-11-05 17:16:46,696 - DEBUG - Fetcher end: code=1, url=http://sh.lianjia.com/ershoufang/sh4803888.html
