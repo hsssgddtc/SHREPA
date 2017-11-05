@@ -5,17 +5,33 @@ util_parse.py by shai
 """
 
 import logging
+import os
+import sys
 
 def SetupLogging(output_type):
-  """S
-  sets up logging for the spider.
+  """
+  Sets up logging for the spider.
   """
   if output_type == "console":
     logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
   else:
     logging.basicConfig(filename = 'logs/SHREPA.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
+def HandleDaemon(handle_type):
+  """
+    Create daemon file for process.
+  """
+  pidfile = "mydaemon.pid"
 
+  if handle_type == "create":
+    pid = str(os.getpid())
+    if os.path.isfile(pidfile):
+      print "%s already exists, exiting" % pidfile
+      sys.exit()
+    file(pidfile, 'w').write(pid)
+
+  if handle_type == "delete":
+    os.unlink(pidfile)
   #logger = logging.getLogger('SHREPA')
   ##logger.setLevel(logging.DEBUG)
   #

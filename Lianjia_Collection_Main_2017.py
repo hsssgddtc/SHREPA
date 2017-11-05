@@ -11,6 +11,8 @@ import pymysql
 import logging
 import traceback
 import re
+import sys
+import os
 from datetime import datetime
 from bs4 import BeautifulSoup
 
@@ -19,6 +21,7 @@ import processor
 
 global cur_house_hash_set
 global cur_community_hash_set
+global cur_community_link_set
 global cur_link_repo
 cur_link_repo_dict = {}
 BASE_URL = "http://sh.lianjia.com"
@@ -57,7 +60,6 @@ class LianjiaParser(processor.Parser):
                 for item in content.find_all(name="a", gahref=re.compile(
                         "^((?!(district-nolimit)).)*$")):
                     DISTRICT_URL = BASE_URL + item.get("href")
-
 
                     logging.debug("Current District: " + item.get_text())
                     #logging.debug(DISTRICT_URL)
@@ -120,10 +122,39 @@ class LianjiaParser(processor.Parser):
                 detail_link = BASE_URL + bsObj.find_all(name="a", attrs={"gahref": list_link})[0].get("href")
                 #print(detail_link)
 
+
                 detail_code, content_detail = fetcher.working(detail_link, None, 1, 3)
+                #print(content_detail)
                 house_content_dict = processor.html_parse(content_detail, "house")
 
-                house_content_dict.update({"Hash_Value":str(hash(frozenset(house_content_dict.items())))})
+                tag_content = bsObj.find_all(name="ul", attrs={"class": "js_fang_list"})[0].find_all(name="li")[i-1].find_all(name="span", attrs={"class": "c-prop-tag2"})
+                if len(tag_content) == 3:
+                    Metro = tag_content[0].text.encode("utf-8")
+                    Keys_Flag = "Y"
+                elif len(tag_content) >= 1:
+                    if re.match("距离",tag_content[0].text.encode("utf-8")):
+                        Metro = tag_content[0].text.encode("utf-8")
+                    if len(tag_content) == 2:
+                        if re.match("钥匙", tag_content[1].text.encode("utf-8")):
+                            Keys_Flag = "Y"
+                    else:
+                        if re.match("钥匙", tag_content[0].text.encode("utf-8")):
+                            Keys_Flag = "Y"
+
+                if locals().has_key('Metro'):
+                    Metro_Line = Metro[Metro.find("距离")+6 : Metro.find("线")+3]
+                    Metro_Station = Metro[Metro.find("线")+3 : Metro.rfind("站")+3].replace("站站", "站")
+                if locals().has_key('Keys_Flag'):
+                    house_content_dict.update({"Keys_Flag": Keys_Flag})
+                if bsObj.find_all(name="ul", attrs={"class": "js_fang_list"})[0].find_all(name="li")[i-1].find_all(name="span", attrs={"class": "c-prop-tag c-prop-tag--blue"}) <> []:
+                    house_content_dict.update({"New_Flag": 'Y'})
+                #for keys, values in house_content_dict.items(): print(values)
+
+                house_content_hash_dict = {}
+                house_content_hash_dict.update({"House_Link": house_content_dict.get("House_Link")})
+                house_content_hash_dict.update({"Listing_Price": house_content_dict.get("Listing_Price")})
+
+                house_content_dict.update({"Hash_Value":str(hash(frozenset(house_content_hash_dict.items())))})
 
                 if house_content_dict.get("Hash_Value") not in cur_house_hash_set:
                     dataset = saver.db_prep("house", house_content_dict)
@@ -139,12 +170,16 @@ class LianjiaParser(processor.Parser):
                 #print(url_community)
 
                 cur_code, content = fetcher.working(url_community, None, 1, 3)
+                #print(content)
                 community_content_dict = processor.html_parse(content, "community")
 
                 community_content_dict.update({"Building_Num_on_Total":house_content_dict.pop("Building_Num_on_Total")})
                 community_content_dict.update({"House_Num_on_Total": house_content_dict.pop("House_Num_on_Total")})
                 community_content_dict.update({"House_Num_on_Sold": house_content_dict.pop("House_Num_on_Sold")})
                 community_content_dict.update({"House_Num_on_Rent": house_content_dict.pop("House_Num_on_Rent")})
+                if locals().has_key('Metro_Line'):
+                    community_content_dict.update({"Metro_Line": Metro_Line})
+                    community_content_dict.update({"Metro_Station": Metro_Station})
 
                 if "Gonglue_Link" in community_content_dict:
                     url_community_gonglue = community_content_dict.pop("Gonglue_Link")
@@ -155,6 +190,10 @@ class LianjiaParser(processor.Parser):
                 community_content_dict.update({"Hash_Value": str(hash(frozenset(community_content_dict.items())))})
 
                 if community_content_dict.get("Hash_Value") not in cur_community_hash_set:
+
+                    if community_content_dict.get("Community_Link") in cur_community_link_set:
+                        saver.db_delete("community_link", community_content_dict.get("Community_Link"))
+
                     dataset = saver.db_prep("community", community_content_dict)
                     saver.db_insert("community", dataset)
                     cur_community_hash_set.add(community_content_dict.get("Hash_Value"))
@@ -261,6 +300,11 @@ class LianjiaParser(processor.Parser):
                 {"House_Type_Name": utilities.get_string_strip(
                     bsObj.find_all(name="ul", attrs={"class": "baseinfo-tb"})[5].find_all(name="span", attrs={
                         "class": "item-cell"})[3].text)})
+
+            if bsObj.find_all(name="span", attrs={"class": "featureTagText"}) <> []:
+                content_dict.update(
+                    {"House_Feature": utilities.get_string_strip(
+                        bsObj.find_all(name="span", attrs={"class": "featureTagText"})[0].text)})
 
             content_dict.update({"Building_Num_on_Total":
                                      utilities.get_string_num(bsObj.find_all(name="div", attrs={"class": "module-col intro-col2"})[0].find_all(
@@ -389,40 +433,43 @@ class LianjiaParser(processor.Parser):
 
     def html_parse_com_gonglue_reuse(self, bsObj, content_dict, seq):
         tag = "pgl_"+str(seq)
-        count = len(bsObj.find_all(name="div", attrs={"id": tag })[0].find_all(name="p", attrs={"class", "q"}))
-        trans_dict = {u"整体规划": "Compre_Plan",
-                      u"小区概况": "Community_Overview",
-                      u"位置环境": "Community_Env",
-                      u"住户特征": "Household_Char",
-                      u"周边配套": "Assist_Fac",
-                      u"物业管理": "Estate_Manag",
-                      u"楼栋特色": "Buiding_Char",
-                      u"市场行情": "Market_Quo",
-                      u"类似小区": "Sim_Community"
-                      }
-        title = utilities.get_string_strip(bsObj.find_all(name="div", attrs={"id": tag })[0].find_all(name="div", attrs={"class", "part-title"})[0].text)
-        title = trans_dict.get(title)
+        if bsObj.find_all(name="div", attrs={"id": tag }) != []:
+            count = len(bsObj.find_all(name="div", attrs={"id": tag })[0].find_all(name="p", attrs={"class", "q"}))
+            trans_dict = {u"整体规划": "Compre_Plan",
+                          u"小区概况": "Community_Overview",
+                          u"位置环境": "Community_Env",
+                          u"住户特征": "Household_Char",
+                          u"周边配套": "Assist_Fac",
+                          u"物业管理": "Estate_Manag",
+                          u"楼栋特色": "Buiding_Char",
+                          u"市场行情": "Market_Quo",
+                          u"类似小区": "Sim_Community"
+                          }
+            title = utilities.get_string_strip(bsObj.find_all(name="div", attrs={"id": tag })[0].find_all(name="div", attrs={"class", "part-title"})[0].text)
+            title = trans_dict.get(title)
 
-        i = 0
-        content = ""
-        for i in range(0, count):
-            content = utilities.get_string_strip(content + bsObj.find_all(name="div", attrs={"id": tag})[0].find_all(name="p", attrs={"class", "q"})[i].text) + "\n"
-            content = content + utilities.get_string_strip(bsObj.find_all(name="div", attrs={"id": tag})[0].find_all(name="div", attrs={"class", "a"})[i].text) + "\n"
-            i += 1
-        content_dict.update({title:content})
+            i = 0
+            content = ""
+            for i in range(0, count):
+                content = utilities.get_string_strip(content + bsObj.find_all(name="div", attrs={"id": tag})[0].find_all(name="p", attrs={"class", "q"})[i].text) + "\n"
+                content = content + utilities.get_string_strip(bsObj.find_all(name="div", attrs={"id": tag})[0].find_all(name="div", attrs={"class", "a"})[i].text) + "\n"
+                i += 1
+            content_dict.update({title:content})
         return(content_dict)
 
 class LianjiaSaver(processor.Saver):
     def data_fetch(self, data_type):
         cur = self.conn.cursor()
         if data_type == "house":
-            cur.execute("SELECT Hash_Value FROM house_info_saf_2017")
+            cur.execute("SELECT Hash_Value FROM house_info_saf")
         elif data_type == "community":
-            cur.execute("SELECT Hash_Value FROM community_info_saf_2017")
+            cur.execute("SELECT Hash_Value FROM community_info_saf")
+        elif data_type == "community_link":
+            cur.execute("SELECT Community_Link FROM community_info_saf")
         elif data_type == "link":
-            cur.execute("SELECT URL FROM link_repo_2017")
+            cur.execute("SELECT URL FROM link_repo")
         else:
-            cur.execute("SELECT URL FROM link_repo_2017 WHERE active_flg='Y' Order by Link_ID")
+            cur.execute("SELECT URL FROM link_repo WHERE active_flg='Y' Order by Link_ID DESC")
 
         orig_set = set(link[0] for link in cur)
 
@@ -435,7 +482,7 @@ class LianjiaSaver(processor.Saver):
                 , u'Floor_Number', u'Year_Build', u'District', u'Area', u'Address', u'Community_Name'
                 , u'Ring_Line', u'Elevator', u'Heating_Type', u'Keys_Flag', u'Num_of_Visit_7', u'Num_of_Visit_90'
                 , u'Last_Trade_Date', u'Owner_My_Story', u'Owner_Decoration', u'Owner_House_Feature', u'Seriel_Number'
-                , u'House_Link', u'Hash_Value', u'Parking_Place', u'Trade_Reason']
+                , u'House_Link', u'Hash_Value', u'Parking_Place', u'Trade_Reason', u'New_Flag', u'House_Feature']
 
         elif type == "community":
             content_list = [u'Community_Env',u'Assist_Fac',u'Estate_Manag',u'Community_Type',u'Community_Overview',
@@ -443,7 +490,7 @@ class LianjiaSaver(processor.Saver):
                         u'Household_Char',u'PM_Fee',u'Developer',u'Longitude',u'Latitude',u'Seriel_Number',u'District_Link',
                         u'Area_Link',u'Community_Link',u'Community_Name',u'House_Num_on_Sold',u'On_Sold_Link',u'Address',
                         u'District',u'Area', u'Hash_Value', u'House_Num_on_Rent', u'House_Num_on_Total', u'Building_Num_on_Total',
-                        u'Community_Nearby']
+                        u'Community_Nearby', u'Metro_Line', u'Metro_Station']
         else:
             content_list = [u'District', u'Area', u'Page', u'URL', u'Active_Flg']
 
@@ -462,25 +509,25 @@ class LianjiaSaver(processor.Saver):
         cur = self.conn.cursor()
         if type == "house":
             cur.execute(
-                "INSERT INTO house_info_saf_2017(House_Title, House_Type_Name, Structure_Type, Decoration_Level, Orientation_Type,"
+                "INSERT INTO house_info_saf(House_Title, House_Type_Name, Structure_Type, Decoration_Level, Orientation_Type,"
                 "Restriction_Type,Listing_Price, Square_Meter, Quoted_Price, Floor_Number, Year_Build, District,"
                 "Area, Address, Community_Name, Ring_Line, Elevator, Heating_Type, Keys_Flag,"
                 "Num_of_Visit_7, Num_of_Visit_90, Last_Trade_Date, Owner_My_Story, Owner_Decoration, Owner_House_Feature, Seriel_Number"
-                ", House_Link, Hash_Value, Parking_Place, Trade_Reason) "
-                "VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
+                ", House_Link, Hash_Value, Parking_Place, Trade_Reason, New_Flag, House_Feature) "
+                "VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
                 (dataset))
         elif type == "community":
             cur.execute(
-                "INSERT INTO community_info_saf_2017(Community_Env,Assist_Fac,Estate_Manag,Community_Type,Community_Overview,"
+                "INSERT INTO community_info_saf(Community_Env,Assist_Fac,Estate_Manag,Community_Type,Community_Overview,"
                 "Compre_Plan,Sim_Community,Year_Build,Market_Quo,Everage_Price,Buiding_Char,PM_Company,"
                 "Household_Char,PM_Fee,Developer,Longitude,Latitude,Seriel_Number,District_Link,"
                 "Area_Link,Community_Link,Community_Name,House_Num_on_Sold,On_Sold_Link,Address,District,Area,Hash_Value"
-                ",House_Num_on_Rent,House_Num_on_Total,Building_Num_on_Total, Community_Nearby) "
-                "VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
+                ",House_Num_on_Rent,House_Num_on_Total,Building_Num_on_Total, Community_Nearby, Metro_Line, Metro_Station) "
+                "VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
                 (dataset))
         else:
             cur.execute(
-                "INSERT INTO link_repo_2017(District, Area, Page, URL, Active_Flg) "
+                "INSERT INTO link_repo(District, Area, Page, URL, Active_Flg) "
                 "VALUES (%s,%s,%s,%s,%s)",
                 (dataset))
 
@@ -490,8 +537,17 @@ class LianjiaSaver(processor.Saver):
         cur = self.conn.cursor()
         if type == "link":
             cur.execute(
-                "Update link_repo_2017 Set Active_Flg='N', Updated_Timestamp=%s Where URL=%s", (datetime.now(),
+                "Update link_repo Set Active_Flg='N', Updated_Timestamp=%s Where URL=%s", (datetime.now(),
                 data))
+
+        cur.connection.commit()
+
+    def db_delete(self, type, data):
+        cur = self.conn.cursor()
+        if type == "community_link":
+            cur.execute("Delete from community_info_saf where Community_Link=%s", data)
+        elif type == "link_repo":
+            cur.execute("Truncate table link_repo")
 
         cur.connection.commit()
 
@@ -499,9 +555,13 @@ if __name__ == "__main__":
     """
     main process
     """
-    utilities.SetupLogging("file")
+    if len(sys.argv)>1 and sys.argv[1] == 'log':
+        utilities.SetupLogging("log")
+    else:
+        utilities.SetupLogging("console")
     # logger.debug("Fetching Start: %s", datetime.now())
 
+    utilities.HandleDaemon("create")
     try:
         fetcher = LianjiaFetcher(critical_max_repeat=3, critical_sleep_time=0)
         processor = LianjiaParser(max_deep=1, max_repeat=3)
@@ -512,12 +572,16 @@ if __name__ == "__main__":
         if network_check:
             cur_house_hash_set = saver.data_fetch("house")
             cur_community_hash_set = saver.data_fetch("community")
+            cur_community_link_set = saver.data_fetch("community_link")
             cur_link_repo = saver.data_fetch("link")
 
             House_Info_Type_Name = "ershoufang"
 
             cur_code, content = fetcher.working(BASE_URL + "/" + House_Info_Type_Name, None, 1, 3)
-            # processor.html_parse(content, "main_links")
+
+            if len(sys.argv)>2 and sys.argv[2]=='refresh':
+                saver.db_delete("linl_repo",None)
+                processor.html_parse(content, "main_links")
 
             cur_active_link_repo = saver.data_fetch("active_link")
 
@@ -532,5 +596,4 @@ if __name__ == "__main__":
         traceback.print_exc()
     finally:
         logging.debug("Fetcher end: %s", datetime.now())
-
-
+        utilities.HandleDaemon("delete")

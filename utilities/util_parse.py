@@ -5,7 +5,7 @@ util_parse.py by shai
 """
 
 import re
-import urllib
+import urllib2
 from six import string_types
 
 __all__ = [
