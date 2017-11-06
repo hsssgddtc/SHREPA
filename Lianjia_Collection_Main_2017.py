@@ -470,7 +470,7 @@ class LianjiaSaver(processor.Saver):
         elif data_type == "link":
             cur.execute("SELECT distinct URL FROM link_repo")
         elif data_type == "active_link":
-            cur.execute("SELECT distinct URL FROM link_repo WHERE active_flg='Y' Order by Link_ID DESC")
+            cur.execute("SELECT distinct URL FROM link_repo WHERE active_flg='Y' Order by URL DESC")
         else:
             print(add_param)
             cur.execute("SELECT distinct URL FROM link_repo WHERE FIND_IN_SET(district, %s) and active_flg='Y' Order by URL DESC",
