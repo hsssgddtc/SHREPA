@@ -5,14 +5,10 @@ Lianjia_Collection_Main_2017.py by shai
 """
 
 import requests
-import random
 import urllib2
-import pymysql
 import logging
-import traceback
 import re
 import sys
-import os
 from datetime import datetime
 from bs4 import BeautifulSoup
 
@@ -240,7 +236,7 @@ class LianjiaParser(processor.Parser):
             content_dict.update({"Address":
                                      utilities.get_string_strip(bsObj.find_all(name="ul", attrs={"class": "maininfo-minor maininfo-item"})[0].find_all(
                                             name="span", attrs={
-                                                "class": "item-cell"})[6+incre_index].text.encode("utf-8"))})
+                                                "class": "item-cell"})[6+incre_index].text.encode("utf-8"))[:250]})
             Seriel_Number = \
                 utilities.get_string_strip(
                     bsObj.find_all(name="ul", attrs={"class": "maininfo-minor maininfo-item"})[0].find_all(name="span",
@@ -401,7 +397,7 @@ class LianjiaParser(processor.Parser):
             content_dict.update(
                 {"Address": utilities.get_string_strip(bsObj.find_all(name="div", attrs={"class": "title fl"})[0].find_all(name="span",
                                                                                                 attrs={"class": "adr"})[
-                    0].text)})
+                    0].text)[:250]})
 
             #House_on_Sold = utilities.get_string_strip(bsObj.find_all(name="div", attrs={"id": "res-nav"})[0].find_all(name="a", attrs={
             #    "gahref": "xiaoqu_nav_for_sale"})[0].text)
@@ -456,6 +452,8 @@ class LianjiaParser(processor.Parser):
                 content = content + utilities.get_string_strip(bsObj.find_all(name="div", attrs={"id": tag})[0].find_all(name="div", attrs={"class", "a"})[i].text) + "\n"
                 i += 1
             content_dict.update({title:content})
+            if content_dict.get("Estate_Manag"):
+                print(len(content_dict.get("Estate_Manag")))
         return(content_dict)
 
 class LianjiaSaver(processor.Saver):
@@ -574,6 +572,7 @@ if __name__ == "__main__":
 
         network_check = fetcher.network_on()
 
+
         if network_check:
             cur_house_hash_set = saver.data_fetch("house",None)
             cur_community_hash_set = saver.data_fetch("community",None)
@@ -598,6 +597,7 @@ if __name__ == "__main__":
                 cur_code, content = fetcher.working(link, None, 1, 3)
                 processor.html_parse(content, "house_links")
                 saver.db_update("link", link)
+
 
     except Exception as excep:
         logging.debug("Exception: %s", excep)
