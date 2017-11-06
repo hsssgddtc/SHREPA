@@ -17,6 +17,12 @@ def SetupLogging(output_type):
   Sets up logging for the spider.
   """
   log_file = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))+"/logs/SHREPA_"+str(time.strftime(ISOTIMEFORMAT))+".log"
+
+  if not os.path.exists(os.path.dirname(log_file)):
+      os.makedirs(os.path.dirname(log_file))
+      with open(log_file, "w") as f:
+        f.write("")
+
   if output_type == "console":
     logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
   else:
