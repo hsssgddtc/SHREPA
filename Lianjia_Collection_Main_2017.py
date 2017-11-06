@@ -472,7 +472,7 @@ class LianjiaSaver(processor.Saver):
         elif data_type == "active_link":
             cur.execute("SELECT distinct URL FROM link_repo WHERE active_flg='Y' Order by Link_ID DESC")
         else:
-            cur.execute("SELECT distinct URL FROM link_repo WHERE active_flg='Y' and district=%s Order by Link_ID DESC",
+            cur.execute("SELECT distinct URL FROM link_repo WHERE active_flg='Y' and district in %s Order by Link_ID DESC",
                         add_param)
 
         orig_set = set(link[0] for link in cur)
