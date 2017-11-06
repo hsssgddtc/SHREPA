@@ -574,10 +574,10 @@ if __name__ == "__main__":
         network_check = fetcher.network_on()
 
         if network_check:
-            cur_house_hash_set = saver.data_fetch("house")
-            cur_community_hash_set = saver.data_fetch("community")
-            cur_community_link_set = saver.data_fetch("community_link")
-            cur_link_repo = saver.data_fetch("link")
+            cur_house_hash_set = saver.data_fetch("house",None)
+            cur_community_hash_set = saver.data_fetch("community",None)
+            cur_community_link_set = saver.data_fetch("community_link",None)
+            cur_link_repo = saver.data_fetch("link",None)
 
             House_Info_Type_Name = "ershoufang"
 
@@ -590,7 +590,7 @@ if __name__ == "__main__":
             if len(sys.argv)>3:
                 cur_active_link_repo = saver.data_fetch("active_link_district", sys.argv[3])
             else:
-                cur_active_link_repo = saver.data_fetch("active_link")
+                cur_active_link_repo = saver.data_fetch("active_link",None)
 
             for link in cur_active_link_repo:
                 # print(link)
