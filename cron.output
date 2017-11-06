@@ -1,0 +1,12 @@
+Sun Nov  5 17:16:01 UTC 2017
+cat: mydaemon.pid: No such file or directory
+error: list of process IDs must follow p
+
+Usage:
+ ps [options]
+
+ Try 'ps --help <simple|list|output|threads|misc|all>'
+  or 'ps --help <s|l|o|t|m|a>'
+ for additional help text.
+
+For more details see ps(1).

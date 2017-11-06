@@ -16,7 +16,7 @@ def SetupLogging(output_type):
   """
   Sets up logging for the spider.
   """
-  log_file = os.path.abspath('.')+"/logs/SHREPA_"+str(time.strftime(ISOTIMEFORMAT))+".log"
+  log_file = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))+"/logs/SHREPA_"+str(time.strftime(ISOTIMEFORMAT))+".log"
   if output_type == "console":
     logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
   else:
@@ -26,7 +26,7 @@ def HandleDaemon(handle_type):
   """
     Create daemon file for process.
   """
-  pidfile = "mydaemon.pid"
+  pidfile = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))+"/mydaemon.pid"
 
   if handle_type == "create":
     pid = str(os.getpid())
