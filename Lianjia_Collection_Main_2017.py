@@ -172,6 +172,7 @@ class LianjiaParser(processor.Parser):
                 cur_code, content = fetcher.working(url_community, None, 1, 3)
                 #print(content)
                 community_content_dict = processor.html_parse(content, "community")
+                #for keys, values in community_content_dict.items(): print(values)
 
                 community_content_dict.update({"Building_Num_on_Total":house_content_dict.pop("Building_Num_on_Total")})
                 community_content_dict.update({"House_Num_on_Total": house_content_dict.pop("House_Num_on_Total")})
@@ -458,18 +459,21 @@ class LianjiaParser(processor.Parser):
         return(content_dict)
 
 class LianjiaSaver(processor.Saver):
-    def data_fetch(self, data_type):
+    def data_fetch(self, data_type, add_param):
         cur = self.conn.cursor()
         if data_type == "house":
-            cur.execute("SELECT Hash_Value FROM house_info_saf")
+            cur.execute("SELECT distinct Hash_Value FROM house_info_saf")
         elif data_type == "community":
-            cur.execute("SELECT Hash_Value FROM community_info_saf")
+            cur.execute("SELECT distinct Hash_Value FROM community_info_saf")
         elif data_type == "community_link":
-            cur.execute("SELECT Community_Link FROM community_info_saf")
+            cur.execute("SELECT distinct Community_Link FROM community_info_saf")
         elif data_type == "link":
-            cur.execute("SELECT URL FROM link_repo")
+            cur.execute("SELECT distinct URL FROM link_repo")
+        elif data_type == "active_link":
+            cur.execute("SELECT distinct URL FROM link_repo WHERE active_flg='Y' Order by Link_ID DESC")
         else:
-            cur.execute("SELECT URL FROM link_repo WHERE active_flg='Y' Order by Link_ID DESC")
+            cur.execute("SELECT distinct URL FROM link_repo WHERE active_flg='Y' and district=%s Order by Link_ID DESC",
+                        add_param)
 
         orig_set = set(link[0] for link in cur)
 
@@ -583,7 +587,10 @@ if __name__ == "__main__":
                 saver.db_delete("linl_repo",None)
                 processor.html_parse(content, "main_links")
 
-            cur_active_link_repo = saver.data_fetch("active_link")
+            if len(sys.argv)>3:
+                cur_active_link_repo = saver.data_fetch("active_link_district", sys.argv[3])
+            else:
+                cur_active_link_repo = saver.data_fetch("active_link")
 
             for link in cur_active_link_repo:
                 # print(link)
@@ -593,7 +600,9 @@ if __name__ == "__main__":
 
     except Exception as excep:
         logging.debug("Exception: %s", excep)
-        traceback.print_exc()
+        logging.exception(excep)
+        raise
+        #traceback.print_exc()
     finally:
         logging.debug("Fetcher end: %s", datetime.now())
         utilities.HandleDaemon("delete")
