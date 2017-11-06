@@ -1,6 +1,6 @@
 #!/bin/bash  
- 
-cur_path="$PWD"
+
+cur_path=`pwd`"/SHREPA_"$1 
 now=$(date +"%Y%m%d")
 output_path=$cur_path"/logs/cron_"$now".output"
 date >> $output_path
