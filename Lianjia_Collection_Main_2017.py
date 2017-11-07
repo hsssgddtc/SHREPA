@@ -236,7 +236,8 @@ class LianjiaParser(processor.Parser):
             content_dict.update({"Address":
                                      utilities.get_string_strip(bsObj.find_all(name="ul", attrs={"class": "maininfo-minor maininfo-item"})[0].find_all(
                                             name="span", attrs={
-                                                "class": "item-cell"})[6+incre_index].text.encode("utf-8"))[:250]})
+                                                "class": "item-cell"})[6+incre_index].text.encode("utf-8")).decode('utf8')[:250].encode('utf8')})
+            print(content_dict.get("Address"))
             Seriel_Number = \
                 utilities.get_string_strip(
                     bsObj.find_all(name="ul", attrs={"class": "maininfo-minor maininfo-item"})[0].find_all(name="span",
@@ -397,8 +398,8 @@ class LianjiaParser(processor.Parser):
             content_dict.update(
                 {"Address": utilities.get_string_strip(bsObj.find_all(name="div", attrs={"class": "title fl"})[0].find_all(name="span",
                                                                                                 attrs={"class": "adr"})[
-                    0].text)[:250]})
-
+                    0].text.encode("utf-8").decode('utf8')[:250].encode('utf8'))})
+            print(content_dict.get("Address"))
             #House_on_Sold = utilities.get_string_strip(bsObj.find_all(name="div", attrs={"id": "res-nav"})[0].find_all(name="a", attrs={
             #    "gahref": "xiaoqu_nav_for_sale"})[0].text)
 
@@ -452,8 +453,7 @@ class LianjiaParser(processor.Parser):
                 content = content + utilities.get_string_strip(bsObj.find_all(name="div", attrs={"id": tag})[0].find_all(name="div", attrs={"class", "a"})[i].text) + "\n"
                 i += 1
             content_dict.update({title:content})
-            if content_dict.get("Estate_Manag"):
-                print(len(content_dict.get("Estate_Manag")))
+
         return(content_dict)
 
 class LianjiaSaver(processor.Saver):
