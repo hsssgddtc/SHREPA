@@ -119,6 +119,22 @@ class LianjiaSaver(processor.Saver):
         orig_set = set(link[0] for link in cur)
 
         return (orig_set)
+
+    def db_prep(self, type, content):
+
+        content_list = [u'District', u'Area', u'Page', u'URL', u'Active_Flg']
+
+        t = []
+        # for keys, values in content.items(): print(keys + " : " + values)
+        for column in content_list:
+            if column in content:
+                t.append(content[column])
+            else:
+                t.append(None)
+        t = tuple(t)
+        #for i in t: print(i)
+        return(t)
+
     def db_insert(self, type, dataset):
         cur = self.conn.cursor()
         cur.execute(
@@ -128,13 +144,10 @@ class LianjiaSaver(processor.Saver):
 
         cur.connection.commit()
 
-    def db_delete(self, type, data):
+    def db_delete(self):
         cur = self.conn.cursor()
-        if type == "community_link":
-            cur.execute("Delete from community_info_saf where Community_Link=%s", data)
-        elif type == "link_repo":
-            cur.execute("Truncate table link_repo")
-
+        cur.execute("Truncate table link_repo")
+        logging.debug(cur._executed)
         cur.connection.commit()
 
 if __name__ == "__main__":
@@ -163,7 +176,7 @@ if __name__ == "__main__":
             cur_code, content = fetcher.working(BASE_URL + "/" + House_Info_Type_Name, None, 1, 3)
 
             if len(sys.argv)>2 and sys.argv[2]=='refresh':
-                saver.db_delete("linl_repo",None)
+                saver.db_delete()
                 processor.html_parse(content, "main_links")
 
     except Exception as excep:
