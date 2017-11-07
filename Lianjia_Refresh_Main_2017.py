@@ -110,6 +110,15 @@ class LianjiaParser(processor.Parser):
                 exit
 
 class LianjiaSaver(processor.Saver):
+    def data_fetch(self, data_type, add_param):
+        cur = self.conn.cursor()
+
+        cur.execute("SELECT distinct URL FROM link_repo")
+
+        logging.debug(cur._executed)
+        orig_set = set(link[0] for link in cur)
+
+        return (orig_set)
     def db_insert(self, type, dataset):
         cur = self.conn.cursor()
         cur.execute(
@@ -148,6 +157,7 @@ if __name__ == "__main__":
 
 
         if network_check:
+            cur_link_repo = saver.data_fetch("link", None)
             House_Info_Type_Name = "ershoufang"
 
             cur_code, content = fetcher.working(BASE_URL + "/" + House_Info_Type_Name, None, 1, 3)
