@@ -31,7 +31,7 @@ then district=闵行
 elif [ $1 = 12 ]
 then district=浦东
 fi
-ps up `cat $cur_path"/mydaemon.pid"` >/dev/null && echo "Program Running" || `python $code_path log incre $district` >> $output_path 2>&1
+ps up `cat $cur_path"/mydaemon.pid"` >/dev/null && echo "Program Running" || `python $code_path log incre $district`
 #echo $district
 }
 num=`echo $cur_path | sed 's/[^0-9]//g'`
