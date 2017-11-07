@@ -32,9 +32,9 @@ then district=浦东
 fi
 
 if [ $1 = 0 ]
-then ps up `cat $cur_path"/mydaemon.pid"` >/dev/null && echo "Program Running" || `python $cur_path"/Lianjia_Refresh_Main_2017.py" log refresh`
+then ps up `cat $cur_path"/mydaemon.pid"` >/dev/null 2>&1 && echo "Program Running" || `python $cur_path"/Lianjia_Refresh_Main_2017.py" log refresh`
 else
-ps up `cat $cur_path"/mydaemon.pid"` >/dev/null && echo "Program Running" || `python $cur_path"/Lianjia_Collection_Main_2017.py" log $district`
+ps up `cat $cur_path"/mydaemon.pid"` >/dev/null 2>&1 && echo "Program Running" || `python $cur_path"/Lianjia_Collection_Main_2017.py" log $district`
 fi
 }
 num=`echo $cur_path | sed 's/[^0-9]//g'`
