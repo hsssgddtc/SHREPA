@@ -237,7 +237,7 @@ class LianjiaParser(processor.Parser):
                                      utilities.get_string_strip(bsObj.find_all(name="ul", attrs={"class": "maininfo-minor maininfo-item"})[0].find_all(
                                             name="span", attrs={
                                                 "class": "item-cell"})[6+incre_index].text.encode("utf-8")).decode('utf8')[:250].encode('utf8')})
-            print(content_dict.get("Address"))
+            #print(content_dict.get("Address"))
             Seriel_Number = \
                 utilities.get_string_strip(
                     bsObj.find_all(name="ul", attrs={"class": "maininfo-minor maininfo-item"})[0].find_all(name="span",
@@ -327,24 +327,30 @@ class LianjiaParser(processor.Parser):
                 owner_comment = bsObj.find_all(name="div", attrs={"id": "js-owner-comment"})[0].find_all(name="li",
                                                                                                          attrs={
                                                                                                              "class": "comment-item"})
-                if len(owner_comment) > 0:
-                    content_dict.update(
-                        {"Owner_My_Story": utilities.get_string_strip(bsObj.find_all(name="div", attrs={"id": "js-owner-comment"})[0].find_all(name="li",
-                                                                                                                     attrs={
-                                                                                                                         "class": "comment-item"})[
-                                               0].text.encode("utf-8"))[12:]})
-                    if len(owner_comment) > 1:
+                for i in range(0, len(owner_comment)):
+                    if i == 0:
+                        column_name='Owner_Comment_1st'
+                    elif i == 1:
+                        column_name = 'Owner_Comment_2nd'
+                    else:
+                        column_name = 'Owner_Comment_3rd'
+
+                    if bsObj.find_all(name="div", attrs={"id": "js-owner-comment"})[0].find_all(name="li", attrs={
+                        "class": "comment-item bookingroom-item"}) <> []:
                         content_dict.update(
-                            {"Owner_Decoration": utilities.get_string_strip(bsObj.find_all(name="div", attrs={"id": "js-owner-comment"})[0].find_all(name="li",
-                                                                                                                           attrs={
-                                                                                                                               "class": "comment-item"})[
-                                                     1].text.encode("utf-8"))[12:]})
-                        if len(owner_comment) > 2:
-                            content_dict.update(
-                                {"Owner_House_Feature": utilities.get_string_strip(bsObj.find_all(name="div", attrs={"id": "js-owner-comment"})[0].find_all(name="li",
-                                                                                                                                  attrs={
-                                                                                                                                      "class": "comment-item"})[
-                                                            2].text.encode("utf-8"))[12:]})
+                            {column_name: utilities.get_string_strip(
+                                bsObj.find_all(name="div", attrs={"id": "js-owner-comment"})[0].find_all(name="li",
+                                                                                                         attrs={
+                                                                                                             "class": "comment-item"})[
+                                    i].text.encode("utf-8"))})
+                    else:
+                        content_dict.update(
+                            {column_name: utilities.get_string_strip(
+                                bsObj.find_all(name="div", attrs={"id": "js-owner-comment"})[0].find_all(name="li",
+                                                                                                         attrs={
+                                                                                                             "class": "comment-item"})[
+                                    i].find_all(name="span", attrs={"class": "item-cell"})[1].text.encode("utf-8"))})
+                    #print(content_dict.get(column_name))
 
         elif content_type == "community":
             if bsObj.find_all(name="a", attrs={"class": "link_more"}) != []:
@@ -399,7 +405,7 @@ class LianjiaParser(processor.Parser):
                 {"Address": utilities.get_string_strip(bsObj.find_all(name="div", attrs={"class": "title fl"})[0].find_all(name="span",
                                                                                                 attrs={"class": "adr"})[
                     0].text.encode("utf-8").decode('utf8')[:250].encode('utf8'))})
-            print(content_dict.get("Address"))
+            #print(content_dict.get("Address"))
             #House_on_Sold = utilities.get_string_strip(bsObj.find_all(name="div", attrs={"id": "res-nav"})[0].find_all(name="a", attrs={
             #    "gahref": "xiaoqu_nav_for_sale"})[0].text)
 
@@ -469,11 +475,12 @@ class LianjiaSaver(processor.Saver):
             cur.execute("SELECT distinct URL FROM link_repo")
         elif data_type == "active_link":
             cur.execute("SELECT distinct URL FROM link_repo WHERE active_flg='Y' Order by URL DESC")
+        elif data_type == "column_test":
+            cur.execute("SELECT distinct House_Link FROM house_info_saf WHERE Owner_Comment_1st is not null")
         else:
-            print(add_param)
             cur.execute("SELECT distinct URL FROM link_repo WHERE FIND_IN_SET(district, %s) and active_flg='Y' Order by URL DESC",
                         add_param)
-
+        logging.debug(cur._executed)
         orig_set = set(link[0] for link in cur)
 
         return (orig_set)
@@ -484,7 +491,7 @@ class LianjiaSaver(processor.Saver):
                 , u'Orientation_Type', u'Restriction_Type', u'Listing_Price', u'Square_Meter', u'Quoted_Price'
                 , u'Floor_Number', u'Year_Build', u'District', u'Area', u'Address', u'Community_Name'
                 , u'Ring_Line', u'Elevator', u'Heating_Type', u'Keys_Flag', u'Num_of_Visit_7', u'Num_of_Visit_90'
-                , u'Last_Trade_Date', u'Owner_My_Story', u'Owner_Decoration', u'Owner_House_Feature', u'Seriel_Number'
+                , u'Last_Trade_Date', u'Owner_Comment_1st', u'Owner_Comment_2nd', u'Owner_Comment_3rd', u'Seriel_Number'
                 , u'House_Link', u'Hash_Value', u'Parking_Place', u'Trade_Reason', u'New_Flag', u'House_Feature']
 
         elif type == "community":
@@ -515,7 +522,7 @@ class LianjiaSaver(processor.Saver):
                 "INSERT INTO house_info_saf(House_Title, House_Type_Name, Structure_Type, Decoration_Level, Orientation_Type,"
                 "Restriction_Type,Listing_Price, Square_Meter, Quoted_Price, Floor_Number, Year_Build, District,"
                 "Area, Address, Community_Name, Ring_Line, Elevator, Heating_Type, Keys_Flag,"
-                "Num_of_Visit_7, Num_of_Visit_90, Last_Trade_Date, Owner_My_Story, Owner_Decoration, Owner_House_Feature, Seriel_Number"
+                "Num_of_Visit_7, Num_of_Visit_90, Last_Trade_Date, Owner_Comment_1st, Owner_Comment_2nd, Owner_Comment_3rd, Seriel_Number"
                 ", House_Link, Hash_Value, Parking_Place, Trade_Reason, New_Flag, House_Feature) "
                 "VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
                 (dataset))
@@ -583,21 +590,19 @@ if __name__ == "__main__":
 
             cur_code, content = fetcher.working(BASE_URL + "/" + House_Info_Type_Name, None, 1, 3)
 
-            if len(sys.argv)>2 and sys.argv[2]=='refresh':
-                saver.db_delete("linl_repo",None)
-                processor.html_parse(content, "main_links")
-
-            if len(sys.argv)>3:
-                cur_active_link_repo = saver.data_fetch("active_link_district", sys.argv[3])
+            if len(sys.argv)>2:
+                cur_active_link_repo = saver.data_fetch("active_link_district", sys.argv[2])
             else:
                 cur_active_link_repo = saver.data_fetch("active_link",None)
 
-            for link in cur_active_link_repo:
-                # print(link)
-                cur_code, content = fetcher.working(link, None, 1, 3)
-                processor.html_parse(content, "house_links")
-                saver.db_update("link", link)
-
+            if len(cur_active_link_repo) == 0:
+                logging.debug("No active links")
+            else:
+                for link in cur_active_link_repo:
+                    # print(link)
+                    cur_code, content = fetcher.working(link, None, 1, 3)
+                    processor.html_parse(content, "house_links")
+                    saver.db_update("link", link)
 
     except Exception as excep:
         logging.debug("Exception: %s", excep)
